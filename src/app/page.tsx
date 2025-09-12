@@ -10,33 +10,47 @@ export default function Home() {
       <section className="min-h-screen w-full bg-white flex items-center justify-center">
         {SparklesPreview()}
       </section>
-      <section className="h-[47rem] w-full bg-white flex items-center justify-center">
-        {AnimatedServices({ services: [
-          { 
-            name: "AI & ML Solutions", 
-            description: "Leverage our expertise in artificial intelligence and machine learning to automate processes, gain insights from data, and make smarter business decisions.",
-            subtitle: "Lead AI Consultant",
-            src: "/images/ai-consulting.png"
-          },
-          { 
-            name: "Custom Software Development", 
-            description: "From concept to deployment, our team of expert developers builds tailor-made software solutions that address your specific business requirements.",
-            subtitle: "ML Engineer",
-            src: "/images/custom-ml.png"
-          },
-          { 
-            name: "Insurance Technology", 
-            description: "Specialized solutions for P&C insurance and claims processing, optimizing workflows and enhancing customer experiences in the insurance sector.",
-            subtitle: "Data Engineer",
-            src: "/images/data-engineering.png"
-          }
-        ] })}
+      <section className="w-full">
+        <div className="bg-black text-white flex flex-col items-center justify-center py-20 px-4 md:px-8 lg:px-12">
+          <h1 className="lg:text-4xl font-bold py-5">Our Specialized Solutions</h1>
+          <p>From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
+        </div>
+        <div className="h-[47rem] bg-black flex items-center justify-center">
+          {AnimatedServices({ services: [
+            { 
+              name: "AI & ML Solutions", 
+              description: "Leverage our expertise in artificial intelligence and machine learning to automate processes, gain insights from data, and make smarter business decisions.",
+              subtitle: "You should add a subtitle here",
+              src: "/images/Artificial-intelligence.jpg"
+            },
+            { 
+              name: "Custom Software Development", 
+              description: "From concept to deployment, our team of expert developers builds tailor-made software solutions that address your specific business requirements.",
+              subtitle: "You should add a subtitle here",
+              src: "/images/Coding.jpeg"
+            },
+            { 
+              name: "Insurance Technology", 
+              description: "Specialized solutions for P&C insurance and claims processing, optimizing workflows and enhancing customer experiences in the insurance sector.",
+              subtitle: "You should add a subtitle here",
+              src: "/images/Insurance.jpg"
+            }
+          ] })}
+        </div>
+      </section>
+      <section>
+          {/* Trusted by Industry Leaders */}
+      </section>
+      <section>
+          {/* What our clients say */}
       </section>
       <section className="min-h-screen w-full bg-white flex items-center justify-center">
         {TypewriterEffectDemo()}
       </section>
       <section>
-        
+        <section>
+          {/* Footer */}
+      </section>
       </section>
     </div>
   );

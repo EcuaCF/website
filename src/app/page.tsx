@@ -3,19 +3,24 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import React from "react";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { AnimatedServices } from "@/components/ui/animated-services";
+import { HoverBorderGradient } from "@/components/ui/button-border";
+import TrustedBy from "@/components/Carrousel";
+import Clients from "@/components/Clients";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screeen w-full flex flex-col items-center justify-center">
-      <section className="min-h-screen w-full bg-white flex items-center justify-center">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+      <section className="w-full bg-black flex items-center justify-center">
         {SparklesPreview()}
       </section>
-      <section className="w-full">
-        <div className="bg-black text-white flex flex-col items-center justify-center py-20 px-4 md:px-8 lg:px-12">
-          <h1 className="lg:text-4xl font-bold py-5">Our Specialized Solutions</h1>
+      {TrustedBy()}
+      <section className="w-full bg-black">
+        <div className="text-white flex flex-col items-center justify-center py-2 px-4 md:px-8 lg:px-12">
+          <h1 className="lg:text-4xl font-bold py-8">Our Specialized Solutions</h1>
           <p>From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
         </div>
-        <div className="h-[47rem] bg-black flex items-center justify-center">
+        <div className="flex items-center justify-center py-4">
           {AnimatedServices({ services: [
             { 
               name: "AI & ML Solutions", 
@@ -39,17 +44,14 @@ export default function Home() {
         </div>
       </section>
       <section>
-          {/* Trusted by Industry Leaders */}
+          {Clients()}
       </section>
-      <section>
-          {/* What our clients say */}
-      </section>
-      <section className="min-h-screen w-full bg-white flex items-center justify-center">
+      <section className="h-120 w-full bg-white flex items-center justify-center">
         {TypewriterEffectDemo()}
       </section>
       <section>
         <section>
-          {/* Footer */}
+          {Footer()}
       </section>
       </section>
     </div>
@@ -58,25 +60,36 @@ export default function Home() {
 
 function SparklesPreview() {
   return (
-    <div className="h-[57rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <div className="w-full absolute inset-0 h-screen">
-        <SparklesCore
-          id="tsparticlesfullpage"
-          background="transparent"
-          minSize={0.6}
-          maxSize={1.4}
-          particleDensity={100}
-          className="w-full h-full"
-          particleColor="#FFFFFF"
-        />
+    <>
+      <div className="h-[57rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+        <div className="w-full absolute inset-0 h-screen">
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </div>
+        <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
+          Custom AI Solutions for Global Innovation
+        </h1>
+        <p className="text-neutral-300 text-center mt-8 relative z-20 lg:text-1xl " style={{ maxWidth: "600px" }}>
+          Bridging Ecuador and the US with cutting-edge machine learning and artificial intelligence solutions tailored to transform your business operations.
+        </p>
+          <div className="m-10 flex justify-center text-center">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black text-black dark:text-white flex items-center space-x-2"
+          >
+            <span className="p-2">Request a Consultation</span>
+          </HoverBorderGradient>
       </div>
-      <h1 className="md:text-7xl text-3xl lg:text-6xl font-bold text-center text-white relative z-20">
-        Custom AI Solutions for Global Innovation
-      </h1>
-      <p className="text-neutral-300 text-center mt-8 relative z-20 lg:text-1xl " style={{ maxWidth: "600px" }}>
-        Bridging Ecuador and the US with cutting-edge machine learning and artificial intelligence solutions tailored to transform your business operations.
-      </p>
     </div>
+  </>
   );
 }
 

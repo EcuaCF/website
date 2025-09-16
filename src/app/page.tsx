@@ -1,4 +1,5 @@
 "use client";
+
 import { SparklesCore } from "@/components/ui/sparkles";
 import React from "react";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
@@ -14,7 +15,7 @@ export default function Home() {
       <section className="w-full bg-black flex items-center justify-center">
         {SparklesPreview()}
       </section>
-      {TrustedBy()}
+        {TrustedBy()}
       <section className="w-full bg-black">
         <div className="text-white flex flex-col items-center justify-center py-2 px-4 md:px-8 lg:px-12">
           <h1 className="lg:text-4xl font-bold py-8">Our Specialized Solutions</h1>
@@ -44,15 +45,13 @@ export default function Home() {
         </div>
       </section>
       <section>
-          {Clients()}
+        {Clients()}
       </section>
       <section className="h-120 w-full bg-white flex items-center justify-center">
         {TypewriterEffectDemo()}
       </section>
       <section>
-        <section>
-          {Footer()}
-      </section>
+        {Footer()}
       </section>
     </div>
   );

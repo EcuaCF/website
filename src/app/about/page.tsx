@@ -6,6 +6,9 @@ import Image from "next/image";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import Members from "@/components/Members";
 import Mission from "@/components/Mission";
+import Globe from "@/components/GlobalPresence";
+import { TypewriterEffect } from "@/components/ui/typewriter-effect";
+import Footer from "@/components/Footer";
 
 export function TimelineDemo() {
   const data = [
@@ -261,6 +264,67 @@ export default function About() {
       <section>
         {Mission()}
       </section>
+      <section>
+        {Globe()}
+      </section>
+      <section className="h-120 w-full bg-white flex items-center justify-center">
+        {TypewriterEffectDemo()}
+      </section>
+      <section>
+        {Footer()}
+      </section>
    </>
+  );
+}
+
+function TypewriterEffectDemo() {
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "awesome",
+    },
+    {
+      text: "apps",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Ecua",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Code",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "Forge",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+    {
+      text: "S.A.S.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+  return (
+    <div className="flex flex-col items-center justify-center h-[40rem] ">
+      <p className="text-black text-base lg:text-4xl font-bold mb-10">
+        Ready to Transform Your Business?
+      </p>
+      <p className="text-black text-base lg:text-1xl mb-10">
+        {"Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization."}
+      </p>
+      <TypewriterEffect words={words} />
+      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
+        <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+          Join now
+        </button>
+        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+          Signup
+        </button>
+      </div>
+    </div>
   );
 }

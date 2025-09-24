@@ -270,9 +270,6 @@ export default function About() {
       <section className="h-120 w-full bg-white flex items-center justify-center">
         {TypewriterEffectDemo()}
       </section>
-      <section>
-        {Footer()}
-      </section>
    </>
   );
 }

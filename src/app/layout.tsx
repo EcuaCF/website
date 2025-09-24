@@ -3,6 +3,7 @@ import { Roboto_Flex
  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const bitcoin = Roboto_Flex
  ({
@@ -29,7 +30,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        
+        <Footer />
       </body>
     </html>
   );

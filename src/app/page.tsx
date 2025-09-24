@@ -8,6 +8,7 @@ import { HoverBorderGradient } from "@/components/ui/button-border";
 import TrustedBy from "@/components/Carrousel";
 import Clients from "@/components/Clients";
 import Footer from "@/components/Footer";
+import SectionSeparator from "@/components/SectionSeparator";
 
 export default function Home() {
   return (
@@ -49,9 +50,6 @@ export default function Home() {
       </section>
       <section className="h-120 w-full bg-white flex items-center justify-center">
         {TypewriterEffectDemo()}
-      </section>
-      <section>
-        {Footer()}
       </section>
     </div>
   );

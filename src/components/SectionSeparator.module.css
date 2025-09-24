@@ -1,0 +1,17 @@
+/* components/SectionSeparator.module.css */
+.separator {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  fill: var(--separator-color);
+}
+
+.separator.flip {
+  transform: rotate(180deg);
+}
+
+.lineSeparator {
+  height: 2px;
+  width: 100%;
+  margin: 2rem 0;
+}

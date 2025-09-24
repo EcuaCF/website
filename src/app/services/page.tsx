@@ -31,8 +31,8 @@ export default function Services(){
                     ] })}
                 </div>
             </section>
-            <section>
-                {Footer()}
+            <section className="w-full bg-white h-100">
+                <div>KNOW YOUR REQUIREMENTS</div>
             </section>
         </div>
     );

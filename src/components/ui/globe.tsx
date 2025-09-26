@@ -70,15 +70,15 @@ export function Globe({ globeConfig, data }: WorldProps) {
     atmosphereColor: "#ffffff",
     showAtmosphere: true,
     atmosphereAltitude: 0.1,
-    polygonColor: "rgba(255,255,255,0.7)",
-    globeColor: "#1d072e",
-    emissive: "#000000",
-    emissiveIntensity: 0.1,
+    polygonColor: "#000",
+    globeColor: "#000080",
+    emissive: "#000080",
+    emissiveIntensity: 0.9,
     shininess: 0.9,
     arcTime: 2000,
     arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
+    rings: 4,
+    maxRings: 6,
     ...globeConfig,
   };
 
@@ -270,7 +270,7 @@ export function World(props: WorldProps) {
         enableZoom={false}
         minDistance={cameraZ}
         maxDistance={cameraZ}
-        autoRotateSpeed={1}
+        autoRotateSpeed={2}
         autoRotate={true}
         minPolarAngle={Math.PI / 3.5}
         maxPolarAngle={Math.PI - Math.PI / 3}

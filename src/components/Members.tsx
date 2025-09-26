@@ -19,7 +19,7 @@ export function Members() {
     <div className="team-carousel-section">
       <SlideUp>
         <h1 className="team-section-title">Our Leadership Team</h1>
-        <p className="text-1xl text-black text-center mb-10">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
+        <p className="text-1xl text-black text-center mb-15 mt-7">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
       </SlideUp>
       <div className="team-carousel-container">
         <div className="team-carousel"> 

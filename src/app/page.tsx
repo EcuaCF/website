@@ -72,16 +72,13 @@ function SparklesPreview() {
             particleColor="#FFFFFF"
           />
         </div>
-        <SlideUp>
-          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          Custom AI Solutions for Global <br />Innovation
-          </h1>
-          <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-            Bridging Ecuador and the US with cutting-edge machine learning and artificial intelligence solutions tailored to transform your business operations.
-          </p>
-        </SlideUp>
-        
-          <div className="m-10 flex justify-center text-center">
+        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        Custom AI Solutions for Global <br />Innovation
+        </h1>
+        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+          Bridging Ecuador and the US with cutting-edge machine learning and artificial intelligence solutions tailored to transform your business operations.
+        </p>
+        <div className="m-10 flex justify-center text-center">
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
@@ -129,7 +126,7 @@ function TypewriterEffectDemo() {
   return (
     <div className="flex flex-col items-center justify-center h-[40rem] ">
       <SlideUp>
-        <p className="text-black text-base lg:text-4xl font-bold mb-10">
+        <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
           Ready to Transform Your Business?
         </p>
         <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">

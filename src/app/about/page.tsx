@@ -6,7 +6,7 @@ import Image from "next/image";
 import { LayoutGrid } from "@/components/ui/layout-grid";
 import Members from "@/components/Members";
 import Mission from "@/components/Mission";
-import Globe from "@/components/GlobalPresence";
+import { Globe } from "@/components/GlobalPresence";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import SlideUp from "@/components/SlideUp";
 
@@ -148,7 +148,7 @@ export function TimelineDemo() {
 
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full cursor-pointer bg-black">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -213,29 +213,29 @@ const cards = [
     id: 1,
     content: <SkeletonOne />,
     className: "md:col-span-2",
-    thumbnail:
-      "images/inno.jpg",
+    thumbnail: "images/inno.jpg",
+    title: "Innovation",
   },
   {
     id: 2,
     content: <SkeletonTwo />,
     className: "col-span-1",
-    thumbnail:
-      "images/inno.jpg",
+    thumbnail: "images/inno.jpg", 
+    title: "Collaboration",
   },
   {
     id: 3,
     content: <SkeletonThree />,
     className: "col-span-1",
-    thumbnail:
-      "images/inno.jpg",
+    thumbnail: "images/inno.jpg",
+    title: "Excellence",
   },
   {
     id: 4,
     content: <SkeletonFour />,
     className: "md:col-span-2",
-    thumbnail:
-      "images/inno.jpg",
+    thumbnail: "images/inno.jpg",
+    title: "Integrity",
   },
 ];
 
@@ -253,7 +253,7 @@ export default function About() {
         </BackgroundLines>
       </section>
       <TimelineDemo />
-      <section>
+      <section className="bg-black">
         <SlideUp>
           <h1 className="text-lg md:text-4xl text-black font-bold text-center mt-9">Our Core Values</h1>
           <p className="text-sm md:text-lg text-neutral-500 mt-6 text-center">The principles that guide our work and relationships</p>
@@ -310,7 +310,7 @@ function TypewriterEffectDemo() {
   return (
     <div className="flex flex-col items-center justify-center h-[40rem] ">
       <SlideUp>
-        <p className="text-black text-base lg:text-4xl font-bold mb-10">
+        <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
           Ready to Transform Your Business?
         </p>
         <p className="text-black text-base lg:text-1xl mb-10">

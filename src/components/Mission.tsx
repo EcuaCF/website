@@ -9,12 +9,12 @@ export default function MissionVision() {
         {/* Title */}
         <SlideUp>
           <h1 className="text-4xl font-bold text-black">Our Mission & Vision</h1>
-          <p className="mt-4 text-gray-600">
+          <p className="mt-7 mb-15 text-gray-600">
             Driving innovation through cross-border collaboration and cutting-edge technology
           </p>
         </SlideUp>
         {/* Boxes */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Mission */}
           <div className="p-8 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600">
             <h2 className="text-2xl font-semibold text-black">Our Mission</h2>

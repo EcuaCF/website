@@ -8,7 +8,7 @@ import Members from "@/components/Members";
 import Mission from "@/components/Mission";
 import Globe from "@/components/GlobalPresence";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
-import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp";
 
 export function TimelineDemo() {
   const data = [
@@ -17,7 +17,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">Foundation</h1>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
             Ecua Code Forge was founded in Quito, Ecuador by a team of experienced software engineers with a vision to connect Ecuadorian talent with international markets.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -44,7 +44,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">U.S.A. Expansion</h1>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
             Established a partnership with our first U.S. office and several insurance companies, beginning our cross-border operations.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -71,23 +71,23 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">AI Focus</h1>
-          <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
             Specializing in AI and machine learning solutions, developing our first proprietary algorithms for insurance underwriting and claims processing.
           </p>
           <div className="mb-8">
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+            <div className="text-s text-neutral-700 dark:text-neutral-500">
               ✅ Card grid component
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+            <div className="text-s text-neutral-700 dark:text-neutral-500">
               ✅ Startup template Aceternity
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+            <div className="text-s text-neutral-700 dark:text-neutral-500">
               ✅ Random file upload lol
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+            <div className="text-s text-neutral-700 dark:text-neutral-500">
               ✅ Himesh Reshammiya Music CD
             </div>
-            <div className="flex items-center gap-2 text-xs text-neutral-700 md:text-sm dark:text-neutral-300">
+            <div className="text-s text-neutral-700 dark:text-neutral-500">
               ✅ Salman Bhai Fan Club registrations open
             </div>
           </div>
@@ -115,7 +115,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">Today</h1>
-          <p className="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
             Currently serving clients across multiple industries with a team of specialists in AI, software development, and data science, with partnerships in Ecuador and the United States.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -148,7 +148,7 @@ export function TimelineDemo() {
 
 export function LayoutGridDemo() {
   return (
-    <div className="h-screen py-20 w-full">
+    <div className="h-screen w-full">
       <LayoutGrid cards={cards} />
     </div>
   );
@@ -254,8 +254,10 @@ export default function About() {
       </section>
       <TimelineDemo />
       <section>
-        <h1 className="text-center text-black font-bold text-lg">Our Core Values</h1>
-        <p className="text-center text-black text-9x1">The principles that guide our work and relationships</p>
+        <SlideUp>
+          <h1 className="text-lg md:text-4xl text-black font-bold text-center mt-9">Our Core Values</h1>
+          <p className="text-sm md:text-lg text-neutral-500 mt-6 text-center">The principles that guide our work and relationships</p>
+        </SlideUp>
         <LayoutGridDemo />
       </section>
       <section>
@@ -307,12 +309,14 @@ function TypewriterEffectDemo() {
   ];
   return (
     <div className="flex flex-col items-center justify-center h-[40rem] ">
-      <p className="text-black text-base lg:text-4xl font-bold mb-10">
-        Ready to Transform Your Business?
-      </p>
-      <p className="text-black text-base lg:text-1xl mb-10">
-        {"Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization."}
-      </p>
+      <SlideUp>
+        <p className="text-black text-base lg:text-4xl font-bold mb-10">
+          Ready to Transform Your Business?
+        </p>
+        <p className="text-black text-base lg:text-1xl mb-10">
+          {"Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization."}
+        </p>
+      </SlideUp>
       <TypewriterEffect words={words} />
       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
         <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">

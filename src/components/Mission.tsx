@@ -1,15 +1,18 @@
 "use client";
 
+import SlideUp from "./SlideUp";
+
 export default function MissionVision() {
   return (
     <section className="py-20 px-6 lg:px-20">
       <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
-        <h1 className="text-4xl font-bold text-black">Our Mission & Vision</h1>
-        <p className="mt-4 text-gray-600">
-          Driving innovation through cross-border collaboration and cutting-edge technology
-        </p>
-
+        <SlideUp>
+          <h1 className="text-4xl font-bold text-black">Our Mission & Vision</h1>
+          <p className="mt-4 text-gray-600">
+            Driving innovation through cross-border collaboration and cutting-edge technology
+          </p>
+        </SlideUp>
         {/* Boxes */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Mission */}

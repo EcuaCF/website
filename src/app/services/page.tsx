@@ -1,13 +1,16 @@
 "use client";
 
 import { AnimatedServices } from "@/components/ui/animated-services"
-import Footer from "@/components/Footer"
 import { div } from "motion/react-client";
 
 export default function Services(){
     return (
         <div>
             <section className="bg-black">
+                <div className="text-white flex flex-col items-center justify-center py-2 px-4 md:px-8 lg:px-12">
+                    <h1 className="lg:text-4xl font-bold py-8 text-white mt-28">Our Specialized Solutions</h1>
+                    <p>From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
+                </div>
                 <div className="flex items-center justify-center py-4">
                     {AnimatedServices({ services: [
                     { 
@@ -32,7 +35,7 @@ export default function Services(){
                 </div>
             </section>
             <section className="w-full bg-white h-100">
-                <div>KNOW YOUR REQUIREMENTS</div>
+                <div className="text-black text-center mt-10">KNOW YOUR REQUIREMENTS</div>
             </section>
         </div>
     );

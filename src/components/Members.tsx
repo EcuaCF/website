@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import CardPerson from "./CardPerson";
+import SlideUp from "./SlideUp";
 
 const teamMembers = [
   { id: 1, name: "Doménica Criollo", role: "Intern", image: "/images/dome.jpeg" },
@@ -16,8 +17,10 @@ const teamMembers = [
 export function Members() {
   return (
     <div className="team-carousel-section">
-      <h1 className="team-section-title">Our Leadership Team</h1>
-      <p className="text-1xl text-black text-center mb-10">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
+      <SlideUp>
+        <h1 className="team-section-title">Our Leadership Team</h1>
+        <p className="text-1xl text-black text-center mb-10">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
+      </SlideUp>
       <div className="team-carousel-container">
         <div className="team-carousel"> 
           {/* First set */}

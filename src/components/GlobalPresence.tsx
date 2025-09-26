@@ -1,4 +1,5 @@
 import { World, GlobeConfig, Position } from "@/components/ui/globe";
+import SlideUp from "./SlideUp";
 
 const sampleData: Position[] = [
   {
@@ -22,10 +23,12 @@ export default function Globe() {
   };
   return (
     <section className="w-full bg-white text-white">
+      <SlideUp>
         <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl font-bold text-black">Our Global Presence</h1>
             <p className="mt-4 text-gray-600">Bridging talent and innovation across the Americas</p>
         </div>
+      </SlideUp>
         <div className="px-2 md:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 mt-2 mb-3">
             
             {/* Column 1 - Globe */}

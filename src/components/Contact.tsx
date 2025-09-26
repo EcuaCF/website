@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import SlideUp from './SlideUp';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -31,10 +32,12 @@ const ContactUs = () => {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {/* Header Section */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
-        <p className="text-lg text-gray-800 max-w-2xl mx-auto">
-          Fill out the form below and our team will get back to you as soon as possible.
-        </p>
+        <SlideUp>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+            Fill out the form below and our team will get back to you as soon as possible.
+          </p>
+        </SlideUp>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8">
@@ -149,37 +152,38 @@ const ContactUs = () => {
             </button>
           </form>
         </div>
+        <SlideUp>
+          {/* Right Column - Info Boxes */}
+          <div className="space-y-6">
+            {/* Office Location Box */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+              <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
+              <p className="text-gray-600">
+                Edificio SOHO Galaxy<br />
+                Av. Eloy Alfaro N-33-55 y Suiza Oficina 202<br />
+                Quito, Ecuador 170518
+              </p>
+            </div>
 
-        {/* Right Column - Info Boxes */}
-        <div className="space-y-6">
-          {/* Office Location Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
-            <p className="text-gray-600">
-              Edificio SOHO Galaxy<br />
-              Av. Eloy Alfaro N-33-55 y Suiza Oficina 202<br />
-              Quito, Ecuador 170518
-            </p>
-          </div>
+            {/* Contact Information Box */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+              <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
+              <p className="text-gray-600">
+                <strong>Email:</strong> sales@ecuacf.comm<br />
+                <strong>Phone:</strong> +59 (399) 885-2466
+              </p>
+            </div>
 
-          {/* Contact Information Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
-            <p className="text-gray-600">
-              <strong>Email:</strong> sales@ecuacf.comm<br />
-              <strong>Phone:</strong> +59 (399) 885-2466
-            </p>
+            {/* Business Hours Box */}
+            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+              <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
+              <p className="text-gray-600">
+                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (ECT)<br />
+                <strong>Saturday - Sunday:</strong> Closed
+              </p>
+            </div>
           </div>
-
-          {/* Business Hours Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
-            <p className="text-gray-600">
-              <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (ECT)<br />
-              <strong>Saturday - Sunday:</strong> Closed
-            </p>
-          </div>
-        </div>
+        </SlideUp>
       </div>
     </div>
   );

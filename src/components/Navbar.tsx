@@ -40,7 +40,7 @@ const Navbar = () => {
     ]
 
     return (
-        <nav className={`fixed w-full bg-white/[.35] shadow-md transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+        <nav className={`fixed w-full bg-white shadow-md transition-transform duration-300 z-50 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-20">
                     <div className="flex items-center">
@@ -53,7 +53,7 @@ const Navbar = () => {
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className={`text-black hover:text-blue-700 px-3 py-2 rounded-md text-md font-semibold transition-colors ${pathname === link.href ? "text-blue-600" : ''}`}>
+                                className={`text-black hover:text-blue-500 px-3 py-2 rounded-md text-md font-semibold transition-colors ${pathname === link.href ? "text-blue-600" : ''}`}>
                                     {link.label}
                                 </Link>
                         ))}

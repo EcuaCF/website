@@ -139,7 +139,7 @@ export function TimelineDemo() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div className="relative w-full overflow-clip bg-white">
       <Timeline data={data} />
     </div>
   );
@@ -241,38 +241,53 @@ const cards = [
 
 export default function About() {
   return (
-    <>
-      <section>
-        <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
-        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          This is <br /> Our Story.
-        </h2>
-        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
-          Ecua Code Forge S.A.S is a pioneering software development company bridging talent and innovation between Ecuador and the United States, specializing in AI-driven solutions for global businesses.
-        </p>
-        </BackgroundLines>
-      </section>
-      <TimelineDemo />
-      <section className="bg-black">
-        <SlideUp>
-          <h1 className="text-lg md:text-4xl text-black font-bold text-center mt-9">Our Core Values</h1>
-          <p className="text-sm md:text-lg text-neutral-500 mt-6 text-center">The principles that guide our work and relationships</p>
-        </SlideUp>
-        <LayoutGridDemo />
-      </section>
-      <section>
-        {Members()}
-      </section>
-      <section>
-        {Mission()}
-      </section>
-      <section>
-        {Globe()}
-      </section>
-      <section className="h-120 w-full bg-white flex items-center justify-center">
-        {TypewriterEffectDemo()}
-      </section>
-   </>
+    <div className="relative">
+      <main className="flex-grow w-full">
+        <section className="w-full relative min-h-screen overflow-hidden">
+          <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 h-full absolute inset-0">
+            <div className="relative z-10">
+              <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 font-bold tracking-tight">
+                This is <br /> Our Story.
+              </h2>
+              <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+                Ecua Code Forge S.A.S is a pioneering software development company bridging talent and innovation between Ecuador and the United States, specializing in AI-driven solutions for global businesses.
+              </p>
+            </div>
+          </BackgroundLines>
+        </section>
+        
+        <section className="w-full bg-white">
+          <TimelineDemo />
+        </section>
+        
+        <section className="w-full bg-black">
+          <SlideUp>
+            <h1 className="text-lg md:text-4xl pt-18 text-white font-bold text-center">Our Core Values</h1>
+            <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">The principles that guide our work and relationships</p>
+          </SlideUp>
+          <LayoutGridDemo />
+        </section>
+        <section className="w-full bg-white">
+          {Members()}
+        </section>
+        
+        <section className="w-full bg-white">
+          {Mission()}
+        </section>
+        
+        <section className="w-full bg-white">
+          {Globe()}
+        </section>
+        
+        <section className="w-full bg-white">
+          <div className="h-120 w-full flex items-center justify-center">
+            {TypewriterEffectDemo()}
+          </div>
+        </section>
+        <section className="relative z-0">
+        </section>
+      </main>
+    </div>
   );
 }
 
@@ -307,25 +322,25 @@ function TypewriterEffectDemo() {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
-  return (
-    <div className="flex flex-col items-center justify-center h-[40rem] ">
-      <SlideUp>
-        <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
-          Ready to Transform Your Business?
-        </p>
-        <p className="text-black text-base lg:text-1xl mb-10">
-          {"Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization."}
-        </p>
-      </SlideUp>
-      <TypewriterEffect words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
-        <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
-          Join now
-        </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
-        </button>
-      </div>
-    </div>
-  );
+ return (
+     <div className="flex flex-col items-center justify-center h-[30rem] ">
+       <SlideUp>
+         <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
+           Ready to Transform Your Business?
+         </p>
+         <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">
+           {"Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization."}
+         </p>
+       </SlideUp>
+         <TypewriterEffect words={words} />
+       <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
+         <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm cursor-pointer">
+           Join now
+         </button>
+         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer">
+           Signup
+         </button>
+       </div>
+     </div>
+   );
 }

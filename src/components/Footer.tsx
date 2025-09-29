@@ -26,10 +26,9 @@ export default function Footer() {
   };
 
   return (
-    <section className="w-full bg-black">
-      <SectionSeparator />
-      <footer className="w-full bg-black text-white relative py-15">
-        <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-10 mt-2 mb-3">
+    <footer className="fixed bottom-0 left-0 w-full bg-black text-white z-10 h-screen flex items-end">
+      <div className="w-full">
+        <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-10 py-15">
           {/* Column 1 - Globe */}
           <div className="h-60">
             <World globeConfig={globeConfig} data={sampleData} />
@@ -79,10 +78,10 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-center text-gray-400 mt-5 text-sm">
+        <p className="text-center text-gray-400 mt-5 text-sm pb-5">
           © 2025 Ecua Code Forge S.A.S. All rights reserved.
         </p>
-      </footer>
-    </section>
+      </div>
+    </footer>
   );
 }

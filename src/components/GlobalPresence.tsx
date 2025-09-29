@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
+import SlideUp from "./SlideUp";
  
 const World = dynamic(() => import("../components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -404,12 +405,14 @@ export function Globe() {
         transition={{ duration: 1 }}
         className="mb-10"
       >
-        <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-          Our Global Presence
-        </h2>
-        <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mx-auto mt-7">
-          Bridging talent and innovation across the Americas
-        </p>
+        <SlideUp>
+          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+            Our Global Presence
+          </h2>
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
+            Bridging talent and innovation across the Americas
+          </p>
+        </SlideUp>
       </motion.div>
 
       {/* Two columns layout */}

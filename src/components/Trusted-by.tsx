@@ -25,7 +25,7 @@ export default function TrustedBy() {
   }, []);
 
   return (
-    <section className="relative w-full py-10 bg-white mt-12 mb-10">
+    <section className="relative w-full py-10 bg-white">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <SlideUp>
           <h1 className="text-3xl font-bold text-black md:text-4xl mb-10">

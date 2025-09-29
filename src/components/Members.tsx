@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import CardPerson from "./CardPerson";
 import SlideUp from "./SlideUp";
 
@@ -16,10 +15,10 @@ const teamMembers = [
 
 export function Members() {
   return (
-    <div className="team-carousel-section">
+    <div className="team-carousel-section pt-0">
       <SlideUp>
-        <h1 className="team-section-title">Our Leadership Team</h1>
-        <p className="text-1xl text-black text-center mb-15 mt-7">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
+        <h1 className="team-section-title pt-15">Our Leadership Team</h1>
+        <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
       </SlideUp>
       <div className="team-carousel-container">
         <div className="team-carousel"> 

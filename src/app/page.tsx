@@ -5,26 +5,29 @@ import React from "react";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import { AnimatedServices } from "@/components/ui/animated-services";
 import { HoverBorderGradient } from "@/components/ui/button-border";
-import TrustedBy from "@/components/Carrousel";
+import TrustedBy from "@/components/Trusted-by";
 import Clients from "@/components/Clients";
-import SectionSeparator from "@/components/SectionSeparator";
 import SlideUp from "@/components/SlideUp";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-      <section className="w-full bg-black flex items-center justify-center">
+    <div className="relative">
+      <section className="w-full bg-black flex items-center justify-center relative z-20">
         {SparklesPreview()}
       </section>
+      
+      <section className="relative z-20 bg-white">
         {TrustedBy()}
-      <section className="w-full bg-black">
+      </section>
+      
+      <section className="w-full bg-black relative z-20 pb-15 pt-20">
         <SlideUp>
-          <div className="text-white flex flex-col items-center justify-center py-2 px-4 md:px-8 lg:px-12 mt-10">
-              <h1 className="lg:text-4xl font-bold py-8">Our Specialized Solutions</h1>
-              <p className="mx-auto mt-4 text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
+          <div className="text-white flex flex-col items-center justify-center md:px-8 lg:px-12">
+            <h1 className="lg:text-4xl font-bold">Our Specialized Solutions</h1>
+            <p className="mx-auto mt-4 text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
           </div>
         </SlideUp>
-        <div className="flex items-center justify-center py-4 mb-8">
+        <div className="flex items-center justify-center">
           {AnimatedServices({ services: [
             { 
               name: "AI & ML Solutions", 
@@ -47,10 +50,11 @@ export default function Home() {
           ] })}
         </div>
       </section>
-      <section>
+      
+      <section className="relative z-20">
         {Clients()}
       </section>
-      <section className="h-120 w-full bg-white flex items-center justify-center">
+      <section className="relative z-20 bg-white">
         {TypewriterEffectDemo()}
       </section>
     </div>
@@ -123,8 +127,9 @@ function TypewriterEffectDemo() {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
+  
   return (
-    <div className="flex flex-col items-center justify-center h-[40rem] ">
+    <div className="flex flex-col items-center justify-center h-[30rem] ">
       <SlideUp>
         <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
           Ready to Transform Your Business?

@@ -9,7 +9,7 @@ export default function MissionVision() {
         {/* Title */}
         <SlideUp>
           <h1 className="text-4xl font-bold text-black">Our Mission & Vision</h1>
-          <p className="mt-7 mb-15 text-gray-600">
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
             Driving innovation through cross-border collaboration and cutting-edge technology
           </p>
         </SlideUp>

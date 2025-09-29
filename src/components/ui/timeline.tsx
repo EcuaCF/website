@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <SlideUp>
-          <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl font-bold">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
             Our Journey
           </h2>
           <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 mt-6">

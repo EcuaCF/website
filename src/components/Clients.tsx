@@ -79,7 +79,7 @@ export default function Clients() {
       {/* Title */}
       <div className="relative z-10 text-center py-16 px-4">
         <SlideUp>
-          <h1 className="text-4xl font-bold text-white mb-10">
+          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
             What our customers say
           </h1>
           <p className="mx-auto text-sm md:text-lg text-white dark:text-neutral-400 text-center">

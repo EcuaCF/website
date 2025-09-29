@@ -6,7 +6,7 @@ import ContactUs from "@/components/Contact";
 import SlideUp from "@/components/SlideUp";
 
 export function FlipWordsDemo() {
-  const words = ["better", "cute", "beautiful", "modern"];
+  const words = ["better", "professional", "interesting", "efficient", "responsive", "inspiring", "modern", "creative"];
 
   return (
     <div className="h-[40rem] flex justify-center items-center px-4">
@@ -32,7 +32,7 @@ export default function Contact (){
         <section className="bg-black">
             {FlipWordsDemo()}
         </section>
-        <section>
+        <section className="bg-white">
             {ContactUs()}
         </section>
     </div>

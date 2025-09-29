@@ -181,3 +181,40 @@ body {
     font-size: 0.8rem;
   }
 }
+
+/*FLOATING BUTTON*/
+/* Add this to your global CSS */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.water-fill {
+  transition: all 0.3s ease;
+}
+
+.btn:hover .water-fill {
+  opacity: 0.3 !important;
+}
+
+.fab-flower {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.fab-main-action {
+  z-index: 100;
+}
+
+/* Ensure good click area */
+.btn {
+  cursor: pointer !important;
+}

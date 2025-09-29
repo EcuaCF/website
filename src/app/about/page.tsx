@@ -262,7 +262,7 @@ export default function About() {
         
         <section className="w-full bg-black">
           <SlideUp>
-            <h1 className="text-lg md:text-4xl pt-18 text-white font-bold text-center">Our Core Values</h1>
+            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">Our Core Values</h1>
             <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">The principles that guide our work and relationships</p>
           </SlideUp>
           <LayoutGridDemo />
@@ -325,7 +325,7 @@ function TypewriterEffectDemo() {
  return (
      <div className="flex flex-col items-center justify-center h-[30rem] ">
        <SlideUp>
-         <p className="text-black text-base lg:text-4xl font-bold mb-10 text-center">
+         <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
            Ready to Transform Your Business?
          </p>
          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">

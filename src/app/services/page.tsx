@@ -4,6 +4,7 @@ import SlideUp from "@/components/SlideUp";
 import { AnimatedServices } from "@/components/ui/animated-services"
 import React from "react";
 import { HeroParallax } from "@/components/ui/parallax";
+import WhyChooseUs from "@/components/choose-us";
 
 export default function Services(){
     return (
@@ -14,7 +15,7 @@ export default function Services(){
             <section className="bg-black">
                 <SlideUp>
                     <div className="text-white flex flex-col items-center justify-center">
-                        <h1 className="lg:text-4xl font-bold text-white">Our Specialized Solutions</h1>
+                        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl relative z-20 font-bold tracking-tight pt-25">Our Specialized Solutions</h1>
                         <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
                     </div>
                 </SlideUp>
@@ -40,6 +41,9 @@ export default function Services(){
                     }
                     ] })}
                 </div>
+            </section>
+            <section>
+                {WhyChooseUs()}
             </section>
             <section className="w-full bg-white h-100">
                 <div className="text-black text-center">KNOW YOUR REQUIREMENTS</div>

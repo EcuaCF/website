@@ -28,7 +28,7 @@ export default function TrustedBy() {
     <section className="relative w-full py-10 bg-white">
       <div className="mx-auto max-w-6xl px-6 text-center">
         <SlideUp>
-          <h1 className="text-3xl font-bold text-black md:text-4xl mb-10">
+          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
           Trusted by Industry Leaders
           </h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">

@@ -2,7 +2,7 @@
 
 import { World, GlobeConfig, Position } from "@/components/ui/globe";
 import ReactCountryFlag from "react-country-flag";
-import SectionSeparator from "./SectionSeparator";
+import FloatingActionButton from "./Floating-button";
 
 const sampleData: Position[] = [
   {
@@ -31,6 +31,7 @@ export default function Footer() {
         <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-10 py-15">
           {/* Column 1 - Globe */}
           <div className="h-60">
+            
             <World globeConfig={globeConfig} data={sampleData} />
           </div>
 
@@ -74,6 +75,10 @@ export default function Footer() {
             <p>Quito, Ecuador 170518</p>
             <p>Email: <a href="mailto:sales@ecuacf.com" className="underline">sales@ecuacf.com</a></p>
             <p>Phone: +59 (399) 885-2466</p>
+          </div>
+
+          <div>
+            {FloatingActionButton()}
           </div>
         </div>
 

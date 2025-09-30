@@ -25,12 +25,14 @@ export function FlipWordsDemo() {
   );
 }
 
-
 export default function Contact (){
     return (
     <div>
         <section className="bg-black">
             {FlipWordsDemo()}
+        </section>
+        <section className="bg-white">
+            
         </section>
         <section className="bg-white">
             {ContactUs()}

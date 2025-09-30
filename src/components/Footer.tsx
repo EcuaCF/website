@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-black text-white z-10 h-screen flex items-end">
       <div className="w-full">
-        <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-10 py-15">
+        <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-15">
           {/* Column 1 - Globe */}
           <div className="h-50 pl-13">
             {Card()}
@@ -29,11 +29,11 @@ export default function Footer() {
           {/* Column 3 - Quick Links */}
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold mb-3">Quick Links</h1>
-            <a href="#" className="hover:text-gray-400 transition">Home</a>
-            <a href="/about" className="hover:text-gray-400 transition">About Us</a>
-            <a href="/services" className="hover:text-gray-400 transition">Services</a>
-            <a href="/white-papers" className="hover:text-gray-400 transition">White Papers</a>
-            <a href="/contact" className="hover:text-gray-400 transition">Contact Us</a>
+            <a href="#" className="hover:text-gray-400 transition link link-animated">Home</a>
+            <a href="/about" className="hover:text-gray-400 transition link link-animated">About Us</a>
+            <a href="/services" className="hover:text-gray-400 transition link link-animated">Services</a>
+            <a href="/white-papers" className="hover:text-gray-400 transition link link-animated">White Papers</a>
+            <a href="/contact" className="hover:text-gray-400 transition link link-animated">Contact Us</a>
           </div>
 
           {/* Column 4 - Services */}
@@ -52,7 +52,7 @@ export default function Footer() {
             <p>Edificio SOHO Galaxy</p>
             <p>Av. Eloy Alfaro N-33-55 y Suiza Oficina 202</p>
             <p>Quito, Ecuador 170518</p>
-            <p>Email: <a href="mailto:sales@ecuacf.com" className="underline">sales@ecuacf.com</a></p>
+            <p>Email: <a href="mailto:sales@ecuacf.com" className="link link-animated">sales@ecuacf.com</a></p>
             <p>Phone: +59 (399) 885-2466</p>
           </div>
 

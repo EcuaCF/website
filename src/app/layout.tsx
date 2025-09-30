@@ -27,7 +27,7 @@ export default function RootLayout({
         <div className="relative z-20">
           {children}
           <SectionSeparator></SectionSeparator>
-          <section className="h-95 bg-transparent"></section>
+          <section className="h-86 bg-transparent"></section>
         </div>
         <Footer />
       </body>

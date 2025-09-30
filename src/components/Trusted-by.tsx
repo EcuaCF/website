@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import SlideUp from "./SlideUp";
+import { TrustedIcon } from "./trusted-icon";
 
 const logos = [
   "/images/IA.jpg",
@@ -26,6 +27,7 @@ export default function TrustedBy() {
 
   return (
     <section className="relative w-full py-10 bg-white">
+
       <div className="mx-auto max-w-6xl px-6 text-center">
         <SlideUp>
           <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
@@ -35,7 +37,11 @@ export default function TrustedBy() {
             Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.
           </p>
         </SlideUp>
-        
+        <SlideUp>
+          <div className="justify-items-center mt-10">
+            {TrustedIcon()}
+          </div>
+        </SlideUp>
       </div>
 
       <div className="relative mt-10 w-full overflow-hidden">

@@ -4,6 +4,9 @@ import React from "react";
 import { FlipWords } from "@/components/ui/flip-words";
 import ContactUs from "@/components/Contact";
 import SlideUp from "@/components/SlideUp";
+import { Canvas } from "@react-three/fiber"
+import { OrbitControls } from "@react-three/drei"
+import { ParticleSphere } from "@/components/sphere"
 
 export function FlipWordsDemo() {
   const words = ["better", "professional", "interesting", "efficient", "responsive", "inspiring", "modern", "creative"];
@@ -27,7 +30,23 @@ export function FlipWordsDemo() {
 
 export default function Contact (){
     return (
-    <div>
+        <div>
+            <div className="w-full h-screen bg-black relative">
+                <div className="absolute top-20 left-0 right-0 z-10 p-6">
+                    <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 mt-20 font-bold tracking-tight">
+                        Do you want to know more? <br />
+                        Contact Us
+                    </h1>
+                </div>
+
+                <Canvas camera={{ position: [-10, 1.5, 10], fov: 50 }}>
+                    <ambientLight intensity={0.5} />
+                    <pointLight position={[10, 10, 10]} intensity={1} />
+                    <ParticleSphere />
+                    <OrbitControls enablePan={true} enableZoom={false} enableRotate={true} />
+                </Canvas>
+            </div>
+        <div>
         <section className="bg-black">
             {FlipWordsDemo()}
         </section>
@@ -38,5 +57,7 @@ export default function Contact (){
             {ContactUs()}
         </section>
     </div>
+        </div>
+        
     );
 }

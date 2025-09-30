@@ -45,9 +45,6 @@ export default function Services(){
             <section>
                 {WhyChooseUs()}
             </section>
-            <section className="w-full bg-white h-100">
-                <div className="text-black text-center">KNOW YOUR REQUIREMENTS</div>
-            </section>
         </div>
     );
 }

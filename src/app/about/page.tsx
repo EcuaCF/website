@@ -3,12 +3,12 @@ import { BackgroundLines } from "@/components/ui/background-lines";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline"; 
 import Image from "next/image";
-import { LayoutGrid } from "@/components/ui/layout-grid";
 import Members from "@/components/Members";
 import Mission from "@/components/Mission";
 import { Globe } from "@/components/GlobalPresence";
 import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import SlideUp from "@/components/SlideUp";
+import OurValues from "@/components/Values";
 
 export function TimelineDemo() {
   const data = [
@@ -144,101 +144,7 @@ export function TimelineDemo() {
     </div>
   );
 }
-
-
-export function LayoutGridDemo() {
-  return (
-    <div className="h-screen w-full cursor-pointer bg-black">
-      <LayoutGrid cards={cards} />
-    </div>
-  );
-}
  
-const SkeletonOne = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Innovation
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        We constantly push boundaries and explore new technologies to deliver cutting-edge solutions that give our clients a competitive edge.
-      </p>
-    </div>
-  );
-};
- 
-const SkeletonTwo = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Cross-Border Collaboration
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        We believe in the power of diverse perspectives and international collaboration to solve complex problems and drive innovation.
-      </p>
-    </div>
-  );
-};
-const SkeletonThree = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Technical Excellence
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        We are committed to the highest standards of technical quality, continuously improving our skills and knowledge to deliver exceptional results.
-      </p>
-    </div>
-  );
-};
-const SkeletonFour = () => {
-  return (
-    <div>
-      <p className="font-bold md:text-4xl text-xl text-white">
-        Integrity
-      </p>
-      <p className="font-normal text-base text-white"></p>
-      <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-        We operate with transparency, honesty, and ethical practices in all our business relationships and technical implementations.
-      </p>
-    </div>
-  );
-};
- 
-const cards = [
-  {
-    id: 1,
-    content: <SkeletonOne />,
-    className: "md:col-span-2",
-    thumbnail: "images/inno.jpg",
-    title: "Innovation",
-  },
-  {
-    id: 2,
-    content: <SkeletonTwo />,
-    className: "col-span-1",
-    thumbnail: "images/inno.jpg", 
-    title: "Collaboration",
-  },
-  {
-    id: 3,
-    content: <SkeletonThree />,
-    className: "col-span-1",
-    thumbnail: "images/inno.jpg",
-    title: "Excellence",
-  },
-  {
-    id: 4,
-    content: <SkeletonFour />,
-    className: "md:col-span-2",
-    thumbnail: "images/inno.jpg",
-    title: "Integrity",
-  },
-];
-
 export default function About() {
   return (
     <div className="relative">
@@ -261,11 +167,7 @@ export default function About() {
         </section>
         
         <section className="w-full bg-black">
-          <SlideUp>
-            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">Our Core Values</h1>
-            <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">The principles that guide our work and relationships</p>
-          </SlideUp>
-          <LayoutGridDemo />
+            {OurValues()}
         </section>
         <section className="w-full bg-white">
           {Members()}

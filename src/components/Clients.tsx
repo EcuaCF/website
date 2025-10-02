@@ -20,7 +20,7 @@ type Testimonial = {
 export default function Clients() {
     const {language} = useLanguage();
     const text = {
-      title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de nuestros clientes',
+      title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de Nuestros Clientes',
       paragraph: language === 'EN' ? 'Discover how our solutions have transformed businesses and enhanced operational efficiency.' : 'Descubre cómo nuestras soluciones han transformado negocios y mejorado la eficiencia operativa.',
       testimonial1: language === 'EN' ? 'Their AI solutions transformed our workflow and boosted efficiency beyond expectations!' : '¡Sus soluciones de IA transformaron nuestro flujo de trabajo e impulsaron la eficiencia más allá de las expectativas!',
       testimonial2: language === 'EN' ? 'Professional, reliable, and innovative. Highly recommend!' : 'Profesionales, confiables e innovadores. ¡Altamente recomendados!',

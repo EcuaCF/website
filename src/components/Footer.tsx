@@ -106,8 +106,21 @@ function FloatingActionButton() {
 export default function Footer() {
   const {language} = useLanguage();
   const text = {
-    title: language === 'EN' ? 'Trusted by Industry Leaders' : 'Con la Confianza de Líderes de la Industria',
-    paragraph: language === 'EN' ? 'Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.' : 'Nuestras soluciones están impulsando la innovación en las principales empresas a nivel mundial. Nos hemos asociado con compañías con visión de futuro en Ecuador y Estados Unidos para ofrecer soluciones digitales transformadoras.',
+    paragraph: language === 'EN' ? 'Pioneering AI and software solutions that bridge international markets and drive business transformation.' : 'Soluciones pioneras de IA y software que conectan mercados internacionales e impulsan la transformación empresarial.',
+    quick: language === 'EN' ? 'Quick Links' : 'Enlaces Rápidos',
+    home: language === 'EN' ? 'Home' : 'Inicio',
+    about: language === 'EN' ? 'About Us' : 'Nosotros',
+    service: language === 'EN' ? 'Services' : 'Servicios',
+    contact: language === 'EN' ? 'Contact Us' : 'Contacto',
+    services: language === 'EN' ? 'Services' : 'Servicios',
+    ai: language === 'EN' ? 'AI, Machine Learning and Software Development' : 'IA, Aprendizaje Automático y Desarrollo de Software',
+    data: language === 'EN' ? 'Data Collection and Document Management' : 'Recolección de Datos y Gestión Documental',
+    insurance: language === 'EN' ? 'Insurance Technology and Technical Support' : 'Tecnología para Seguros y Soporte Técnico',
+    training: language === 'EN' ? 'Training on Software' : 'Capacitación en Software',
+    contactUs: language === 'EN' ? 'Contact Us' : 'Contáctanos ',
+    mail: language === 'EN' ? 'Email' : 'Correo Electrónico',
+    phone: language === 'EN' ? 'Phone' : 'Teléfono',
+    rights: language === 'EN' ? '© 2025 Ecua Code Forge S.A.S. All rights reserved.' : '© 2025 Ecua Code Forge S.A.S. Todos los derechos reservados.',
   }
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-black text-white z-10 h-screen flex items-end">
@@ -122,7 +135,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h1 className="text-xl font-bold mb-3">Ecua Code Forge S.A.S</h1>
             <p className="text-gray-300">
-              Pioneering AI and software solutions that bridge international markets and drive business transformation.
+              {text.paragraph}
             </p>
             <div className="flex gap-3 mt-2">
               <ReactCountryFlag countryCode="EC" svg style={{ width: '24px', height: '24px' }} />
@@ -132,30 +145,30 @@ export default function Footer() {
 
           {/* Column 3 - Quick Links */}
           <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">Quick Links</h1>
-            <a href="#" className="hover:text-gray-400 text-gray-300 transition link link-animated">Home</a>
-            <a href="/about" className="hover:text-gray-400 text-gray-300 transition link link-animated">About Us</a>
-            <a href="/services" className="hover:text-gray-400 text-gray-300 transition link link-animated">Services</a>
-            <a href="/contact" className="hover:text-gray-400 text-gray-300 transition link link-animated">Contact Us</a>
+            <h1 className="text-xl font-bold mb-3">{text.quick}</h1>
+            <a href="#" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.home}</a>
+            <a href="/about" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.about}</a>
+            <a href="/services" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.service}</a>
+            <a href="/contact" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.contact}</a>
           </div>
 
           {/* Column 4 - Services */}
           <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">Services</h1>
-            <span className="text-gray-300">AI, Machine Learning and Software Development</span>
-            <span className="text-gray-300">Data Collection and Document Management</span>
-            <span className="text-gray-300">Insurance Technology and Technical Support</span>
-            <span className="text-gray-300">Training on Software</span>
+            <h1 className="text-xl font-bold mb-3">{text.services}</h1>
+            <span className="text-gray-300">{text.ai}</span>
+            <span className="text-gray-300">{text.data}</span>
+            <span className="text-gray-300">{text.insurance}</span>
+            <span className="text-gray-300">{text.training}</span>
           </div>
 
           {/* Column 5 - Contact */}
           <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">Contact Us</h1>
+            <h1 className="text-xl font-bold mb-3">{text.contactUs}</h1>
             <p className="text-gray-300">Edificio SOHO Galaxy</p>
             <p className="text-gray-300">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
             <p className="text-gray-300">Quito, Ecuador 170518</p>
-            <p className="text-gray-300">Email: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
-            <p className="text-gray-300">Phone: <a href="tel:+593998852466" className="link link-animated">+593 99 885 2466</a></p>
+            <p className="text-gray-300">{text.mail}: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
+            <p className="text-gray-300">{text.phone}: <a href="tel:+593998852466" className="link link-animated">+593 99 885 2466</a></p>
           </div>
 
           <div>
@@ -165,7 +178,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-gray-400 mt-5 text-sm pb-5">
-          © 2025 Ecua Code Forge S.A.S. All rights reserved.
+          {text.rights}
         </p>
       </div>
     </footer>

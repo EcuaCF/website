@@ -149,7 +149,7 @@ export default function Footer() {
             <p className="text-gray-300">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
             <p className="text-gray-300">Quito, Ecuador 170518</p>
             <p className="text-gray-300">Email: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
-            <p className="text-gray-300">Phone: +593 99 885 2466</p>
+            <p className="text-gray-300">Phone: <a href="tel:+593998852466" className="link link-animated">+593 99 885 2466</a></p>
           </div>
 
           <div>

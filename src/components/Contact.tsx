@@ -29,7 +29,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-8 bg-white">
+    <div className="mx-auto px-4 py-8 bg-white">
       {/* Header Section */}
       <div className="text-center mb-12">
         <SlideUp>
@@ -40,9 +40,9 @@ const ContactUs = () => {
         </SlideUp>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="flex items-center align-center justify-center gap-20 md:flex-row flex-col">
         {/* Left Column - Form */}
-        <div className="md:col-span-2">
+        <div className="w-[30%]">
           <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6">
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
@@ -146,7 +146,7 @@ const ContactUs = () => {
 
             <button
               type="submit"
-              className="w-1/4 bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
+              className="bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
             >
               Send Message
             </button>
@@ -154,8 +154,14 @@ const ContactUs = () => {
         </div>
           {/* Right Column - Info Boxes */}
         <div className="space-y-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7968382323184!2d-78.48349202417796!3d-0.18801813541363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a79557d52c3%3A0xa496f4af631f2ae5!2sEdificio%20Soho%20Galaxy!5e0!3m2!1ses-419!2sec!4v1759419615513!5m2!1ses-419!2sec" width="600" height="450" style={{border: "0", borderRadius: '30px'}} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-8 items-center align-center pt-12 pb-12">
+        <div className="space-y-6 flex flex-row md:col-span-3 justify-evenly">
           {/* Office Location Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
             <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
             <p className="text-gray-600">
               Edificio SOHO Galaxy<br />
@@ -165,7 +171,7 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Information Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
             <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
             <p className="text-gray-600">
               <strong>Email:</strong> lgarzon@ecuacf.com<br />
@@ -174,7 +180,7 @@ const ContactUs = () => {
           </div>
 
           {/* Business Hours Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
             <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
             <p className="text-gray-600">
               <strong>Monday - Friday:</strong> 8:30 AM - 5:30 PM (ECT)<br />

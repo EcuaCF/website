@@ -55,9 +55,9 @@ const WhyChooseUs = () => {
       <div className="container mx-auto px-4">
         {/* Header Section */}
         <SlideUp>
-          <div className="text-center mb-16">
+          <div className="text-center mb-5">
             <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">Why Choose Us</h2>
-            <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">
+            <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center">
               Faster, safer, and more personalized solutions for your needs.
             </p>
           </div>

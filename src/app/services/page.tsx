@@ -15,7 +15,7 @@ export default function Services(){
             <section className="bg-black">
                 <SlideUp>
                     <div className="text-white flex flex-col items-center justify-center">
-                        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl relative z-20 font-bold tracking-tight pt-25">Our Specialized Solutions</h1>
+                        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl relative z-20 font-bold tracking-tight">Our Specialized Solutions</h1>
                         <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">From custom software development to advanced AI implementation, we deliver tailored solutions to meet your unique business challenges.</p>
                     </div>
                 </SlideUp>

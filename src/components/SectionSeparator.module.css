@@ -4,6 +4,7 @@
   width: 100%;
   line-height: 0;
   fill: var(--separator-color);
+  margin-bottom: 310px;
 }
 
 .separator.flip {

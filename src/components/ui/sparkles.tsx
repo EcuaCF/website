@@ -45,7 +45,7 @@ export const SparklesCore = (props: ParticlesProps) => {
       controls.start({
         opacity: 1,
         transition: {
-          duration: 1,
+          duration: 2,
         },
       });
     }
@@ -355,7 +355,7 @@ export const SparklesCore = (props: ParticlesProps) => {
                 },
               },
               life: {
-                count: 0,
+                count: 1,
                 delay: {
                   value: 0,
                   sync: false,

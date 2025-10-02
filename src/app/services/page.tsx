@@ -22,22 +22,46 @@ export default function Services(){
                 <div className="flex items-center justify-center">
                     {AnimatedServices({ services: [
                     { 
-                        name: "AI & ML Solutions", 
-                        description: "Leverage our expertise in artificial intelligence and machine learning to automate processes, gain insights from data, and make smarter business decisions.",
-                        subtitle: "You should add a subtitle here",
-                        src: "/images/Artificial-intelligence.jpg"
+                      name: "AI & ML Solutions", 
+                      description: "Process automation powered by AI, combined with advanced data analysis and predictive modeling, enables organizations to make faster decisions. By leveraging specialized technological equipment designed for AI, businesses can optimize strategies, ultimately driving efficiency, innovation, and sustainable growth.",
+                      subtitle: "Smarter decisions through automation",
+                      src: "/images/solutions/AI-solutions.jpg"
                     },
                     { 
-                        name: "Custom Software Development", 
-                        description: "From concept to deployment, our team of expert developers builds tailor-made software solutions that address your specific business requirements.",
-                        subtitle: "You should add a subtitle here",
-                        src: "/images/Coding.jpeg"
+                      name: "Custom Software Development", 
+                      description: "Our team of expert developers creates custom web applications fully adapted to your needs. By designing modern and secure platforms, we help optimize processes and deliver software solutions that align with your specific business requirements, ensuring efficiency, scalability, and long-term value.",
+                      subtitle: "Tailor-made digital solutions",
+                      src: "/images/solutions/Coding.jpeg"
                     },
                     { 
-                        name: "Insurance Technology", 
-                        description: "Specialized solutions for P&C insurance and claims processing, optimizing workflows and enhancing customer experiences in the insurance sector.",
-                        subtitle: "You should add a subtitle here",
-                        src: "/images/Insurance.jpg"
+                      name: "Document management and form generation", 
+                      description: "Document digitization, combined with the automatic generation of invoices, contracts, and digital reports, streamlines business operations by reducing errors and minimizing management time. This approach ensures greater accuracy, efficiency, and productivity.",
+                      subtitle: "Efficient digital document workflows",
+                      src: "/images/solutions/documents.jpg"
+                    },
+                    { 
+                      name: "Data collection with custom calculations", 
+                      description: "Real-time data collection, processing, and analysis enable businesses to access valuable insights instantly. With advanced calculations that deliver precise and reliable information, organizations can make informed decisions, optimize strategies, and stay ahead in a competitive environment.",
+                      subtitle: "Real-time insights for smarter strategies",
+                      src: "/images/solutions/data-collection.jpg"
+                    },
+                    { 
+                      name: "Insurance Technology", 
+                      description: "Specialized solutions for P&C insurance and claims processing, optimizing workflows and enhancing customer experiences in the insurance sector.",
+                      subtitle: "Optimized solutions for insurance",
+                      src: "/images/solutions/Insurance.jpg"
+                    },
+                    { 
+                      name: "Technical support", 
+                      description: "With 24/7 availability, preventive and corrective maintenance, and a highly trained multidisciplinary team, we ensure continuous support and reliable solutions. Our experts work proactively to keep systems running smoothly, maximizing operational efficiency.",
+                      subtitle: "Reliable support anytime, anywhere",
+                      src: "/images/solutions/tech-support.jpg"
+                    },
+                    { 
+                      name: "Training on technologies and software", 
+                      description: "Through custom workshops, technology updates, and tailored inductions on the use of digital tools, we empower teams to enhance their skills. This approach ensures effective adoption of new technologies, greater productivity, and a smoother digital transformation process.",
+                      subtitle: "Empowering teams with digital skills",
+                      src: "/images/solutions/training.jpg"
                     }
                     ] })}
                 </div>
@@ -54,97 +78,69 @@ export function HeroParallaxDemo() {
 }
 const products = [
   {
-    title: "Moonbeam",
-    link: "https://gomoonbeam.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+    title: "HDI.",
+    thumbnail: "/images/services/HDI3.png",
   },
   {
-    title: "Cursor",
-    link: "https://cursor.so",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+    title: "HDI",
+    thumbnail: "/images/services/HDI2.png",
   },
   {
-    title: "Rogue",
-    link: "https://userogue.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+    title: "HDI",
+    thumbnail: "/images/services/HDI.png",
   },
 
   {
-    title: "Editorially",
-    link: "https://editorially.org",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+    title: "NPIA",
+    thumbnail: "/images/services/NPIA2.png",
   },
   {
-    title: "Editrix AI",
-    link: "https://editrix.ai",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+    title: "PCC",
+    thumbnail: "/images/services/PCC.png",
   },
   {
-    title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+    title: "NPIA",
+    thumbnail: "/images/services/NPIA.png",
   },
 
   {
-    title: "Algochurn",
-    link: "https://algochurn.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+    title: "SSI",
+    thumbnail: "/images/services/SSI.png",
   },
   {
-    title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+    title: "STM",
+    thumbnail: "/images/services/STM2.png",
   },
   {
-    title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+    title: "STM",
+    thumbnail: "/images/services/STM.png",
   },
   {
-    title: "SmartBridge",
-    link: "https://smartbridgetech.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+    title: "AI",
+    thumbnail: "/images/services/AI.png",
   },
   {
-    title: "Renderwork Studio",
-    link: "https://renderwork.studio",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+    title: "PCC",
+    thumbnail: "/images/services/PCC.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+    title: "Costumer Portal - HDI",
+    thumbnail: "/images/services/CP-HDI.png",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
-    thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+    title: "PCC",
+    thumbnail: "/images/services/PCC.png",
   },
   {
-    title: "Invoker Labs",
-    link: "https://invoker.lol",
+    title: "Costumer Portal - STM",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+      "/images/services/CP-STM.png",
   },
   {
-    title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    title: "Costumer Portal - SSI",
     thumbnail:
-      "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+      "/images/services/CP-SSI.png",
   },
 ];
 

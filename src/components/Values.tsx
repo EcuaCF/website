@@ -18,7 +18,7 @@ const values: Value[] = [
   {
     id: 1,
     title: "Innovation",
-    image: "/images/IA.jpg",
+    image: "/images/values/innovation.jpg",
     description: "We constantly push boundaries and explore new technologies to deliver cutting-edge solutions that give our clients a competitive edge.",
     colSpan: "col-span-1",
     rowSpan: "row-span-2" // Vertical image
@@ -26,7 +26,7 @@ const values: Value[] = [
   {
     id: 2,
     title: "Cross-Border Collaboration",
-    image: "/images/IA.jpg",
+    image: "/images/values/collaboration.jpg",
     description: "We believe in the power of diverse perspectives and international collaboration to solve complex problems and drive innovation.",
     colSpan: "col-span-2",
     rowSpan: "row-span-1" // Horizontal image on top
@@ -34,7 +34,7 @@ const values: Value[] = [
   {
     id: 3,
     title: "Technical Excellence",
-    image: "/images/IA.jpg",
+    image: "/images/values/technical.jpg",
     description: "We are committed to the highest standards of technical quality, continuously improving our skills and knowledge to deliver exceptional results.",
     colSpan: "col-span-1",
     rowSpan: "row-span-1" // Bottom left
@@ -42,7 +42,7 @@ const values: Value[] = [
   {
     id: 4,
     title: "Integrity",
-    image: "/images/IA.jpg",
+    image: "/images/values/integrity.jpg",
     description: "We operate with transparency, honesty, and ethical practices in all our business relationships and technical implementations.",
     colSpan: "col-span-1",
     rowSpan: "row-span-1" // Bottom right
@@ -77,8 +77,8 @@ export default function OurValues() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed"
-                >
+                className="mx-auto text-sm md:text-lg text-neutral-300 text-center mb-9"
+            >
                     The principles that guide our work and relationships.
             </motion.p>
         </div>

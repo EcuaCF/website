@@ -4,28 +4,28 @@ export function TrustedIcon() {
       <div className="flex -space-x-1.5 items-center ml-1">
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/diego.jpeg"
+          src="/images/members/diego.jpeg"
           width={25}
           height={25}
           alt="Avatar 01"
         />
         <img
-          className="ring-background rounded-full ring-1"
-          src="/images/david.jpeg"
+          class           Name="ring-background rounded-full ring-1"
+          src="/images/members/david.jpeg"
           width={25}
           height={25}
           alt="Avatar 02"
         />
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/erick.jpeg"
+          src="/images/members/erick.jpeg"
           width={25}
           height={25}
           alt="Avatar 03"
         />
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/jairo.jpeg"
+          src="/images/members/jairo.jpeg"
           width={25}
           height={25}
           alt="Avatar 04"

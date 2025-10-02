@@ -152,38 +152,36 @@ const ContactUs = () => {
             </button>
           </form>
         </div>
-        <SlideUp>
           {/* Right Column - Info Boxes */}
-          <div className="space-y-6">
-            {/* Office Location Box */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-              <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
-              <p className="text-gray-600">
-                Edificio SOHO Galaxy<br />
-                Av. Eloy Alfaro N-33-55 y Suiza Oficina 202<br />
-                Quito, Ecuador 170518
-              </p>
-            </div>
-
-            {/* Contact Information Box */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-              <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
-              <p className="text-gray-600">
-                <strong>Email:</strong> sales@ecuacf.comm<br />
-                <strong>Phone:</strong> +59 (399) 885-2466
-              </p>
-            </div>
-
-            {/* Business Hours Box */}
-            <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
-              <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
-              <p className="text-gray-600">
-                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM (ECT)<br />
-                <strong>Saturday - Sunday:</strong> Closed
-              </p>
-            </div>
+        <div className="space-y-6">
+          {/* Office Location Box */}
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
+            <p className="text-gray-600">
+              Edificio SOHO Galaxy<br />
+              Av. Eloy Alfaro N33-55 y Suiza Oficina 202<br />
+              Quito, Ecuador 170518
+            </p>
           </div>
-        </SlideUp>
+
+          {/* Contact Information Box */}
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
+            <p className="text-gray-600">
+              <strong>Email:</strong> lgarzon@ecuacf.com<br />
+              <strong>Phone:</strong> +593 99 885 2466
+            </p>
+          </div>
+
+          {/* Business Hours Box */}
+          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700">
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
+            <p className="text-gray-600">
+              <strong>Monday - Friday:</strong> 8:30 AM - 5:30 PM (ECT)<br />
+              <strong>Saturday - Sunday:</strong> Closed
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

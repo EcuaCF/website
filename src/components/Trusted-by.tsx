@@ -33,7 +33,7 @@ export default function TrustedBy() {
           <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
           Trusted by Industry Leaders
           </h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+          <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center">
             Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.
           </p>
         </SlideUp>

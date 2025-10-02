@@ -15,10 +15,10 @@ const teamMembers = [
 
 export function Members() {
   return (
-    <div className="team-carousel-section pt-0">
+    <div className="team-carousel-section pt-9">
       <SlideUp>
         <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">Our Leadership Team</h1>
-        <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
+        <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center pb-12">Meet the experts driving innovation and excellence at Ecua Code Forge</p>
       </SlideUp>
       <div className="team-carousel-container">
         <div className="team-carousel"> 

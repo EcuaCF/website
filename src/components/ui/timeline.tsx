@@ -42,7 +42,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
             Our Journey
           </h2>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 mt-6">
+          <p className="mx-auto text-sm md:text-lg text-neutral-400 mb-9">
             From a small team of developers to an international technology innovator.
           </p>
         </SlideUp>

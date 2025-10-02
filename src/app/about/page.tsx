@@ -17,7 +17,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">Foundation</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             Ecua Code Forge was founded in Quito, Ecuador by a team of experienced software engineers with a vision to connect Ecuadorian talent with international markets.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -44,7 +44,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">U.S.A. Expansion</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             Established a partnership with our first U.S. office and several insurance companies, beginning our cross-border operations.
           </p>
           <div className="grid grid-cols-2 gap-4">
@@ -71,7 +71,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">AI Focus</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             Specializing in AI and machine learning solutions, developing our first proprietary algorithms for insurance underwriting and claims processing.
           </p>
           <div className="mb-8">
@@ -115,7 +115,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold text-2xl">Today</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             Currently serving clients across multiple industries with a team of specialists in AI, software development, and data science, with partnerships in Ecuador and the United States.
           </p>
           <div className="grid grid-cols-2 gap-4">

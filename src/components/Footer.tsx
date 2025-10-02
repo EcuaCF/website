@@ -1,8 +1,106 @@
 "use client";
 import ReactCountryFlag from "react-country-flag";
-import FloatingActionButton from "./Floating-button";
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Plus, X, MessageCircle, Linkedin, Mail } from 'lucide-react';
+
+function FloatingActionButton() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleWhatsApp = () => {
+    window.open('https://wa.me/+593998852466', '_blank');
+  };
+
+  const handleLinkedIn = () => {
+    window.open('https://www.linkedin.com/company/ecua-code-forge-s-a-s/', '_blank');
+  };
+
+  const handleEmail = () => {
+    window.location.href = 'mailto:lgarzon@ecuacf.com';
+  };
+
+  return (
+    <div className="fixed bottom-6 right-6 z-50">
+      {/* Speed Dial Buttons */}
+      <div className={`flex flex-col items-end space-y-3 mb-3 transition-all duration-300 ${
+      isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+    }`}>
+        {/* WhatsApp Button */}
+        <div className="flex items-center">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+            WhatsApp
+          </span>
+          <button
+            onClick={handleWhatsApp}
+            className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle size={20} />
+          </button>
+        </div>
+
+        {/* LinkedIn Button */}
+        <div className="flex items-center">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+            LinkedIn
+          </span>
+          <button
+            onClick={handleLinkedIn}
+            className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            aria-label="LinkedIn"
+          >
+            <Linkedin size={20} />
+          </button>
+        </div>
+
+        {/* Email Button */}
+        <div className="flex items-center">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+            Email
+          </span>
+          <button
+            onClick={handleEmail}
+            className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            aria-label="Email"
+          >
+            <Mail size={20} />
+          </button>
+        </div>
+      </div>
+
+      {/* Main FAB Button */}
+      <div className="flex items-center gap-3">
+        <span className="bg-gray-800 text-white px-6 py-2 rounded-2xl font-medium opacity-0 transition-opacity duration-300"
+              style={{ opacity: isOpen ? 0 : 1 }}>
+          Contact Us
+        </span>
+        <button
+          onClick={toggleMenu}
+          className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 transform focus:outline-none ${
+            isOpen 
+              ? 'bg-gray-700 rotate-180 hover:bg-gray-800' 
+              : 'bg-blue-600 rotate-0 hover:bg-blue-700'
+          }`}
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+          role="button"
+        >
+          <div className="flex items-center justify-center w-full h-full">
+            {isOpen ? (
+              <X size={24} className="text-white transition-transform duration-300" />
+            ) : (
+              <Plus size={24} className="text-white transition-transform duration-300" />
+            )}
+          </div>
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
@@ -17,7 +115,7 @@ export default function Footer() {
           {/* Column 2 - Company Info */}
           <div className="flex flex-col gap-4">
             <h1 className="text-xl font-bold mb-3">Ecua Code Forge S.A.S</h1>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300">
               Pioneering AI and software solutions that bridge international markets and drive business transformation.
             </p>
             <div className="flex gap-3 mt-2">
@@ -29,31 +127,29 @@ export default function Footer() {
           {/* Column 3 - Quick Links */}
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold mb-3">Quick Links</h1>
-            <a href="#" className="hover:text-gray-400 transition link link-animated">Home</a>
-            <a href="/about" className="hover:text-gray-400 transition link link-animated">About Us</a>
-            <a href="/services" className="hover:text-gray-400 transition link link-animated">Services</a>
-            <a href="/white-papers" className="hover:text-gray-400 transition link link-animated">White Papers</a>
-            <a href="/contact" className="hover:text-gray-400 transition link link-animated">Contact Us</a>
+            <a href="#" className="hover:text-gray-400 text-gray-300 transition link link-animated">Home</a>
+            <a href="/about" className="hover:text-gray-400 text-gray-300 transition link link-animated">About Us</a>
+            <a href="/services" className="hover:text-gray-400 text-gray-300 transition link link-animated">Services</a>
+            <a href="/contact" className="hover:text-gray-400 text-gray-300 transition link link-animated">Contact Us</a>
           </div>
 
           {/* Column 4 - Services */}
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold mb-3">Services</h1>
-            <span>AI & Machine Learning</span>
-            <span>Custom Software Development</span>
-            <span>Data Analytics</span>
-            <span>Cloud Solutions</span>
-            <span>Insurance Technology</span>
+            <span className="text-gray-300">AI, Machine Learning and Software Development</span>
+            <span className="text-gray-300">Data Collection and Document Management</span>
+            <span className="text-gray-300">Insurance Technology and Technical Support</span>
+            <span className="text-gray-300">Training on Software</span>
           </div>
 
           {/* Column 5 - Contact */}
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold mb-3">Contact Us</h1>
-            <p>Edificio SOHO Galaxy</p>
-            <p>Av. Eloy Alfaro N-33-55 y Suiza Oficina 202</p>
-            <p>Quito, Ecuador 170518</p>
-            <p>Email: <a href="mailto:sales@ecuacf.com" className="link link-animated">sales@ecuacf.com</a></p>
-            <p>Phone: +59 (399) 885-2466</p>
+            <p className="text-gray-300">Edificio SOHO Galaxy</p>
+            <p className="text-gray-300">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
+            <p className="text-gray-300">Quito, Ecuador 170518</p>
+            <p className="text-gray-300">Email: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
+            <p className="text-gray-300">Phone: +593 99 885 2466</p>
           </div>
 
           <div>

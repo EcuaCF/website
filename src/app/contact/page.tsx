@@ -51,9 +51,6 @@ export default function Contact (){
             {FlipWordsDemo()}
         </section>
         <section className="bg-white">
-            
-        </section>
-        <section className="bg-white">
             {ContactUs()}
         </section>
     </div>

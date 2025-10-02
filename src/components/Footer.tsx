@@ -3,6 +3,7 @@ import ReactCountryFlag from "react-country-flag";
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Plus, X, MessageCircle, Linkedin, Mail } from 'lucide-react';
+import { useLanguage } from "@/components/LanguageContext";
 
 function FloatingActionButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,6 +104,11 @@ function FloatingActionButton() {
 }
 
 export default function Footer() {
+  const {language} = useLanguage();
+  const text = {
+    title: language === 'EN' ? 'Trusted by Industry Leaders' : 'Con la Confianza de Líderes de la Industria',
+    paragraph: language === 'EN' ? 'Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.' : 'Nuestras soluciones están impulsando la innovación en las principales empresas a nivel mundial. Nos hemos asociado con compañías con visión de futuro en Ecuador y Estados Unidos para ofrecer soluciones digitales transformadoras.',
+  }
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-black text-white z-10 h-screen flex items-end">
       <div className="w-full">

@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 import { IconArrowLeft, IconArrowRight, IconQuote } from "@tabler/icons-react";
 import SlideUp from "./SlideUp";
 import { GradientBackground } from "@/components/Gradient-bg-clients"
+import { useLanguage } from "@/components/LanguageContext";
 
 type Testimonial = {
   name: string;
@@ -14,47 +15,60 @@ type Testimonial = {
   photo: string;
 };
 
-const testimonials: Testimonial[] = [
-  {
-    name: "Alice Johnson",
-    company: "TechCorp",
-    comment:
-      "Their AI solutions transformed our workflow and boosted efficiency beyond expectations!",
-    photo: "/images/customers/alice.jpg",
-  },
-  {
-    name: "Bob Smith",
-    company: "FinSolutions",
-    comment: "Professional, reliable, and innovative. Highly recommend!",
-    photo: "/images/customers/bob.jpg",
-  },
-  {
-    name: "Clara Lee",
-    company: "HealthPlus",
-    comment: "Amazing service and support. Our team loves it!",
-    photo: "/images/customers/clara.jpg",
-  },
-  {
-    name: "David Green",
-    company: "InsureCo",
-    comment: "Exceeded our expectations in every way.",
-    photo: "/images/customers/david.jpg",
-  },
-  {
-    name: "Eva Martinez",
-    company: "RetailHub",
-    comment: "Seamless integration and excellent communication.",
-    photo: "/images/customers/eva.jpg",
-  },
-  {
-    name: "Frank Wilson",
-    company: "EduTech",
-    comment: "Truly transformative solutions for our business.",
-    photo: "/images/customers/frank.jpg",
-  },
-];
+
 
 export default function Clients() {
+    const {language} = useLanguage();
+    const text = {
+      title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de nuestros clientes',
+      paragraph: language === 'EN' ? 'Discover how our solutions have transformed businesses and enhanced operational efficiency.' : 'Descubre cómo nuestras soluciones han transformado negocios y mejorado la eficiencia operativa.',
+      testimonial1: language === 'EN' ? 'Their AI solutions transformed our workflow and boosted efficiency beyond expectations!' : '¡Sus soluciones de IA transformaron nuestro flujo de trabajo e impulsaron la eficiencia más allá de las expectativas!',
+      testimonial2: language === 'EN' ? 'Professional, reliable, and innovative. Highly recommend!' : 'Profesionales, confiables e innovadores. ¡Altamente recomendados!',
+      testimonial3: language === 'EN' ? 'Amazing service and support. Our team loves it!' : '¡Increíble servicio y soporte! ¡A nuestro equipo le encanta!',
+      testimonial4: language === 'EN' ? 'Exceeded our expectations in every way.' : 'Superó nuestras expectativas en todos los sentidos.',
+      testimonial5: language === 'EN' ? 'Seamless integration and excellent communication.' : 'Integración impecable y excelente comunicación.',
+      testimonial6: language === 'EN' ? 'Truly transformative solutions for our business.' : 'Soluciones verdaderamente transformadoras para nuestro negocio.',
+    }
+    const testimonials: Testimonial[] = [
+    {
+      name: "Alice Johnson",
+      company: "TechCorp",
+      comment:
+        text.testimonial1,
+      photo: "/images/customers/alice.jpg",
+    },
+    {
+      name: "Bob Smith",
+      company: "FinSolutions",
+      comment: text.testimonial2,
+      photo: "/images/customers/bob.jpg",
+    },
+    {
+      name: "Clara Lee",
+      company: "HealthPlus",
+      comment: text.testimonial3,
+      photo: "/images/customers/clara.jpg",
+    },
+    {
+      name: "David Green",
+      company: "InsureCo",
+      comment: text.testimonial4,
+      photo: "/images/customers/david.jpg",
+    },
+    {
+      name: "Eva Martinez",
+      company: "RetailHub",
+      comment: text.testimonial5,
+      photo: "/images/customers/eva.jpg",
+    },
+    {
+      name: "Frank Wilson",
+      company: "EduTech",
+      comment: text.testimonial6,
+      photo: "/images/customers/frank.jpg",
+    },
+  ];
+
   const [index, setIndex] = useState(0);
   const autoPlayDelay = 4000; // 4 seconds
   const cardWidth = 400; // Width of each card
@@ -92,10 +106,10 @@ export default function Clients() {
       <div className="relative z-10 text-center py-4 px-4 w-full max-w-6xl">
         <SlideUp>
           <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-500 to-neutral-300 text-5xl py-2 relative z-20 font-bold tracking-tight">
-            What our customers say
+            {text.title}
           </h1>
           <p className="mx-auto text-sm md:text-lg text-white dark:text-neutral-300 text-center mt-7 mb-4">
-            Discover how our solutions have transformed businesses and enhanced operational efficiency.
+            {text.paragraph}
           </p>
         </SlideUp>
       </div>

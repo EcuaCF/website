@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import SlideUp from "./SlideUp";
 import { TrustedIcon } from "./trusted-icon";
+import { useLanguage } from "@/components/LanguageContext";
 
 const logos = [
   "/images/IA.jpg",
@@ -15,6 +16,11 @@ const logos = [
 ];
 
 export default function TrustedBy() {
+  const {language} = useLanguage();
+  const text = {
+    title: language === 'EN' ? 'Trusted by Industry Leaders' : 'Con la Confianza de Líderes de la Industria',
+    paragraph: language === 'EN' ? 'Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.' : 'Nuestras soluciones están impulsando la innovación en las principales empresas a nivel mundial. Nos hemos asociado con compañías con visión de futuro en Ecuador y Estados Unidos para ofrecer soluciones digitales transformadoras.',
+  }
   const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,10 +37,10 @@ export default function TrustedBy() {
       <div className="mx-auto max-w-6xl px-6 text-center">
         <SlideUp>
           <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-          Trusted by Industry Leaders
+            {text.title}
           </h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center">
-            Our solutions are powering innovation across top businesses worldwide. We have partnered with forward-thinking companies across Ecuador and the United States to deliver transformative digital solutions.
+            {text.paragraph}
           </p>
         </SlideUp>
         <SlideUp>

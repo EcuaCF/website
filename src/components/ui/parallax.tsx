@@ -7,6 +7,7 @@ import {
   useSpring,
   MotionValue,
 } from "motion/react";
+import { useLanguage } from "../LanguageContext";
 
 
 
@@ -101,15 +102,20 @@ export const HeroParallax = ({
 };
 
 export const Header = () => {
+  const {language} = useLanguage();
+  const text = {
+    title1: language === 'EN' ? 'Meet Our' : 'Conoce Nuestros',
+    title2: language === 'EN' ? 'Services' : 'Servicios',
+    subtitle: language === 'EN' ? 'We build beautiful products with the latest technologies and frameworks. We are a team of passionate developers and designers that love to build amazing products.' : 'Construimos productos atractivos con las últimas tecnologías y frameworks. Somos un equipo de desarrolladores y diseñadores apasionados a los que les encanta construir productos increíbles.',
+  }
+
   return (
     <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
       <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-        Meet Our <br /> Services
+        {text.title1} <br /> {text.title2} 
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+        {text.subtitle} 
       </p>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import SlideUp from './SlideUp';
+import { useLanguage } from "@/components/LanguageContext";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -28,14 +29,46 @@ const ContactUs = () => {
     alert('Thank you for your message! We will get back to you soon.');
   };
 
+  const {language} = useLanguage();
+  const text = {
+    title: language === 'EN' ? 'Contact Us' : 'Contáctanos',
+    subtitle: language === 'EN' ? 'Fill out the form below and our team will get back to you as soon as possible.' : 'Llena el siguiente formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.',
+    name: language === 'EN' ? 'Full Name *' : 'Nombre Completo *',
+    email: language === 'EN' ? 'Email Address *' : 'Correo Electrónico*',
+    company: language === 'EN' ? 'Company Name' : 'Nombre de la Empresa',
+    phone: language === 'EN' ? 'Phone Number' : 'Número de Teléfono',
+    subject: language === 'EN' ? 'Subject *' : 'Asunto *',
+    message: language === 'EN' ? 'Message *' : 'Mensaje *',
+    phname: language === 'EN' ? 'Enter your full name' : 'Ingresa tu nombre completo',
+    phmail: language === 'EN' ? 'your.email@example.com' : 'tu.correo@ejemplo.com',
+    phcompany: language === 'EN' ? 'Your company name' : 'El nombre de tu empresa',
+    phphone: language === 'EN' ? 'Your phone number' : 'Tu número de teléfono',
+    phmessage: language === 'EN' ? 'How can we help you?' : '¿Cómo te podemos ayudar?',
+    opt1: language === 'EN' ? 'General Inquiry' : '	Consulta General',
+    opt2: language === 'EN' ? 'Services Information' : 'Información de Servicios',
+    opt3: language === 'EN' ? 'Request a Quote' : 'Solicitar un Presupuesto',
+    opt4: language === 'EN' ? 'Partnership Opportunities' : 'Oportunidades de Asociación',
+    opt5: language === 'EN' ? 'Technical Support' : 'Soporte Técnico',
+    button: language === 'EN' ? 'Send Message' : 'Enviar Mensaje',
+    office: language === 'EN' ? 'Office Location' : 'Ubicación de la Oficina',
+    building: language === 'EN' ? 'SOHO Galaxy Building' : 'Edificio SOHO Galaxy',
+    info: language === 'EN' ? 'Contact Information' : 'Información de Contacto',
+    mail: language === 'EN' ? 'Email:' : 'Correo Electrónico:',
+    nphone: language === 'EN' ? 'Phone:' : 'Teléfono:',
+    hours: language === 'EN' ? 'Business Hours' : 'Horario de Atención',
+    monday: language === 'EN' ? 'Monday - Friday:' : 'Lunes - Viernes:',
+    satur: language === 'EN' ? 'Saturday - Sunday:' : 'Sábado - Domingo:',
+    closed: language === 'EN' ? 'Closed' : 'Cerrado',
+  }
+
   return (
     <div className="mx-auto px-4 py-8 bg-white">
       {/* Header Section */}
       <div className="text-center mb-12">
         <SlideUp>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">{text.title}</h1>
           <p className="text-lg text-gray-800 max-w-2xl mx-auto">
-            Fill out the form below and our team will get back to you as soon as possible.
+            {text.subtitle}
           </p>
         </SlideUp>
       </div>
@@ -47,7 +80,7 @@ const ContactUs = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
-                  Full Name *
+                  {text.name}
                 </label>
                 <input
                   type="text"
@@ -57,12 +90,12 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Enter your full name"
+                  placeholder= {text.phname}
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address *
+                  {text.email}
                 </label>
                 <input
                   type="email"
@@ -72,7 +105,7 @@ const ContactUs = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="your.email@example.com"
+                  placeholder={text.phmail}
                 />
               </div>
             </div>
@@ -80,7 +113,7 @@ const ContactUs = () => {
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
-                  Company Name
+                  {text.company}
                 </label>
                 <input
                   type="text"
@@ -89,12 +122,12 @@ const ContactUs = () => {
                   value={formData.companyName}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your company name"
+                  placeholder={text.phcompany}
                 />
               </div>
               <div>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                  Phone Number
+                  {text.phone}
                 </label>
                 <input
                   type="tel"
@@ -103,14 +136,14 @@ const ContactUs = () => {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Your phone number"
+                  placeholder={text.phphone}
                 />
               </div>
             </div>
 
             <div className="mb-6">
               <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                Subject *
+                {text.subject}
               </label>
               <select
                 id="subject"
@@ -120,17 +153,17 @@ const ContactUs = () => {
                 required
                 className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               >
-                <option value="General Inquiry">General Inquiry</option>
-                <option value="Services Information">Services Information</option>
-                <option value="Request a Quote">Request a Quote</option>
-                <option value="Partnership Opportunities">Partnership Opportunities</option>
-                <option value="Technical Support">Technical Support</option>
+                <option value="General Inquiry">{text.opt1}</option>
+                <option value="Services Information">{text.opt2}</option>
+                <option value="Request a Quote">{text.opt3}</option>
+                <option value="Partnership Opportunities">{text.opt4}</option>
+                <option value="Technical Support">{text.opt5}</option>
               </select>
             </div>
 
             <div className="mb-6">
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Message *
+                {text.message}
               </label>
               <textarea
                 id="message"
@@ -140,7 +173,7 @@ const ContactUs = () => {
                 required
                 rows={5}
                 className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                placeholder="How can we help you?"
+                placeholder={text.phmessage}
               ></textarea>
             </div>
 
@@ -148,7 +181,7 @@ const ContactUs = () => {
               type="submit"
               className="bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
             >
-              Send Message
+              {text.button}
             </button>
           </form>
         </div>
@@ -162,9 +195,9 @@ const ContactUs = () => {
         <div className="space-y-6 flex flex-row md:col-span-3 justify-evenly">
           {/* Office Location Box */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Office Location</h2>
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.office}</h2>
             <p className="text-gray-600">
-              Edificio SOHO Galaxy<br />
+              {text.building}<br />
               Av. Eloy Alfaro N33-55 y Suiza Oficina 202<br />
               Quito, Ecuador 170518
             </p>
@@ -172,19 +205,19 @@ const ContactUs = () => {
 
           {/* Contact Information Box */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Contact Information</h2>
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.info}</h2>
             <p className="text-gray-600">
-              <strong>Email:</strong> lgarzon@ecuacf.com<br />
-              <strong>Phone:</strong> +593 99 885 2466
+              <strong>{text.mail}</strong> lgarzon@ecuacf.com<br />
+              <strong>{text.nphone}</strong> +593 99 885 2466
             </p>
           </div>
 
           {/* Business Hours Box */}
           <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">Business Hours</h2>
+            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.hours}</h2>
             <p className="text-gray-600">
-              <strong>Monday - Friday:</strong> 8:30 AM - 5:30 PM (ECT)<br />
-              <strong>Saturday - Sunday:</strong> Closed
+              <strong>{text.monday}</strong> 8:30 AM - 5:30 PM (ECT)<br />
+              <strong>{text.satur}</strong> {text.closed}
             </p>
           </div>
         </div>

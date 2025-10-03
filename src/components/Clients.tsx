@@ -15,8 +15,6 @@ type Testimonial = {
   photo: string;
 };
 
-
-
 export default function Clients() {
     const {language} = useLanguage();
     const text = {
@@ -90,7 +88,8 @@ export default function Clients() {
 
     // Cleanup interval on component unmount
     return () => clearInterval(interval);
-  }, []);
+  },
+);
 
   // Calculate the translateX value to center the current card
   const calculateTranslateX = () => {

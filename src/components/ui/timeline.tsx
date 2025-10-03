@@ -6,13 +6,18 @@ import {
 } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import SlideUp from "../SlideUp";
-
+import { useLanguage } from "@/components/LanguageContext";
 interface TimelineEntry {
   title: string;
   content: React.ReactNode;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+  const {language} = useLanguage();
+    const text = {
+      title: language === 'EN' ? 'Our Journey' : 'Nuestra Trayectoria',
+      parag: language === 'EN' ? 'From a small team of developers to an international technology innovator.' : 'De un pequeño equipo de desarrolladores a un innovador tecnológico internacional.',
+    }
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -40,10 +45,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <SlideUp>
           <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-            Our Journey
+            {text.title}
           </h2>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mb-9">
-            From a small team of developers to an international technology innovator.
+            {text.parag}
           </p>
         </SlideUp>
       </div>

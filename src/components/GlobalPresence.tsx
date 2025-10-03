@@ -3,12 +3,22 @@ import React from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 import SlideUp from "./SlideUp";
+import { useLanguage } from "@/components/LanguageContext";
  
 const World = dynamic(() => import("../components/ui/globe").then((m) => m.World), {
   ssr: false,
 });
  
 export function Globe() {
+  const {language} = useLanguage();
+  const text = {
+    title: language === 'EN' ? 'Our Global Presence' : 'Nuestra Presencia Global',
+    subtitle: language === 'EN' ? 'Bridging talent and innovation across the Americas' : 'Uniendo talento e innovación a lo largo de las Américas',
+    edif: language === 'EN' ? 'SOHO Galaxy Building' : 'Edificio SOHO Galaxy',
+    usa: language === 'EN' ? 'Bradenton, USA' : 'Bradenton, EE. UU.',
+    office: language === 'EN' ? 'U.S. Operations Office' : 'Oficina de Operaciones en EE. UU.',
+  }
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -407,10 +417,10 @@ export function Globe() {
       >
         <SlideUp>
           <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
-            Our Global Presence
+            {text.title}
           </h2>
           <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
-            Bridging talent and innovation across the Americas
+            {text.subtitle}
           </p>
         </SlideUp>
       </motion.div>
@@ -429,15 +439,15 @@ export function Globe() {
           <div className="w-110 p-7 px-9 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
             <h2 className="text-2xl font-semibold text-black dark:text-white">Quito, Ecuador</h2>
             <p className="mt-3 text-gray-600 dark:text-gray-300">
-              Edificio SOHO Galaxy <br /> Av. Eloy Alfaro N-33-55 y Suiza Oficina 202 <br /> Quito, Ecuador 170518
+              {text.edif} <br /> Av. Eloy Alfaro N-33-55 y Suiza Oficina 202 <br /> Quito, Ecuador 170518
             </p>
           </div>
 
           {/* Bradenton */}
           <div className="w-110 p-7 px-9 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
-            <h2 className="text-2xl font-semibold text-black dark:text-white">Bradenton, USA</h2>
+            <h2 className="text-2xl font-semibold text-black dark:text-white">{text.usa}</h2>
             <p className="mt-3 text-gray-600 dark:text-gray-300">
-              U.S. Operations Office <br /> 3990 SR 64 East <br /> Bradenton, FL 34208
+              {text.office} <br /> 3990 SR 64 East <br /> Bradenton, FL 34208
             </p>
           </div>
         </div>

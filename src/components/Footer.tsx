@@ -6,6 +6,11 @@ import { Plus, X, MessageCircle, Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from "@/components/LanguageContext";
 
 function FloatingActionButton() {
+  const {language} = useLanguage();
+  const text = {
+    button1: language === 'EN' ? 'Contact Us' : 'Contáctanos',
+    button2: language === 'EN' ? 'Email' : 'Correo Electrónico',
+  }
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -61,7 +66,7 @@ function FloatingActionButton() {
         {/* Email Button */}
         <div className="flex items-center">
           <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
-            Email
+            {text.button2}
           </span>
           <button
             onClick={handleEmail}
@@ -77,7 +82,7 @@ function FloatingActionButton() {
       <div className="flex items-center gap-3">
         <span className="bg-gray-800 text-white px-6 py-2 rounded-2xl font-medium opacity-0 transition-opacity duration-300"
               style={{ opacity: isOpen ? 0 : 1 }}>
-          Contact Us
+          {text.button1}
         </span>
         <button
           onClick={toggleMenu}
@@ -117,7 +122,8 @@ export default function Footer() {
     data: language === 'EN' ? 'Data Collection and Document Management' : 'Recolección de Datos y Gestión Documental',
     insurance: language === 'EN' ? 'Insurance Technology and Technical Support' : 'Tecnología para Seguros y Soporte Técnico',
     training: language === 'EN' ? 'Training on Software' : 'Capacitación en Software',
-    contactUs: language === 'EN' ? 'Contact Us' : 'Contáctanos ',
+    contactUs: language === 'EN' ? 'Contact Us' : 'Contáctanos',
+    edificio: language === 'EN' ? 'SOHO Galaxy Building' : 'Edificio SOHO Galaxy',
     mail: language === 'EN' ? 'Email' : 'Correo Electrónico',
     phone: language === 'EN' ? 'Phone' : 'Teléfono',
     rights: language === 'EN' ? '© 2025 Ecua Code Forge S.A.S. All rights reserved.' : '© 2025 Ecua Code Forge S.A.S. Todos los derechos reservados.',
@@ -164,7 +170,7 @@ export default function Footer() {
           {/* Column 5 - Contact */}
           <div className="flex flex-col gap-2">
             <h1 className="text-xl font-bold mb-3">{text.contactUs}</h1>
-            <p className="text-gray-300">Edificio SOHO Galaxy</p>
+            <p className="text-gray-300">{text.edificio}</p>
             <p className="text-gray-300">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
             <p className="text-gray-300">Quito, Ecuador 170518</p>
             <p className="text-gray-300">{text.mail}: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>

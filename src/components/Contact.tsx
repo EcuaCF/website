@@ -31,7 +31,7 @@ const ContactUs = () => {
 
   const {language} = useLanguage();
   const text = {
-    title: language === 'EN' ? 'Contact Us' : 'Contáctanos',
+    title: language === 'EN' ? 'Contact' : 'Contacto',
     subtitle: language === 'EN' ? 'Fill out the form below and our team will get back to you as soon as possible.' : 'Llena el siguiente formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.',
     name: language === 'EN' ? 'Full Name *' : 'Nombre Completo *',
     email: language === 'EN' ? 'Email Address *' : 'Correo Electrónico*',

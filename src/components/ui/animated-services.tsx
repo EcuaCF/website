@@ -148,13 +148,13 @@ export const AnimatedServices = ({
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
-              className="group/button flex h-9 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-9 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 mt-10"
             >
               <IconArrowLeft className="h-7 w-7 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex h-9 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="group/button flex h-9 w-12 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 mt-10"
             >
               <IconArrowRight className="h-7 w-7 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
             </button>

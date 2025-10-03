@@ -18,7 +18,7 @@ export function TrustedIcon() {
           alt="Avatar 01"
         />
         <img
-          class           Name="ring-background rounded-full ring-1"
+          className="ring-background rounded-full ring-1"
           src="/images/members/david.jpeg"
           width={25}
           height={25}

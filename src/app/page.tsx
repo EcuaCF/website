@@ -43,18 +43,18 @@ export default function Home() {
         {SparklesPreview(language)}
       </section>
       
-      <section className="relative z-20 bg-white">
+      <section className="relative z-20 bg-white py-12 md:py-20 lg:py-24">
         {TrustedBy()}
       </section>
       
       <section className="w-full bg-black relative z-20 pb-15 pt-20">
         <SlideUp>
-          <div className="text-white flex flex-col items-center justify-center md:px-8 lg:px-12">
-            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.special}</h1>
-            <p className="mx-auto text-sm md:text-lg text-white dark:text-neutral-300 text-center mb-4">{text.custom}</p>
+          <div className="text-white flex flex-col items-center justify-center px-4 md:px-8 lg:px-12">
+            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-3xl md:text-4xl lg:text-5xl py-2 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">{text.special}</h1>
+            <p className="mx-auto text-sm md:text-base lg:text-lg text-white text-center mb-6 md:mb-8 max-w-2xl lg:max-w-4xl">{text.custom}</p>
           </div>
         </SlideUp>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center px-4 md:px-8">
           {AnimatedServices({ services: [
             { 
               name: text.name1, 
@@ -102,10 +102,10 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="relative z-20">
+      <section className="relative z-20 py-12 md:py-16 lg:py-20">
         {Clients()}
       </section>
-      <section className="relative z-20 bg-white">
+      <section className="relative z-20 bg-white py-12 md:py-16 lg:py-20">
         {TypewriterEffectDemo(language)}
       </section>
     </div>
@@ -121,7 +121,7 @@ function SparklesPreview(language:string) {
   }
   return (
     <>
-      <div className="h-[57rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="h-[40rem] sm:h-[45rem] md:h-[50rem] lg:h-[57rem] relative w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md px-4">
         <div className="w-full absolute inset-0 h-screen">
           <SparklesCore
             id="tsparticlesfullpage"
@@ -133,19 +133,19 @@ function SparklesPreview(language:string) {
             particleColor="#FFFFFF"
           />
         </div>
-        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-7xl py-4 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">
         {translations.title1} <br />{translations.title2}
         </h1>
-        <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+        <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-600 text-center mb-6 md:mb-8">
           {translations.paragraph}
         </p>
-        <div className="m-10 flex justify-center text-center">
+        <div className="mt-6 md:mt-10 flex justify-center text-center text-sm md:text-base">
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
-            className="dark:bg-black text-black dark:text-white flex items-center space-x-2"
+            className="bg-black text-white flex items-center space-x-2"
           >
-            <span className="p-2 cursor-pointer">{translations.button}</span>
+            <span className="px-4 p-2 cursor-pointer">{translations.button}</span>
           </HoverBorderGradient>
       </div>
     </div>
@@ -180,40 +180,42 @@ function TypewriterEffectDemo(language:string) {
     },
     {
       text: "Ecua",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500",
     },
     {
       text: "Code",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500",
     },
     {
       text: "Forge",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500",
     },
     {
       text: "S.A.S.",
-      className: "text-blue-500 dark:text-blue-500",
+      className: "text-blue-500",
     },
   ];
 
   
   
   return (
-    <div className="flex flex-col items-center justify-center h-[30rem] ">
+    <div className="flex flex-col items-center justify-center h-auto min-h-[25rem] md:min-h-[30rem] py-8 md:py-12 px-4">
       <SlideUp>
-        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl py-4 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight leading-tight">
           {translated.question}
         </p>
-        <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center mb-9">
+        <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-6 md:mb-9 max-w-2xl">
           {translated.parag}
         </p>
       </SlideUp>
+      <div className="scale-75 sm:scale-90 md:scale-100">
         <TypewriterEffect words={words} />
-      <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
-        <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm cursor-pointer">
+      </div>
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 md:space-x-4 mt-6 md:mt-10">
+        <button className="w-full sm:w-40 h-10 rounded-xl bg-black border border-transparent text-white text-sm cursor-pointer">
           {translated.button1}
         </button>
-        <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer">
+        <button className="w-full sm:w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer">
           {translated.button2}
         </button>
       </div>

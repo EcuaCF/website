@@ -27,7 +27,7 @@ export function Members() {
   return (
     <div className="team-carousel-section pt-9">
       <SlideUp>
-        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.title}</h1>
+        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 sm:text-3xl md:text-4xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.title}</h1>
         <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center pb-12">{text.subtitle}</p>
       </SlideUp>
       <div className="team-carousel-container">

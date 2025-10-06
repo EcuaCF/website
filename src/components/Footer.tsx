@@ -29,64 +29,64 @@ function FloatingActionButton() {
     window.location.href = 'mailto:lgarzon@ecuacf.com';
   };
 
-  return (
-    <div className="fixed bottom-6 right-6 z-50">
+return (
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Speed Dial Buttons */}
-      <div className={`flex flex-col items-end space-y-3 mb-3 transition-all duration-300 ${
+      <div className={`flex flex-col items-end space-y-2 sm:space-y-3 mb-2 sm:mb-3 transition-all duration-300 ${
       isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
     }`}>
         {/* WhatsApp Button */}
         <div className="flex items-center">
-          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             WhatsApp
           </span>
           <button
             onClick={handleWhatsApp}
-            className="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            className="bg-green-500 hover:bg-green-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="WhatsApp"
           >
-            <MessageCircle size={20} />
+            <MessageCircle size={16} className="sm:w-5 sm:h-5" />
           </button>
         </div>
 
         {/* LinkedIn Button */}
         <div className="flex items-center">
-          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             LinkedIn
           </span>
           <button
             onClick={handleLinkedIn}
-            className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            className="bg-blue-600 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="LinkedIn"
           >
-            <Linkedin size={20} />
+            <Linkedin size={16} className="sm:w-5 sm:h-5" />
           </button>
         </div>
 
         {/* Email Button */}
         <div className="flex items-center">
-          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-sm font-medium">
+          <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             {text.button2}
           </span>
           <button
             onClick={handleEmail}
-            className="bg-red-500 hover:bg-red-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
+            className="bg-red-500 hover:bg-red-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="Email"
           >
-            <Mail size={20} />
+            <Mail size={16} className="sm:w-5 sm:h-5" />
           </button>
         </div>
       </div>
 
       {/* Main FAB Button */}
-      <div className="flex items-center gap-3">
-        <span className="bg-gray-800 text-white px-6 py-2 rounded-2xl font-medium opacity-0 transition-opacity duration-300"
+      <div className="flex items-center gap-2 sm:gap-3">
+        <span className="bg-gray-800 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-xl sm:rounded-2xl text-xs sm:text-sm font-medium opacity-0 transition-opacity duration-300"
               style={{ opacity: isOpen ? 0 : 1 }}>
           {text.button1}
         </span>
         <button
           onClick={toggleMenu}
-          className={`w-14 h-14 rounded-full shadow-lg transition-all duration-300 transform focus:outline-none ${
+          className={`w-10 h-10 sm:w-14 sm:h-14 rounded-full shadow-lg transition-all duration-300 transform focus:outline-none ${
             isOpen 
               ? 'bg-gray-700 rotate-180 hover:bg-gray-800' 
               : 'bg-blue-600 rotate-0 hover:bg-blue-700'
@@ -97,9 +97,9 @@ function FloatingActionButton() {
         >
           <div className="flex items-center justify-center w-full h-full">
             {isOpen ? (
-              <X size={24} className="text-white transition-transform duration-300" />
+              <X size={18} className="text-white transition-transform duration-300 sm:w-6 sm:h-6" />
             ) : (
-              <Plus size={24} className="text-white transition-transform duration-300" />
+              <Plus size={18} className="text-white transition-transform duration-300 sm:w-6 sm:h-6" />
             )}
           </div>
         </button>
@@ -131,66 +131,72 @@ export default function Footer() {
   return (
     <footer className="fixed bottom-0 left-0 w-full bg-black text-white z-10 h-screen flex items-end">
       <div className="w-full">
-        <div className="max-w-9xl mx-auto px-2 md:px-8 grid grid-cols-1 md:grid-cols-5 gap-15">
-          {/* Column 1 - Globe */}
-          <div className="h-50 pl-13">
-            {Card()}
-          </div>
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+          {/* Main Grid - Globe only on large screens, 4 columns on smaller screens */}
+          <div className="flex flex-col gap-4 sm:grid sm:grid-cols-4 lg:grid-cols-[280px_1fr_1fr_1fr_1fr] sm:gap-4 lg:gap-8 ">
+            
+            {/* Column 1 - Globe (Hidden on small/medium, shown on large) */}
+            <div className="hidden lg:block">
+              <div className="h-40 w-40 mx-auto">
+                {Card()}
+              </div>
+            </div>
 
-          {/* Column 2 - Company Info */}
-          <div className="flex flex-col gap-4">
-            <h1 className="text-xl font-bold mb-3">Ecua Code Forge S.A.S</h1>
-            <p className="text-gray-300">
-              {text.paragraph}
-            </p>
-            <div className="flex gap-3 mt-2">
-              <ReactCountryFlag countryCode="EC" svg style={{ width: '24px', height: '24px' }} />
-              <ReactCountryFlag countryCode="US" svg style={{ width: '24px', height: '24px' }} />
+            {/* Column 2 - Company Info */}
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold">Ecua Code Forge S.A.S</h1>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
+                {text.paragraph}
+              </p>
+              <div className="flex gap-3 mt-2">
+                <ReactCountryFlag countryCode="EC" svg style={{ width: '20px', height: '20px', fontSize: '20px' }} />
+                <ReactCountryFlag countryCode="US" svg style={{ width: '20px', height: '20px', fontSize: '20px' }} />
+              </div>
+            </div>
+
+            {/* Column 3 - Quick Links */}
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold">{text.quick}</h1>
+              <a href="#" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.home}</a>
+              <a href="/about" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.about}</a>
+              <a href="/services" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.service}</a>
+              <a href="/contact" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.contact}</a>
+            </div>
+
+            {/* Column 4 - Services */}
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold">{text.services}</h1>
+              <span className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.ai}</span>
+              <span className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.data}</span>
+              <span className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.insurance}</span>
+              <span className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.training}</span>
+            </div>
+
+            {/* Column 5 - Contact */}
+            <div className="flex flex-col gap-2 sm:gap-3">
+              <h1 className="text-sm sm:text-base lg:text-lg font-bold">{text.contactUs}</h1>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.edificio}</p>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base">Quito, Ecuador 170518</p>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.mail}: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base">{text.phone}: <a href="tel:+593998852466" className="link link-animated">+593 99 885 2466</a></p>
             </div>
           </div>
 
-          {/* Column 3 - Quick Links */}
-          <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">{text.quick}</h1>
-            <a href="#" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.home}</a>
-            <a href="/about" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.about}</a>
-            <a href="/services" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.service}</a>
-            <a href="/contact" className="hover:text-gray-400 text-gray-300 transition link link-animated">{text.contact}</a>
-          </div>
-
-          {/* Column 4 - Services */}
-          <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">{text.services}</h1>
-            <span className="text-gray-300">{text.ai}</span>
-            <span className="text-gray-300">{text.data}</span>
-            <span className="text-gray-300">{text.insurance}</span>
-            <span className="text-gray-300">{text.training}</span>
-          </div>
-
-          {/* Column 5 - Contact */}
-          <div className="flex flex-col gap-2">
-            <h1 className="text-xl font-bold mb-3">{text.contactUs}</h1>
-            <p className="text-gray-300">{text.edificio}</p>
-            <p className="text-gray-300">Av. Eloy Alfaro N33-55 y Suiza Oficina 202</p>
-            <p className="text-gray-300">Quito, Ecuador 170518</p>
-            <p className="text-gray-300">{text.mail}: <a href="mailto:lgarzon@ecuacf.com" className="link link-animated">lgarzon@ecuacf.com</a></p>
-            <p className="text-gray-300">{text.phone}: <a href="tel:+593998852466" className="link link-animated">+593 99 885 2466</a></p>
-          </div>
-
-          <div>
-            {FloatingActionButton()}
+          {/* Copyright */}
+          <div className="mt-6 sm:mt-8 lg:mt-10 border-t border-gray-800 pt-4 sm:pt-6">
+            <p className="text-center text-gray-400 text-xs sm:text-sm">
+              {text.rights}
+            </p>
           </div>
         </div>
-
-        {/* Copyright */}
-        <p className="text-center text-gray-400 mt-5 text-sm pb-5">
-          {text.rights}
-        </p>
       </div>
+      
+      {/* Floating Action Button */}
+      <FloatingActionButton />
     </footer>
   );
 }
-
 export const Card = () => {
   return (
     <StyledWrapper>

@@ -30,7 +30,7 @@ export function TimelineDemo() {
       title: text.title,
       content: (
         <div>
-          <h1 className="font-bold text-2xl">{text.subtitle}</h1>
+          <h1 className="font-boldfont-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle}</h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph}
           </p>
@@ -57,7 +57,7 @@ export function TimelineDemo() {
       title: "2025",
       content: (
         <div>
-          <h1 className="font-bold text-2xl">{text.subtitle2}</h1>
+          <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle2}</h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph2}
           </p>
@@ -84,7 +84,7 @@ export function TimelineDemo() {
       title: "2025",
       content: (
         <div>
-          <h1 className="font-bold text-2xl">{text.subtitle3}</h1>
+          <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle3}</h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph3}
           </p>
@@ -111,7 +111,7 @@ export function TimelineDemo() {
       title: text.title4,
       content: (
         <div>
-          <h1 className="font-bold text-2xl">{text.subtitle4}</h1>
+          <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle4}</h1>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph4}
           </p>
@@ -171,7 +171,7 @@ export default function About() {
         </section>
         
         <section className="w-full bg-black">
-            {OurValues()}
+          {OurValues()}
         </section>
         <section className="w-full bg-white">
           {Members()}
@@ -240,10 +240,11 @@ function TypewriterEffectDemo() {
       className: "text-blue-500 dark:text-blue-500",
     },
   ];
+
  return (
      <div className="flex flex-col items-center justify-center h-[30rem] ">
        <SlideUp>
-         <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+         <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
            {text.question}
          </p>
          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">

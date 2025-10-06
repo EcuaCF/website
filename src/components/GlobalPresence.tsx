@@ -416,7 +416,7 @@ export function Globe() {
         className="mb-10"
       >
         <SlideUp>
-          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 sm:text-3xl md:text-4xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
             {text.title}
           </h2>
           <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
@@ -429,7 +429,7 @@ export function Globe() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Column 1 - Globe */}
-        <div className="h-[30rem] md:h-[35rem] relative z-10">
+        <div className="lg:h-[30rem] md:h-[25rem] sm:h-[15rem] relative z-10">
           <World globeConfig={globeConfig} data={sampleArcs} />
         </div>
 

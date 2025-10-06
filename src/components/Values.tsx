@@ -81,7 +81,7 @@ export default function OurValues() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight"
+              className="font-bold text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 text-white mb-6 tracking-tight"
             >
               {text.title1}
               <br />
@@ -99,7 +99,6 @@ export default function OurValues() {
             </motion.p>
         </div>
       </SlideUp>
-      
 
       {/* values Grid - Square Layout */}
       <div className="mx-auto flex justify-center">
@@ -140,7 +139,7 @@ export default function OurValues() {
                       activeCard === value.id
                     } transition-all duration-100`}
                   >
-                    <h3 className="text-2xl font-bold">{value.title}</h3>
+                    <h3 className="text-2xl font-bold sm:text-1x1 md:text-3xl lg:text-2xl">{value.title}</h3>
                   </motion.div>
 
                   {/* Description - Appears below title when active */}
@@ -153,7 +152,7 @@ export default function OurValues() {
                         transition={{ duration: 0.4, delay: 0.1 }}
                         className="mt-4 flex-1 overflow-hidden"
                       >
-                        <p className="text-gray-200 text-sm leading-relaxed">
+                        <p className="text-gray-200 sm:text-xs md:text-xs lg:text-sm leading-relaxed">
                           {value.description}
                         </p>
                       </motion.div>

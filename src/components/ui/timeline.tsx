@@ -44,7 +44,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <SlideUp>
-          <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+          <h2 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 sm:text-3xl md:text-4xl lg:text-5xl relative z-20 font-bold tracking-tight">
             {text.title}
           </h2>
           <p className="mx-auto text-sm md:text-lg text-neutral-400 mb-9">

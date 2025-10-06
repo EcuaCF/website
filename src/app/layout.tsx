@@ -26,7 +26,7 @@ export default function RootLayout({
       <body className={`${bitcoin.variable} antialiased relative min-h-screen`}>
         <LanguageProvider>
           <Navbar/>
-          <div className="relative z-20 mb-100">
+          <div className="relative z-20 mb-155 md:mb-90 lg:mb-100">
             {children}
             <SectionSeparator></SectionSeparator>
           </div>

@@ -47,7 +47,7 @@ export default function Home() {
         {TrustedBy()}
       </section>
       
-      <section className="w-full bg-black relative z-20 pb-15 pt-20">
+      <section className="w-full bg-black relative z-20 py-12 md:py-16 lg:py-20">
         <SlideUp>
           <div className="text-white flex flex-col items-center justify-center px-4 md:px-8 lg:px-12">
             <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-3xl md:text-4xl lg:text-5xl py-2 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">{text.special}</h1>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
       
-      <section className="relative z-20 py-12 md:py-16 lg:py-20">
+      <section className="relative z-20">
         {Clients()}
       </section>
       <section className="relative z-20 bg-white py-12 md:py-16 lg:py-20">
@@ -164,7 +164,8 @@ function TypewriterEffectDemo(language:string) {
     parag: language === 'EN' ? "Let's discuss how our custom AI and software solutions can address your specific challenges and drive innovation in your organization." : 'Conversemos sobre cómo nuestras soluciones de software e IA personalizadas pueden abordar sus desafíos específicos e impulsar la innovación en su organización.',
     button1: language === 'EN' ? 'Our Services' : 'Nuestros Servicios',
     button2: language === 'EN' ? 'Contact Us' : 'Contáctanos',
-  }
+  };
+
   const words = [
     {
       text: translated.text1,
@@ -199,23 +200,25 @@ function TypewriterEffectDemo(language:string) {
   
   
   return (
-    <div className="flex flex-col items-center justify-center h-auto min-h-[25rem] md:min-h-[30rem] py-8 md:py-12 px-4">
+    <div className="flex flex-col items-center justify-center h-auto min-h-[20rem] sm:min-h-[25rem] md:min-h-[30rem] py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6">
       <SlideUp>
-        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl py-4 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight leading-tight">
+        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-3 sm:py-4 md:py-6 lg:py-8 relative z-20 font-bold tracking-tight leading-tight">
           {translated.question}
         </p>
-        <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-6 md:mb-9 max-w-2xl">
+        <p className="mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl leading-relaxed">
           {translated.parag}
         </p>
       </SlideUp>
-      <div className="scale-75 sm:scale-90 md:scale-100">
-        <TypewriterEffect words={words} />
+      <div className="w-full flex justify-center mb-4 sm:mb-6 md:mb-8 lg:mb-10">
+        <div className="scale-95 sm:scale-95 md:scale-100 lg:scale-100 transform-gpu">
+          <TypewriterEffect words={words} />
+        </div>
       </div>
-      <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 md:space-x-4 mt-6 md:mt-10">
-        <button className="w-full sm:w-40 h-10 rounded-xl bg-black border border-transparent text-white text-sm cursor-pointer">
+      <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto justify-center">
+        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-black border border-transparent text-white text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-800 active:scale-95">
           {translated.button1}
         </button>
-        <button className="w-full sm:w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer">
+        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-white text-black border border-gray-300 text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-50 hover:border-gray-400 active:scale-95">
           {translated.button2}
         </button>
       </div>

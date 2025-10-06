@@ -12,8 +12,8 @@ const bitcoin = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "Ecua Code Forge Website",
-  description: "This website describes ECF products",
+  title: "Ecua Code Forge SAS",
+  description: "Ecua Code Forge SAS builds custom, scalable software applications and digital solutions to drive business growth and efficiency.",
 };
 
 export default function RootLayout({

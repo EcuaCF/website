@@ -28,19 +28,53 @@ export function FlipWordsDemo() {
 
   const words = [text.flip1, text.flip2, text.flip3, text.flip4, text.flip5, text.flip6, text.flip7, text.flip8];
 
-  return (
-    <div className="h-[35rem] flex justify-center items-center">
-        <div className="max-w-5xl mx-auto">
-            <SlideUp>
-                <h1 className="text-4xl font-bold text-white">{text.title}</h1>
-                <p className="mt-4 text-gray-300 w-160">{text.subtitle}</p>
-            </SlideUp>
-        </div>
-        <div className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400 w-140">
-            {text.build}
+return (
+    <div className="min-h-[35rem] flex justify-center items-center py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        {/* Mobile & Tablet: Stacked layout */}
+        <div className="lg:hidden flex flex-col items-center text-center space-y-8">
+          <SlideUp>
+            <div className="mb-8">
+              <h1 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+                {text.title}
+              </h1>
+              <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+                {text.subtitle}
+              </p>
+            </div>
+          </SlideUp>
+          
+          <div className="text-2xl sm:text-3xl font-normal text-neutral-600 dark:text-neutral-400">
+            {text.build}{" "}
             <FlipWords words={words} /> <br />
             {text.text}
+          </div>
         </div>
+
+        {/* Desktop: Side by side layout */}
+        <div className="hidden lg:flex justify-between items-center gap-12">
+          {/* Left side - Title and subtitle */}
+          <div className="flex-1 max-w-2xl">
+            <SlideUp>
+              <h1 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                {text.title}
+              </h1>
+              <p className="text-gray-300 text-lg lg:text-xl">
+                {text.subtitle}
+              </p>
+            </SlideUp>
+          </div>
+
+          {/* Right side - FlipWords */}
+          <div className="flex-1 flex justify-center">
+            <div className="text-4xl font-normal text-neutral-600 dark:text-neutral-400 text-center lg:text-right">
+              {text.build}{" "}
+              <FlipWords words={words} /> <br />
+              {text.text}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

@@ -71,17 +71,16 @@ export default function OurValues() {
   const handleCardClick = (id: number) => {
     setActiveCard(activeCard === id ? null : id);
   };
-
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-16 px-4">
+return (
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       {/* Header Section */}
       <SlideUp>
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-bold text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 text-white mb-6 tracking-tight"
+              className="font-bold text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 text-white mb-4 sm:mb-6 tracking-tight"
             >
               {text.title1}
               <br />
@@ -93,106 +92,44 @@ export default function OurValues() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mx-auto text-sm md:text-lg text-neutral-300 text-center mb-9"
+              className="mx-auto text-sm md:text-lg text-neutral-300 text-center mb-6 sm:mb-9"
             >
               {text.paragraph}
             </motion.p>
         </div>
       </SlideUp>
 
-      {/* values Grid - Square Layout */}
+      {/* Values Grid - Responsive Layout */}
       <div className="mx-auto flex justify-center">
-        <div className="grid grid-cols-3 grid-rows-2 gap-4 aspect-square max-h-[600px] w-[1000px]">
+        {/* Desktop Grid (lg and up) - Original layout */}
+        <div className="hidden lg:grid lg:grid-cols-3 lg:grid-rows-2 gap-4 aspect-square max-h-[600px] w-[1000px]">
           {values.map((value, index) => (
-            <motion.div
+            <ValueCard 
               key={value.id}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`relative group ${value.colSpan} ${value.rowSpan}`}
-            >
-              {/* Card Container - No click handler here */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gray-800">
-                {/* Background Image */}
-                <Image
-                  src={value.image}
-                  alt={value.title}
-                  fill
-                  className={`object-cover transition-all duration-500 ${
-                    activeCard === value.id ? 'blur-sm' : 'group-hover:scale-105'
-                  }`}
-                />
-                
-                {/* Gradient Overlay - Changes based on state */}
-                <div className={`absolute inset-0 transition-all duration-500 ${
-                  activeCard === value.id 
-                    ? 'bg-black/70' 
-                    : 'bg-gradient-to-t from-black/80 via-black/40 to-transparent'
-                }`} />
-                
-                {/* Content Container */}
-                <div className="absolute inset-0 p-6 flex flex-col">
-                  {/* Title */}
-                  <motion.div
-                    layout
-                    className={`text-white ${
-                      activeCard === value.id
-                    } transition-all duration-100`}
-                  >
-                    <h3 className="text-2xl font-bold sm:text-1x1 md:text-3xl lg:text-2xl">{value.title}</h3>
-                  </motion.div>
+              value={value}
+              index={index}
+              activeCard={activeCard}
+              handleCardClick={handleCardClick}
+              setActiveCard={setActiveCard}
+              text={text.learn}
+            />
+          ))}
+        </div>
 
-                  {/* Description - Appears below title when active */}
-                  <AnimatePresence>
-                    {activeCard === value.id && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: 20 }}
-                        transition={{ duration: 0.4, delay: 0.1 }}
-                        className="mt-4 flex-1 overflow-hidden"
-                      >
-                        <p className="text-gray-200 sm:text-xs md:text-xs lg:text-sm leading-relaxed">
-                          {value.description}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-
-                  {/* Default Button - Shows when not active */}
-                  {activeCard !== value.id && (
-                    <motion.button
-                      onClick={() => handleCardClick(value.id)}
-                      className="relative px-6 py-2 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold text-sm border border-white/20 overflow-hidden group/btn mt-4 ml-auto mr-auto"
-                      whileHover={{ 
-                        scale: 1.05,
-                        backgroundColor: "rgba(255,255,255,0.2)"
-                      }}
-                    >
-                      {/* White Aura/Shine Effect */}
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
-                      {text.learn}
-                    </motion.button>
-                  )}
-                </div>
-
-                {/* Close Button - Shows when active */}
-                <AnimatePresence>
-                  {activeCard === value.id && (
-                    <motion.button
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      transition={{ duration: 0.5 }}
-                      onClick={() => setActiveCard(null)}
-                      className="absolute top-4 right-4 w-8 h-8 bg-black/50 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors z-20"
-                    >
-                      ×
-                    </motion.button>
-                  )}
-                </AnimatePresence>
-              </div>
-            </motion.div>
+        {/* Mobile/Tablet Grid - Stacked layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl lg:hidden">
+          {values.map((value, index) => (
+            <div key={value.id} className="aspect-[4/3] sm:aspect-square">
+              <ValueCard 
+                value={value}
+                index={index}
+                activeCard={activeCard}
+                handleCardClick={handleCardClick}
+                setActiveCard={setActiveCard}
+                text={text.learn}
+                isMobile={true}
+              />
+            </div>
           ))}
         </div>
       </div>
@@ -200,5 +137,124 @@ export default function OurValues() {
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
     </main>
+  );
+}
+
+// Separate component for the value card to avoid code duplication
+function ValueCard({ 
+  value, 
+  index, 
+  activeCard, 
+  handleCardClick, 
+  setActiveCard, 
+  text,
+  isMobile = false 
+}: { 
+  value: Value;
+  index: number;
+  activeCard: number | null;
+  handleCardClick: (id: number) => void;
+  setActiveCard: (id: number | null) => void;
+  text: string;
+  isMobile?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      className={`relative group ${!isMobile ? `${value.colSpan} ${value.rowSpan}` : 'w-full h-full'}`}
+    >
+      {/* Card Container */}
+      <div className="relative w-full h-full rounded-xl sm:rounded-2xl overflow-hidden bg-gray-800">
+        {/* Background Image */}
+        <Image
+          src={value.image}
+          alt={value.title}
+          fill
+          className={`object-cover transition-all duration-500 ${
+            activeCard === value.id ? 'blur-sm' : 'group-hover:scale-105'
+          }`}
+        />
+        
+        {/* Gradient Overlay - Enhanced for better text visibility */}
+        <div className={`absolute inset-0 transition-all duration-500 ${
+          activeCard === value.id 
+            ? 'bg-black/80' 
+            : 'bg-gradient-to-t from-black/90 via-black/60 to-black/40'
+        }`} />
+        
+        {/* Content Container */}
+        <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-between">
+          {/* Title and Description */}
+          <div className="flex-1">
+            <motion.div
+              layout
+              className="text-white transition-all duration-100"
+            >
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 sm:mb-3">
+                {value.title}
+              </h3>
+            </motion.div>
+
+            {/* Description - Always visible on mobile, appears when active on desktop */}
+            <AnimatePresence>
+              {(isMobile || activeCard === value.id) && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  transition={{ duration: 0.3, delay: 0.1 }}
+                  className="overflow-hidden"
+                >
+                  <p className="text-gray-200 text-xs sm:text-sm leading-relaxed sm:leading-normal">
+                    {value.description}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Button - Only show on desktop when not active */}
+          {!isMobile && activeCard !== value.id && (
+            <motion.button
+              onClick={() => handleCardClick(value.id)}
+              className="relative px-4 sm:px-6 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full font-semibold text-xs sm:text-sm border border-white/30 overflow-hidden group/btn mt-2 sm:mt-4 ml-auto mr-auto"
+              whileHover={{ 
+                scale: 1.05,
+                backgroundColor: "rgba(255,255,255,0.3)"
+              }}
+            >
+              {/* White Aura/Shine Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -skew-x-12 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000" />
+              {text}
+            </motion.button>
+          )}
+
+          {/* Mobile: Always show a subtle indicator */}
+          {isMobile && (
+            <div className="mt-2 text-center">
+              <div className="w-6 h-1 bg-white/40 rounded-full mx-auto" />
+            </div>
+          )}
+        </div>
+
+        {/* Close Button - Shows when active on desktop */}
+        <AnimatePresence>
+          {!isMobile && activeCard === value.id && (
+            <motion.button
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.3 }}
+              onClick={() => setActiveCard(null)}
+              className="absolute top-3 right-3 w-6 h-6 sm:w-8 sm:h-8 bg-black/60 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-black/80 transition-colors z-20 text-sm sm:text-base"
+            >
+              ×
+            </motion.button>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
   );
 }

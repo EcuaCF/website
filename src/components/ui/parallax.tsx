@@ -9,8 +9,6 @@ import {
 } from "motion/react";
 import { useLanguage } from "../LanguageContext";
 
-
-
 export const HeroParallax = ({
   products,
 }: {
@@ -54,10 +52,11 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
+  
   return (
     <div
       ref={ref}
-      className="h-[266vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[200vh] sm:h-[250vh] lg:h-[266vh] py-20 sm:py-30 lg:py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -69,7 +68,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-6 lg:space-x-10 mb-10 sm:mb-15 lg:mb-20">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -78,7 +77,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-15 space-x-10 ">
+        <motion.div className="flex flex-row mb-8 sm:mb-12 lg:mb-15 space-x-4 sm:space-x-6 lg:space-x-10">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -87,7 +86,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-6 lg:space-x-10">
           {thirdRow.map((product) => (
             <ProductCard
               product={product}
@@ -110,11 +109,11 @@ export const Header = () => {
   }
 
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-7xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+    <div className="max-w-7xl relative mx-auto py-12 sm:py-20 md:py-30 lg:py-40 px-4 sm:px-6 lg:px-8 w-full left-0 top-0">
+      <h1 className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-300 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl py-4 sm:py-6 md:py-8 lg:py-10 relative z-20 font-bold tracking-tight">
         {text.title1} <br /> {text.title2} 
       </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      <p className="max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mt-4 sm:mt-6 lg:mt-8 dark:text-neutral-200">
         {text.subtitle} 
       </p>
     </div>
@@ -140,7 +139,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product h-82 w-[40rem] relative shrink-0"
+      className="group/product h-48 sm:h-60 md:h-72 lg:h-82 w-64 sm:w-80 md:w-96 lg:w-[40rem] relative shrink-0"
     >
         <img
           src={product.thumbnail}
@@ -150,7 +149,7 @@ export const ProductCard = ({
           alt={product.title}
         />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
+      <h2 className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 opacity-0 group-hover/product:opacity-100 text-white text-sm sm:text-base md:text-lg">
         {product.title}
       </h2>
     </motion.div>

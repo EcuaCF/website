@@ -24,7 +24,6 @@ const ContactUs = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
     console.log(formData);
     alert('Thank you for your message! We will get back to you soon.');
   };
@@ -61,24 +60,24 @@ const ContactUs = () => {
     closed: language === 'EN' ? 'Closed' : 'Cerrado',
   }
 
-  return (
-    <div className="mx-auto px-4 py-8 bg-white">
+return (
+    <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white">
       {/* Header Section */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-8 sm:mb-12">
         <SlideUp>
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">{text.title}</h1>
-          <p className="text-lg text-gray-800 max-w-2xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">{text.title}</h1>
+          <p className="text-base sm:text-lg text-gray-800 max-w-2xl mx-auto px-4">
             {text.subtitle}
           </p>
         </SlideUp>
       </div>
 
-      <div className="flex items-center align-center justify-center gap-20 md:flex-row flex-col">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-20">
         {/* Left Column - Form */}
-        <div className="w-[30%]">
-          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6">
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
+        <div className="w-full lg:w-[30%] max-w-2xl">
+          <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-4 sm:p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
+              <div className="sm:col-span-2 sm:col-start-1">
                 <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-1">
                   {text.name}
                 </label>
@@ -89,11 +88,11 @@ const ContactUs = () => {
                   value={formData.fullName}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder= {text.phname}
+                  className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  placeholder={text.phname}
                 />
               </div>
-              <div>
+              <div className="sm:col-span-2 sm:col-start-1">
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                   {text.email}
                 </label>
@@ -104,13 +103,13 @@ const ContactUs = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder={text.phmail}
                 />
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6">
               <div>
                 <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
                   {text.company}
@@ -121,7 +120,7 @@ const ContactUs = () => {
                   name="companyName"
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder={text.phcompany}
                 />
               </div>
@@ -135,7 +134,7 @@ const ContactUs = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                   placeholder={text.phphone}
                 />
               </div>
@@ -151,7 +150,7 @@ const ContactUs = () => {
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
               >
                 <option value="General Inquiry">{text.opt1}</option>
                 <option value="Services Information">{text.opt2}</option>
@@ -172,31 +171,44 @@ const ContactUs = () => {
                 onChange={handleChange}
                 required
                 rows={5}
-                className="w-full px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                className="w-full px-3 sm:px-4 py-2 border text-gray-800 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                 placeholder={text.phmessage}
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
+              className="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
             >
               {text.button}
             </button>
           </form>
         </div>
-          {/* Right Column - Info Boxes */}
-        <div className="space-y-6">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7968382323184!2d-78.48349202417796!3d-0.18801813541363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a79557d52c3%3A0xa496f4af631f2ae5!2sEdificio%20Soho%20Galaxy!5e0!3m2!1ses-419!2sec!4v1759419615513!5m2!1ses-419!2sec" width="600" height="450" style={{border: "0", borderRadius: '30px'}} allowFullScreen={false} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+        {/* Right Column - Map */}
+        <div className="w-full lg:w-auto">
+          <div className="w-full max-w-2xl lg:max-w-none">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7968382323184!2d-78.48349202417796!3d-0.18801813541363882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59a79557d52c3%3A0xa496f4af631f2ae5!2sEdificio%20Soho%20Galaxy!5e0!3m2!1ses-419!2sec!4v1759419615513!5m2!1ses-419!2sec" 
+              width="100%" 
+              height="300"
+              className="sm:h-[400px] lg:h-[450px] lg:w-[600px] rounded-lg sm:rounded-2xl lg:rounded-3xl"
+              style={{ border: "0" }}
+              allowFullScreen={false} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-8 items-center align-center pt-12 pb-12">
-        <div className="space-y-6 flex flex-row md:col-span-3 justify-evenly">
+      {/* Info Boxes Section */}
+      <div className="pt-8 sm:pt-12 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {/* Office Location Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.office}</h2>
-            <p className="text-gray-600">
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:border-blue-700 border border-transparent transition-all duration-300 h-full">
+            <h2 className="text-lg sm:text-xl font-semibold text-blue-600 mb-3">{text.office}</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               {text.building}<br />
               Av. Eloy Alfaro N33-55 y Suiza Oficina 202<br />
               Quito, Ecuador 170518
@@ -204,18 +216,18 @@ const ContactUs = () => {
           </div>
 
           {/* Contact Information Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.info}</h2>
-            <p className="text-gray-600">
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:border-blue-700 border border-transparent transition-all duration-300 h-full">
+            <h2 className="text-lg sm:text-xl font-semibold text-blue-600 mb-3">{text.info}</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               <strong>{text.mail}</strong> lgarzon@ecuacf.com<br />
               <strong>{text.nphone}</strong> +593 99 885 2466
             </p>
           </div>
 
           {/* Business Hours Box */}
-          <div className="bg-white rounded-lg shadow-md p-6 hover:border-blue-700 w-[350px] h-[160px]">
-            <h2 className="text-xl font-semibold text-blue-600 mb-3">{text.hours}</h2>
-            <p className="text-gray-600">
+          <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 hover:border-blue-700 border border-transparent transition-all duration-300 h-full">
+            <h2 className="text-lg sm:text-xl font-semibold text-blue-600 mb-3">{text.hours}</h2>
+            <p className="text-gray-600 text-sm sm:text-base">
               <strong>{text.monday}</strong> 8:30 AM - 5:30 PM (ECT)<br />
               <strong>{text.satur}</strong> {text.closed}
             </p>

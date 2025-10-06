@@ -406,47 +406,51 @@ export function Globe() {
   ];
  
   return (
-  <div className="flex flex-row items-center justify-center py-20 h-auto dark:bg-black bg-white relative w-full">
-    <div className="max-w-7xl mx-auto w-full relative overflow-hidden px-4">
+  <div className="flex flex-row items-center justify-center py-8 sm:py-12 lg:py-16 xl:py-20 h-auto dark:bg-black bg-white relative w-full">
+    <div className="max-w-7xl mx-auto w-full relative overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Header with motion */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="mb-10"
+        className="mb-8 sm:mb-10 lg:mb-12"
       >
         <SlideUp>
-          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 sm:text-3xl md:text-4xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-4 md:py-6 lg:py-8 xl:py-10 relative z-20 font-bold tracking-tight">
             {text.title}
           </h2>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
+          <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-6 md:mb-8 lg:mb-9 pt-4 sm:pt-6 lg:pt-7">
             {text.subtitle}
           </p>
         </SlideUp>
       </motion.div>
 
       {/* Two columns layout */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
         
         {/* Column 1 - Globe */}
-        <div className="lg:h-[30rem] md:h-[25rem] sm:h-[15rem] relative z-10">
+        <div className="h-64 sm:h-80 md:h-96 lg:h-[25rem] xl:h-[30rem] relative z-10 order-2 lg:order-1">
           <World globeConfig={globeConfig} data={sampleArcs} />
         </div>
 
         {/* Column 2 - Offices */}
-        <div className="mt-6 md:mt-0 flex flex-col gap-8 z-10">
+        <div className="mt-6 lg:mt-0 flex flex-col gap-4 sm:gap-6 lg:gap-8 z-10 order-1 lg:order-2">
           {/* Quito */}
-          <div className="w-110 p-7 px-9 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
-            <h2 className="text-2xl font-semibold text-black dark:text-white">Quito, Ecuador</h2>
-            <p className="mt-3 text-gray-600 dark:text-gray-300">
+          <div className="w-full p-4 sm:p-6 lg:p-7 xl:p-8 border rounded-xl sm:rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-black dark:text-white mb-2 sm:mb-3">
+              Quito, Ecuador
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
               {text.edif} <br /> Av. Eloy Alfaro N-33-55 y Suiza Oficina 202 <br /> Quito, Ecuador 170518
             </p>
           </div>
 
           {/* Bradenton */}
-          <div className="w-110 p-7 px-9 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
-            <h2 className="text-2xl font-semibold text-black dark:text-white">{text.usa}</h2>
-            <p className="mt-3 text-gray-600 dark:text-gray-300">
+          <div className="w-full p-4 sm:p-6 lg:p-7 xl:p-8 border rounded-xl sm:rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600 bg-white dark:bg-neutral-900">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-black dark:text-white mb-2 sm:mb-3">
+              {text.usa}
+            </h2>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
               {text.office} <br /> 3990 SR 64 East <br /> Bradenton, FL 34208
             </p>
           </div>

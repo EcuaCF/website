@@ -14,31 +14,41 @@ export function Members() {
   }
   
   const teamMembers = [
-  { id: 1, name: "Doménica Criollo", role: text.role3, image: "/images/dome.jpeg" },
-  { id: 2, name: "Jairo Cabrera", role: text.role2, image: "/images/jairo.jpeg" },
-  { id: 3, name: "Jinson Medina", role: text.role1, image: "/images/jinson.jpeg" },
-  { id: 4, name: "Erick Armijos", role: text.role1, image: "/images/erick.jpeg" },
-  { id: 5, name: "Diego Pazmiño", role: text.role1, image: "/images/diego.jpeg" },
-  { id: 6, name: "David Velasco", role: text.role1, image: "/images/david.jpeg" },
-  { id: 7, name: "Omar Gualotuña", role: text.role1, image: "/images/omar.jpeg" },
-  { id: 8, name: "Adhisson Cedeño", role: text.role1, image: "/images/adhisson.jpeg" },
+    { id: 1, name: "Doménica Criollo", role: text.role3, image: "/images/dome.jpeg" },
+    { id: 2, name: "Jairo Cabrera", role: text.role2, image: "/images/jairo.jpeg" },
+    { id: 3, name: "Jinson Medina", role: text.role1, image: "/images/jinson.jpeg" },
+    { id: 4, name: "Erick Armijos", role: text.role1, image: "/images/erick.jpeg" },
+    { id: 5, name: "Diego Pazmiño", role: text.role1, image: "/images/diego.jpeg" },
+    { id: 6, name: "David Velasco", role: text.role1, image: "/images/david.jpeg" },
+    { id: 7, name: "Omar Gualotuña", role: text.role1, image: "/images/omar.jpeg" },
+    { id: 8, name: "Adhisson Cedeño", role: text.role1, image: "/images/adhisson.jpeg" },
   ];
 
   return (
-    <div className="team-carousel-section pt-9">
+    <div className="team-carousel-section py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
       <SlideUp>
-        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 sm:text-3xl md:text-4xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.title}</h1>
-        <p className="mx-auto text-sm md:text-lg text-neutral-500 text-center pb-12">{text.subtitle}</p>
+        <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl py-4 sm:py-6 md:py-8 lg:py-10 relative z-20 font-bold tracking-tight">
+          {text.title}
+        </h1>
+        <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-8 sm:mb-10 lg:mb-12">
+          {text.subtitle}
+        </p>
       </SlideUp>
-      <div className="team-carousel-container">
-        <div className="team-carousel"> 
+      
+      {/* Horizontal Carousel for all devices */}
+      <div className="team-carousel-container w-full overflow-hidden">
+        <div className="team-carousel flex gap-4 sm:gap-6 md:gap-8 animate-scroll whitespace-nowrap">
           {/* First set */}
           {teamMembers.map((member) => (
-            <CardPerson member={member} key={member.name}/>
+            <div key={`${member.id}-1`} className="inline-flex">
+              <CardPerson member={member} />
+            </div>
           ))}
           {/* Duplicate set for seamless loop */}
           {teamMembers.map(member => (
-            <CardPerson member={member} key={member.name}/>
+            <div key={`${member.id}-2`} className="inline-flex">
+              <CardPerson member={member} />
+            </div>
           ))}
         </div>
       </div>

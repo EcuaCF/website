@@ -1,7 +1,7 @@
 import { useLanguage } from "./LanguageContext";
 import SlideUp from "./SlideUp";
 
-  const WhyChooseUs = () => {
+const WhyChooseUs = () => {
   const {language} = useLanguage();
   const text = {
     title: language === 'EN' ? 'Why Choose Us' : '¿Por qué elegirnos?',
@@ -29,7 +29,7 @@ import SlideUp from "./SlideUp";
   const features = [
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
@@ -45,9 +45,9 @@ import SlideUp from "./SlideUp";
     },
     {
       icon: (
-    <svg className="w-11 h-11" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/> 
-    </svg>
+        <svg className="w-6 h-6 sm:w-7 sm:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"> 
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/> 
+        </svg>
       ),
       title: text.title2,
       items: [
@@ -60,7 +60,7 @@ import SlideUp from "./SlideUp";
     },
     {
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
@@ -76,37 +76,40 @@ import SlideUp from "./SlideUp";
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-8 sm:py-12 lg:py-16 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <SlideUp>
-          <div className="text-center mb-5">
-            <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.title}</h2>
-            <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center">
+          <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+            <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl py-4 sm:py-6 md:py-8 lg:py-10 relative z-20 font-bold tracking-tight">
+              {text.title}
+            </h2>
+            <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-700 dark:text-neutral-500 text-center">
               {text.subtitle}
             </p>
           </div>
         </SlideUp>
+        
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {features.map((feature, index) => (
-            <div key={index} className="text-center p-6">
+            <div key={index} className="text-center p-4 sm:p-6 lg:p-8">
               {/* Icon Container */}
-              <div className="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 mx-auto mb-4 sm:mb-6 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
                 {feature.icon}
               </div>
               
               {/* Title */}
-              <h4 className="text-xl font-semibold text-gray-900 mb-6">
+              <h4 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 mb-4 sm:mb-6 leading-tight">
                 {feature.title}
               </h4>
               
               {/* List with checkmarks */}
-              <ul className="text-left space-y-3">
+              <ul className="text-left space-y-2 sm:space-y-3">
                 {feature.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start text-gray-600">
                     <svg 
-                      className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0" 
+                      className="w-4 h-4 sm:w-5 sm:h-5 text-blue-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" 
                       fill="none" 
                       stroke="currentColor" 
                       viewBox="0 0 24 24"
@@ -118,7 +121,9 @@ import SlideUp from "./SlideUp";
                         d="M5 13l4 4L19 7" 
                       />
                     </svg>
-                    <span className="text-justify">{item}</span>
+                    <span className="text-xs sm:text-sm lg:text-base text-justify leading-relaxed">
+                      {item}
+                    </span>
                   </li>
                 ))}
               </ul>

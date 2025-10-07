@@ -31,25 +31,9 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-boldfont-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle}</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph}
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/templates/startup-1.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <Image
-              src="https://assets.aceternity.com/templates/startup-2.webp"
-              alt="startup template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
         </div>
       ),
     },
@@ -58,25 +42,9 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle2}</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph2}
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
         </div>
       ),
     },
@@ -85,25 +53,9 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle3}</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph3}
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
         </div>
       ),
     },
@@ -112,25 +64,9 @@ export function TimelineDemo() {
       content: (
         <div>
           <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle4}</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-400 mt-5 mb-6">
+          <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph4}
           </p>
-          <div className="grid grid-cols-2 gap-4">
-            <Image
-              src="https://assets.aceternity.com/pro/hero-sections.png"
-              alt="hero template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-            <Image
-              src="https://assets.aceternity.com/features-section.png"
-              alt="feature template"
-              width={500}
-              height={500}
-              className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] md:h-44 lg:h-60"
-            />
-          </div>
         </div>
       ),
     },
@@ -159,7 +95,7 @@ export default function About() {
               <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 font-bold tracking-tight">
                 {text.title1} <br /> {text.title2}
               </h2>
-              <p className="max-w-xl mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-400 text-center">
+              <p className="max-w-xl mx-auto text-sm md:text-base lg:text-lg text-neutral-700 dark:text-neutral-400 text-center">
                 {text.paragraph1}
               </p>
             </div>
@@ -244,10 +180,10 @@ function TypewriterEffectDemo() {
  return (
      <div className="flex flex-col items-center justify-center h-[30rem] ">
        <SlideUp>
-         <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">
+         <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-3 sm:py-4 md:py-6 lg:py-8 relative z-20 font-bold tracking-tight">
            {text.question}
          </p>
-         <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">
+         <p className="mx-auto text-sm md:text-lg lg:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">
            {text.parag}
          </p>
        </SlideUp>

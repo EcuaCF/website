@@ -19,8 +19,8 @@ export default function MissionVision() {
       <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
         <SlideUp>
-          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl py-2 md:py-10 relative z-20 font-bold tracking-tight">{text.title}</h1>
-          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9 pt-7">
+          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl md:text-4xl lg:text-5xl pt-6 md:pt-7 lg:pt-10 pb-5 md:pb-6 lg:pb-9 relative z-20 font-bold tracking-tight">{text.title}</h1>
+          <p className="mx-auto text-sm md:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-9">
             {text.subtitle}
           </p>
         </SlideUp>
@@ -29,7 +29,7 @@ export default function MissionVision() {
           {/* Mission */}
           <div className="p-8 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600">
             <h2 className="text-2xl font-semibold text-black">{text.title2}</h2>
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-600 text-sm md:text-base lg:text-base">
               {text.text1}
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function MissionVision() {
           {/* Vision */}
           <div className="p-8 border rounded-2xl shadow-md transition duration-300 hover:shadow-xl hover:border-blue-600">
             <h2 className="text-2xl font-semibold text-black">{text.title3}</h2>
-            <p className="mt-3 text-gray-600">
+            <p className="mt-3 text-gray-600 text-sm md:text-base lg:text-base">
               {text.text2}
             </p>
           </div>

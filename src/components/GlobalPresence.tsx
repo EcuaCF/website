@@ -416,10 +416,10 @@ export function Globe() {
         className="mb-8 sm:mb-10 lg:mb-12"
       >
         <SlideUp>
-          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-4 md:py-6 lg:py-8 xl:py-10 relative z-20 font-bold tracking-tight">
+          <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-neutral-300 text-2xl md:text-4xl lg:text-5xl xl:text-5xl pt-6 md:pt-7 lg:pt-10 pb-5 md:pb-6 lg:pb-9 relative z-20 font-bold tracking-tight">
             {text.title}
           </h2>
-          <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-700 dark:text-neutral-500 text-center mb-6 md:mb-8 lg:mb-9 pt-4 sm:pt-6 lg:pt-7">
+          <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-sm md:text-base lg:text-lg text-neutral-400 dark:text-neutral-500 text-center">
             {text.subtitle}
           </p>
         </SlideUp>

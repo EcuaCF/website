@@ -43,15 +43,15 @@ export default function Home() {
         {SparklesPreview(language)}
       </section>
       
-      <section className="relative z-20 bg-white py-12 md:py-20 lg:py-24">
+      <section className="relative z-20 bg-white pb-6">
         {TrustedBy()}
       </section>
       
       <section className="w-full bg-black relative z-20 py-12 md:py-16 lg:py-20">
         <SlideUp>
           <div className="text-white flex flex-col items-center justify-center px-4 md:px-8 lg:px-12">
-            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-700 to-neutral-300 text-3xl md:text-4xl lg:text-5xl py-2 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">{text.special}</h1>
-            <p className="mx-auto text-sm md:text-base lg:text-lg text-white text-center mb-6 md:mb-8 max-w-2xl lg:max-w-4xl">{text.custom}</p>
+            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-neutral-300 text-2xl md:text-4xl lg:text-5xl py-2 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">{text.special}</h1>
+            <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 text-center mb-6 md:mb-8 max-w-2xl lg:max-w-4xl">{text.custom}</p>
           </div>
         </SlideUp>
         <div className="flex items-center justify-center px-4 md:px-8">
@@ -136,7 +136,7 @@ function SparklesPreview(language:string) {
         <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-white text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-7xl py-4 md:py-6 lg:py-10 relative z-20 font-bold tracking-tight">
         {translations.title1} <br />{translations.title2}
         </h1>
-        <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-600 text-center mb-6 md:mb-8">
+        <p className="max-w-xs sm:max-w-sm md:max-w-xl mx-auto text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-6 md:mb-8">
           {translations.paragraph}
         </p>
         <div className="mt-6 md:mt-10 flex justify-center text-center text-sm md:text-base">
@@ -145,7 +145,7 @@ function SparklesPreview(language:string) {
             as="button"
             className="bg-black text-white flex items-center space-x-2"
           >
-            <span className="px-4 p-2 cursor-pointer">{translations.button}</span>
+            <span className="px-4 p-2 cursor-pointer" onClick={() => window.location.href = '/contact'}>{translations.button}</span>
           </HoverBorderGradient>
       </div>
     </div>
@@ -202,7 +202,7 @@ function TypewriterEffectDemo(language:string) {
   return (
     <div className="flex flex-col items-center justify-center h-auto min-h-[20rem] sm:min-h-[25rem] md:min-h-[30rem] py-8 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6">
       <SlideUp>
-        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-3 sm:py-4 md:py-6 lg:py-8 relative z-20 font-bold tracking-tight leading-tight">
+        <p className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl md:text-3xl lg:text-4xl xl:text-5xl py-3 sm:py-4 md:py-6 lg:py-8 relative z-20 font-bold tracking-tight leading-tight">
           {translated.question}
         </p>
         <p className="mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-500 text-center mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-xs sm:max-w-sm md:max-w-xl lg:max-w-2xl leading-relaxed">
@@ -215,10 +215,12 @@ function TypewriterEffectDemo(language:string) {
         </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto justify-center">
-        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-black border border-transparent text-white text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-800 active:scale-95">
+        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-black border border-transparent text-white text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-800 active:scale-95"
+        onClick={() => window.location.href = '/services'}>
           {translated.button1}
         </button>
-        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-white text-black border border-gray-300 text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-50 hover:border-gray-400 active:scale-95">
+        <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-white text-black border border-gray-300 text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-50 hover:border-gray-400 active:scale-95"
+        onClick={() => window.location.href = '/contact'}>
           {translated.button2}
         </button>
       </div>

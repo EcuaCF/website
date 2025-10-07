@@ -7,12 +7,12 @@ import { TrustedIcon } from "./trusted-icon";
 import { useLanguage } from "@/components/LanguageContext";
 
 const logos = [
-  "/images/IA.jpg",
-  "/images/header-logo.gif",
-  "/images/IA.jpg",
-  "/images/IA.jpg",
-  "/images/IA.jpg",
-  "/images/IA.jpg",
+  "/images/industry-leaders/core-logo.png",
+  "/images/industry-leaders/HDI-logo.png",
+  "/images/industry-leaders/NPIA-logo.png",
+  "/images/industry-leaders/PCC-logo.png",
+  "/images/industry-leaders/sterling-logo.png",
+  "/images/industry-leaders/quick-silver-logo.gif",
 ];
 
 export default function TrustedBy() {
@@ -37,7 +37,7 @@ export default function TrustedBy() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <SlideUp>
           <div className="text-center mb-8 md:mb-12 lg:mb-16">
-            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight py-4 md:py-6 lg:py-8">
+            <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-blue-700 to-blue-500 text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight py-4 md:py-6 lg:py-8">
               {text.title}
             </h1>
             <p className="mx-auto text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-500 text-center max-w-2xl lg:max-w-3xl leading-relaxed">
@@ -67,7 +67,7 @@ export default function TrustedBy() {
           {logos.map((logo, idx) => (
             <div
               key={idx}
-              className="relative flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 flex items-center justify-center"
+              className="relative flex-shrink-0 hover:grayscale-100 transition-all duration-300 flex items-center justify-center"
               style={{
                   width: 'clamp(120px, 20vw, 280px)',
                   height: 'clamp(80px, 15vw, 160px)'

@@ -12,21 +12,21 @@ export function TrustedIcon() {
       <div className="flex -space-x-1.5 items-center ml-1">
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/members/diego.jpeg"
+          src="/images/trusted-by/user.png"
           width={25}
           height={25}
           alt="Avatar 01"
         />
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/members/david.jpeg"
+          src="/images/trusted-by/user.png"
           width={25}
           height={25}
           alt="Avatar 02"
         />
         <img
           className="ring-background rounded-full ring-1"
-          src="/images/members/erick.jpeg"
+          src="/images/trusted-by/user.png"
           width={25}
           height={25}
           alt="Avatar 03"

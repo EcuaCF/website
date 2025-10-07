@@ -72,19 +72,19 @@ export default function OurValues() {
     setActiveCard(activeCard === id ? null : id);
   };
 return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 py-8 sm:py-12 lg:py-16 px-4 sm:px-6">
+    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-10 md:pt-12 lg:pt-14 pb-10 md:pb-12 lg:pb-14 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
       <SlideUp>
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center">
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="font-bold text-2xl md:text-4xl lg:text-7xl py-2 md:py-10 text-white mb-4 sm:mb-6 tracking-tight"
+              className="font-bold text-2xl md:text-4xl lg:text-5xl text-white tracking-tight"
             >
               {text.title1}
               <br />
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-2xl md:text-4xl lg:text-5xl">
                   {text.title2}
               </span>
             </motion.h1>
@@ -92,7 +92,7 @@ return (
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mx-auto text-sm md:text-lg text-neutral-300 text-center mb-6 sm:mb-9"
+              className="mx-auto text-sm md:text-base lg:text-lg pt-7 md:pt-9 lg:pt-12 pb-4 md:pb-5 lg:pb-8 text-neutral-300 text-center mb-6 sm:mb-9"
             >
               {text.paragraph}
             </motion.p>

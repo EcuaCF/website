@@ -33,37 +33,37 @@ export default function Clients() {
       name: "Alice Johnson",
       company: "TechCorp",
       comment: text.testimonial1,
-      photo: "/images/customers/alice.jpg",
+      photo: "/images/trusted-by/user.png",
     },
     {
       name: "Bob Smith",
       company: "FinSolutions",
       comment: text.testimonial2,
-      photo: "/images/customers/bob.jpg",
+      photo: "/images/trusted-by/user.png",
     },
     {
       name: "Clara Lee",
       company: "HealthPlus",
       comment: text.testimonial3,
-      photo: "/images/customers/clara.jpg",
+      photo: "/images/trusted-by/user.png",
     },
     {
       name: "David Green",
       company: "InsureCo",
       comment: text.testimonial4,
-      photo: "/images/customers/david.jpg",
+      photo: "/images/trusted-by/user.png",
     },
     {
       name: "Eva Martinez",
       company: "RetailHub",
       comment: text.testimonial5,
-      photo: "/images/customers/eva.jpg",
+      photo: "/images/trusted-by/user.png",
     },
     {
       name: "Frank Wilson",
       company: "EduTech",
       comment: text.testimonial6,
-      photo: "/images/customers/frank.jpg",
+      photo: "/images/trusted-by/user.png",
     },
   ];
 
@@ -135,7 +135,7 @@ export default function Clients() {
       {/* Header Section */}
       <div className="relative z-10 text-center py-4 px-4 w-full max-w-6xl">
         <SlideUp>
-          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-500 to-neutral-300 text-3xl sm:text-4xl md:text-5xl py-2 relative z-20 font-bold tracking-tight">
+          <h1 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-600 to-neutral-300 text-3xl sm:text-4xl md:text-5xl py-2 relative z-20 font-bold tracking-tight">
             {text.title}
           </h1>
           <p className="mx-auto text-sm sm:text-base md:text-lg text-white dark:text-neutral-300 text-center mt-4 md:mt-7 mb-6 md:mb-8 max-w-2xl">

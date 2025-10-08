@@ -134,7 +134,6 @@ export default function Footer() {
         <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
           {/* Main Grid - Globe only on large screens, 4 columns on smaller screens */}
           <div className="flex flex-col gap-4 sm:grid sm:grid-cols-4 lg:grid-cols-[280px_1fr_1fr_1fr_1fr] sm:gap-4 lg:gap-8 ">
-            
             {/* Column 1 - Globe (Hidden on small/medium, shown on large) */}
             <div className="hidden lg:block">
               <div className="h-40 w-40 mx-auto">

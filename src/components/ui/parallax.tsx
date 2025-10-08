@@ -49,14 +49,14 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [0, 300]),  // Reduced from -700 to 300
     springConfig
   );
-  
+
   return (
     <div
       ref={ref}
-      className="parallax lg:h[300vh] py-70 md:py-50 lg:py-20 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="parallax min-h-screen py-70 md:py-50 lg:py-20 lg:overflow-visible lg:pb-50 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -68,7 +68,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-6 lg:space-x-10 mb-5 md:mb-15 lg:mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-4 sm:space-x-6 lg:space-x-10 mb-10 md:mb-20 lg:mb-30">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -145,7 +145,7 @@ export const ProductCard = ({
           src={product.thumbnail}
           height="600"
           width="850"
-          className="object-center absolute h-full w-full inset-0"
+          className="object-cover absolute h-full w-full inset-0"
           alt={product.title}
         />
       <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>

@@ -20,8 +20,8 @@ export default function Clients() {
     const text = {
       title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de Nuestros Clientes',
       paragraph: language === 'EN' ? 'Discover how our solutions have transformed businesses and enhanced operational efficiency.' : 'Descubre cómo nuestras soluciones han transformado negocios y mejorado la eficiencia operativa.',
-      testimonial1: language === 'EN' ? 'Their AI solutions transformed our workflow and boosted efficiency beyond expectations!' : '¡Sus soluciones de IA transformaron nuestro flujo de trabajo e impulsaron la eficiencia más allá de las expectativas!',
-      testimonial2: language === 'EN' ? 'Professional, reliable, and innovative. Highly recommend!' : 'Profesionales, confiables e innovadores. ¡Altamente recomendados!',
+      testimonial1: language === 'EN' ? "Ecua Code Forge has helped revolutionize our policy processing platform. Their custom AI solution has reduced processing time by 60% and significantly improved accuracy. Their team's expertise and dedication to our success has made them an invaluable partner." : 'Ecua Code Forge ha ayudado a revolucionar nuestra plataforma de procesamiento de pólizas. Su solución de IA personalizada ha reducido el tiempo de procesamiento en un 60 % y ha mejorado significativamente la precisión. La experiencia y la dedicación de su equipo a nuestro éxito los han convertido en un socio invaluable.',
+      testimonial2: language === 'EN' ? 'Working with Ecua Code Forge has been a game-changer for our business. Their understanding of international standards has helped us implement solutions that truly address our unique challenges.' : 'Trabajar con Ecua Code Forge ha sido un punto de inflexión para nuestra empresa. Su conocimiento de los estándares internacionales nos ha ayudado a implementar soluciones que realmente abordan nuestros desafíos únicos.',
       testimonial3: language === 'EN' ? 'Amazing service and support. Our team loves it!' : '¡Increíble servicio y soporte! ¡A nuestro equipo le encanta!',
       testimonial4: language === 'EN' ? 'Exceeded our expectations in every way.' : 'Superó nuestras expectativas en todos los sentidos.',
       testimonial5: language === 'EN' ? 'Seamless integration and excellent communication.' : 'Integración impecable y excelente comunicación.',
@@ -30,14 +30,14 @@ export default function Clients() {
     
     const testimonials: Testimonial[] = [
     {
-      name: "Alice Johnson",
-      company: "TechCorp",
+      name: "Sarah Munro",
+      company: "Quick Silver Systems, Inc.",
       comment: text.testimonial1,
       photo: "/images/trusted-by/user.png",
     },
     {
-      name: "Bob Smith",
-      company: "FinSolutions",
+      name: "Sean Pitcher",
+      company: "CEO",
       comment: text.testimonial2,
       photo: "/images/trusted-by/user.png",
     },
@@ -197,7 +197,7 @@ export default function Clients() {
 
                     {/* Comment */}
                     <div className="relative z-10">
-                      <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed pt-2 md:pt-3">
+                      <p className="text-gray-800 text-xxs md:text-sm leading-relaxed pt-2 md:pt-3">
                         {t.comment}
                       </p>
                     </div>

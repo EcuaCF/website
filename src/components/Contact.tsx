@@ -25,11 +25,12 @@ const ContactUs = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    alert(`${text.alert}`);
   };
 
   const {language} = useLanguage();
   const text = {
+    alert: language === 'EN' ? 'Thank you for your message! We will get back to you soon.' : '¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.',
     title: language === 'EN' ? 'Contact' : 'Contacto',
     subtitle: language === 'EN' ? 'Fill out the form below and our team will get back to you as soon as possible.' : 'Llena el siguiente formulario y nuestro equipo se pondrá en contacto contigo lo antes posible.',
     name: language === 'EN' ? 'Full Name *' : 'Nombre Completo *',

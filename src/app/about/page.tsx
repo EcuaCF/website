@@ -30,7 +30,7 @@ export function TimelineDemo() {
       title: text.title,
       content: (
         <div>
-          <h1 className="font-boldfont-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle}</h1>
+          <h1 className="font-bold sm:text-1x1 md:text-2xl lg:text-2xl">{text.subtitle}</h1>
           <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 mt-5 mb-6">
             {text.paragraph}
           </p>

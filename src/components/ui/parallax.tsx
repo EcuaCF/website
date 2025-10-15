@@ -8,6 +8,7 @@ import {
   MotionValue,
 } from "motion/react";
 import { useLanguage } from "../LanguageContext";
+import Image from "next/image";
 
 export const HeroParallax = ({
   products,
@@ -141,7 +142,7 @@ export const ProductCard = ({
       key={product.title}
       className="group/product h-48 sm:h-60 md:h-72 lg:h-82 w-64 sm:w-80 md:w-96 lg:w-[40rem] relative shrink-0"
     >
-        <img
+        <Image
           src={product.thumbnail}
           height="600"
           width="850"

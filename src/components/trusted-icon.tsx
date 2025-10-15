@@ -1,4 +1,5 @@
 import { useLanguage } from "@/components/LanguageContext";
+import Image from "next/image";
 
 export function TrustedIcon() {
   const {language} = useLanguage();
@@ -10,21 +11,21 @@ export function TrustedIcon() {
   return (
     <div className="bg-transparent border-neutral-400 flex rounded-full border p-1 shadow-sm w-60 align-middle">
       <div className="flex -space-x-1.5 items-center ml-1">
-        <img
+        <Image
           className="ring-background rounded-full ring-1"
           src="/images/trusted-by/user.png"
           width={25}
           height={25}
           alt="Avatar 01"
         />
-        <img
+        <Image
           className="ring-background rounded-full ring-1"
           src="/images/trusted-by/user.png"
           width={25}
           height={25}
           alt="Avatar 02"
         />
-        <img
+        <Image
           className="ring-background rounded-full ring-1"
           src="/images/trusted-by/user.png"
           width={25}

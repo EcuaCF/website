@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { IconArrowLeft, IconArrowRight, IconQuote } from "@tabler/icons-react";
@@ -69,6 +69,7 @@ export default function Clients() {
 
   const [index, setIndex] = useState(0);
   const [visibleCards, setVisibleCards] = useState(1);
+  const [changed, setChanged] = useState(Date.now());
   const autoPlayDelay = 4000;
 
   // Handle responsive card visibility
@@ -103,9 +104,13 @@ export default function Clients() {
 
   const { width: cardWidth, gap } = getCardDimensions();
 
-  const handleNext = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length);
-  };
+  const handleNext = useCallback((autoPlay: boolean = false) => {
+    const dif = Date.now() - changed;
+    if (!autoPlay || (dif >= autoPlayDelay && autoPlay)) {
+      setChanged(Date.now());
+      setIndex((prev) => (prev + 1) % testimonials.length);
+    }
+  }, [changed, autoPlayDelay, testimonials.length]); // Add dependencies used in the function
 
   const handlePrev = () => {
     setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -114,11 +119,11 @@ export default function Clients() {
   // Auto-play functionality
   useEffect(() => {
     const interval = setInterval(() => {
-      handleNext();
+      handleNext(true);
     }, autoPlayDelay);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [handleNext, autoPlayDelay]);
 
   // Calculate the translateX value to center the current card
   const calculateTranslateX = () => {
@@ -230,7 +235,7 @@ export default function Clients() {
 
           {/* Right Arrow - Responsive positioning */}
           <button
-            onClick={handleNext}
+            onClick={() => handleNext(false)}
             className="absolute right-2 sm:right-4 md:-right-8 lg:-right-12 top-1/2 -translate-y-1/2 z-30 p-2 sm:p-3 md:p-4 bg-white/90 hover:bg-white cursor-pointer rounded-full shadow-xl transition-all duration-200 border border-gray-200"
           >
             <IconArrowRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-700" />

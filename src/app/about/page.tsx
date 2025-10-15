@@ -2,7 +2,6 @@
 import { BackgroundLines } from "@/components/ui/background-lines";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline"; 
-import Image from "next/image";
 import Members from "@/components/Members";
 import Mission from "@/components/Mission";
 import { Globe } from "@/components/GlobalPresence";

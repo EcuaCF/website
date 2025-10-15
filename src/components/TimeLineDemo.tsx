@@ -1,7 +1,7 @@
 import { useLanguage } from "./LanguageContext";
 import { Timeline } from "./ui/timeline";
 
-export default function TimelineDemo() {
+const TimelineDemo = () => {
   const {language} = useLanguage();
   const text = {
     title: language === 'EN' ? 'Early 2025' : 'Principios de 2025',
@@ -66,5 +66,6 @@ export default function TimelineDemo() {
       <Timeline data={data} />
     </div>
   );
-}
- 
+};
+
+export default TimelineDemo;

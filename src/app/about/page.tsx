@@ -8,7 +8,7 @@ import { TypewriterEffect } from "@/components/ui/typewriter-effect";
 import SlideUp from "@/components/SlideUp";
 import OurValues from "@/components/Values";
 import { useLanguage } from "@/components/LanguageContext";
-import { TimelineDemo } from "@/components/TimeLineDemo";
+import TimelineDemo from "@/components/TimeLineDemo";
 
 export default function About() {
   const {language} = useLanguage();

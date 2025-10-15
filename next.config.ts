@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  assetPrefix: '/website',
-  basePath: '/website',
+  output: "export", // You likely already have this if you're using GitHub Pages
+  basePath: "/website", // 👈 this tells Next.js where it lives
+  assetPrefix: "/website/", // 👈 ensures static assets load correctly
 };
 module.exports = nextConfig
 

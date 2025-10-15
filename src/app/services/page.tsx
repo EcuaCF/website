@@ -53,43 +53,43 @@ export default function Services(){
                       name: text.name1, 
                       description: text.description1,
                       subtitle: text.subtitle1,
-                      src: "/images/solutions/AI-solutions.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/AI-solutions.jpg`
                     },
                     { 
                       name: text.name2, 
                       description: text.description2,
                       subtitle: text.subtitle2,
-                      src: "/images/solutions/Coding.jpeg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/Coding.jpeg`
                     },
                     { 
                       name: text.name3, 
                       description: text.description3,
                       subtitle: text.subtitle3,
-                      src: "/images/solutions/documents.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/documents.jpg`
                     },
                     { 
                       name: text.name4, 
                       description: text.description4,
                       subtitle: text.subtitle4,
-                      src: "/images/solutions/data-collection.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/data-collection.jpg`
                     },
                     { 
                       name: text.name5, 
                       description: text.description5,
                       subtitle: text.subtitle5,
-                      src: "/images/solutions/Insurance.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/Insurance.jpg`
                     },
                     { 
                       name: text.name6, 
                       description: text.description6,
                       subtitle: text.subtitle6,
-                      src: "/images/solutions/tech-support.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/tech-support.jpg`
                     },
                     { 
                       name: text.name7, 
                       description: text.description7,
                       subtitle: text.subtitle7,
-                      src: "/images/solutions/training.jpg"
+                      src: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/solutions/training.jpg`
                     }
                     ] })}
                 </div>

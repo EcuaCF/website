@@ -7,12 +7,12 @@ import { TrustedIcon } from "./trusted-icon";
 import { useLanguage } from "@/components/LanguageContext";
 
 const logos = [
-  "/images/industry-leaders/core-logo.png",
-  "/images/industry-leaders/HDI-logo.png",
-  "/images/industry-leaders/NPIA-logo.png",
-  "/images/industry-leaders/PCC-logo.png",
-  "/images/industry-leaders/sterling-logo.png",
-  "/images/industry-leaders/quick-silver-logo.gif",
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/core-logo.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/HDI-logo.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/NPIA-logo.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/PCC-logo.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/sterling-logo.png`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH}/images/industry-leaders/quick-silver-logo.gif`,
 ];
 
 export default function TrustedBy() {

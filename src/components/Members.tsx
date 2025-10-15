@@ -14,14 +14,14 @@ export function Members() {
   }
   
   const teamMembers = [
-    { id: 1, name: "Doménica Criollo", role: text.role3, image: "/images/dome.jpeg" },
-    { id: 2, name: "Jairo Cabrera", role: text.role2, image: "/images/jairo.jpeg" },
-    { id: 3, name: "Jinson Medina", role: text.role1, image: "/images/jinson.jpeg" },
-    { id: 4, name: "Erick Armijos", role: text.role1, image: "/images/erick.jpeg" },
-    { id: 5, name: "Diego Pazmiño", role: text.role1, image: "/images/diego.jpeg" },
-    { id: 6, name: "David Velasco", role: text.role1, image: "/images/david.jpeg" },
-    { id: 7, name: "Omar Gualotuña", role: text.role1, image: "/images/omar.jpeg" },
-    { id: 8, name: "Adhisson Cedeño", role: text.role1, image: "/images/adhisson.jpeg" },
+    { id: 1, name: "Doménica Criollo", role: text.role3, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/dome.jpeg` },
+    { id: 2, name: "Jairo Cabrera", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/jairo.jpeg` },
+    { id: 3, name: "Jinson Medina", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/jinson.jpeg` },
+    { id: 4, name: "Erick Armijos", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/erick.jpeg` },
+    { id: 5, name: "Diego Pazmiño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/diego.jpeg` },
+    { id: 6, name: "David Velasco", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/david.jpeg` },
+    { id: 7, name: "Omar Gualotuña", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/omar.jpeg` },
+    { id: 8, name: "Adhisson Cedeño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/adhisson.jpeg` },
   ];
 
   return (

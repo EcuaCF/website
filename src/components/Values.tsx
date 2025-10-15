@@ -35,7 +35,7 @@ export default function OurValues() {
     {
       id: 1,
       title: text.titleO,
-      image: "/images/values/innovation.jpg",
+      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/values/innovation.jpg`,
       description: text.desc1,
       colSpan: "col-span-1",
       rowSpan: "row-span-2" // Vertical image
@@ -43,7 +43,7 @@ export default function OurValues() {
     {
       id: 2,
       title: text.titleT,
-      image: "/images/values/collaboration.jpg",
+      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/values/collaboration.jpg`,
       description:  text.desc2,
       colSpan: "col-span-2",
       rowSpan: "row-span-1" // Horizontal image on top
@@ -51,7 +51,7 @@ export default function OurValues() {
     {
       id: 3,
       title: text.titleTh,
-      image: "/images/values/technical.jpg",
+      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/values/technical.jpg`,
       description:  text.desc3,
       colSpan: "col-span-1",
       rowSpan: "row-span-1" // Bottom left
@@ -59,7 +59,7 @@ export default function OurValues() {
     {
       id: 4,
       title: text.titleF,
-      image: "/images/values/integrity.jpg",
+      image: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/values/integrity.jpg`,
       description:  text.desc4,
       colSpan: "col-span-1",
       rowSpan: "row-span-1" // Bottom right

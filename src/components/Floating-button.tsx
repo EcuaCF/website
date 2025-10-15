@@ -8,7 +8,6 @@ export default function FloatingActionButton() {
   const handleMainButtonClick = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsOpen(!isOpen);
-    console.log("Button clicked, isOpen:", !isOpen); // Debug log
   };
 
   const handleActionClick = (url: string, e: React.MouseEvent) => {

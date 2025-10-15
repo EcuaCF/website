@@ -16,12 +16,11 @@ type HoverBorderBaseProps = {
 type PolymorphicRef<T extends React.ElementType> = React.ComponentPropsWithRef<T> & {
   as?: T;
 };
+type HoverBorderProps<T extends React.ElementType> =
+  React.PropsWithChildren<HoverBorderBaseProps> & PolymorphicRef<T>;
 
 export function HoverBorderGradient<T extends React.ElementType = "button">(
-  props: React.PropsWithChildren<HoverBorderBaseProps> &
-    (PolymorphicRef<T> extends infer P ? P : never)
-) {
-  const {
+  {
     children,
     containerClassName,
     className,
@@ -29,18 +28,22 @@ export function HoverBorderGradient<T extends React.ElementType = "button">(
     duration = 1,
     clockwise = true,
     ...rest
-  } = props as any;
+  }: HoverBorderProps<T>
+) {
   const [hovered, setHovered] = useState<boolean>(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
-  const rotateDirection = (currentDirection: Direction): Direction => {
-    const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
-    const currentIndex = directions.indexOf(currentDirection);
-    const nextIndex = clockwise
-      ? (currentIndex - 1 + directions.length) % directions.length
-      : (currentIndex + 1) % directions.length;
-    return directions[nextIndex];
-  };
+  const rotateDirection = React.useCallback(
+    (currentDirection: Direction): Direction => {
+      const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
+      const currentIndex = directions.indexOf(currentDirection);
+      const nextIndex = clockwise
+        ? (currentIndex - 1 + directions.length) % directions.length
+        : (currentIndex + 1) % directions.length;
+      return directions[nextIndex];
+    },
+    [clockwise]
+  );
 
   const movingMap: Record<Direction, string> = {
     TOP: "radial-gradient(20.7% 50% at 50% 0%, hsl(0, 0%, 100%) 0%, rgba(255, 255, 255, 0) 100%)",
@@ -71,7 +74,7 @@ export function HoverBorderGradient<T extends React.ElementType = "button">(
         "relative flex rounded-full content-center bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-white/20 items-center flex-col flex-nowrap gap-10 h-min justify-center overflow-visible p-px decoration-clone w-fit",
         containerClassName
       )}
-      {...(rest as any)}
+      {...(rest as unknown as Record<string, unknown>)}
     >
       <div
         className={cn(

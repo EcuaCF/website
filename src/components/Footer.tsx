@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Plus, X, MessageCircle, Linkedin, Mail } from 'lucide-react';
 import { useLanguage } from "@/components/LanguageContext";
+import Link from "next/link";
 
 function FloatingActionButton() {
   const {language} = useLanguage();
@@ -156,10 +157,10 @@ export default function Footer() {
             {/* Column 3 - Quick Links */}
             <div className="flex flex-col gap-2 sm:gap-3">
               <h1 className="text-sm sm:text-base lg:text-lg font-bold">{text.quick}</h1>
-              <a href="#" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.home}</a>
-              <a href="/about" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.about}</a>
-              <a href="/services" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.service}</a>
-              <a href="/contact" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.contact}</a>
+              <Link href="/" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.home}</Link>
+              <Link href="/about" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.about}</Link>
+              <Link href="/services" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.service}</Link>
+              <Link href="/contact" className="hover:text-gray-400 text-gray-300 text-xs sm:text-sm lg:text-base transition link link-animated">{text.contact}</Link>
             </div>
 
             {/* Column 4 - Services */}

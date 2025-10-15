@@ -33,37 +33,37 @@ export default function Clients() {
       name: "Sarah Munro",
       company: "Quick Silver Systems, Inc.",
       comment: text.testimonial1,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
     {
       name: "Sean Pitcher",
       company: "CEO",
       comment: text.testimonial2,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
     {
       name: "Clara Lee",
       company: "HealthPlus",
       comment: text.testimonial3,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
     {
       name: "David Green",
       company: "InsureCo",
       comment: text.testimonial4,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
     {
       name: "Eva Martinez",
       company: "RetailHub",
       comment: text.testimonial5,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
     {
       name: "Frank Wilson",
       company: "EduTech",
       comment: text.testimonial6,
-      photo: `${process.env.NEXT_PUBLIC_BASE_PATH}/images/trusted-by/user.png`,
+      photo: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/trusted-by/user.png`,
     },
   ];
 

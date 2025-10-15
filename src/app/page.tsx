@@ -153,7 +153,6 @@ function SparklesPreview(language:string) {
   );
 }
 
-
 function TypewriterEffectDemo(language:string) {
   const translated = {
     text1: language === 'EN' ? 'Build' : 'Construye',

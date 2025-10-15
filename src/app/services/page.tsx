@@ -3,9 +3,9 @@
 import SlideUp from "@/components/SlideUp";
 import { AnimatedServices } from "@/components/ui/animated-services"
 import React from "react";
-import { HeroParallax } from "@/components/ui/parallax";
-import WhyChooseUs from "@/components/choose-us";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import { useLanguage } from "@/components/LanguageContext";
+import HeroParallaxDemo from "@/components/HeroParallaxDemo";
 
 export default function Services(){
   const {language} = useLanguage();
@@ -38,7 +38,7 @@ export default function Services(){
     return (
         <div>
             <section className="bg-black">
-                {HeroParallaxDemo()}
+                <HeroParallaxDemo />
             </section>
             <section className="bg-black pt-20">
                 <SlideUp>
@@ -95,7 +95,7 @@ export default function Services(){
                 </div>
             </section>
             <section>
-                {WhyChooseUs()}
+                <WhyChooseUs />
             </section>
         </div>
     );

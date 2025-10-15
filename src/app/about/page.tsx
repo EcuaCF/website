@@ -121,10 +121,12 @@ function TypewriterEffectDemo() {
        </SlideUp>
          <TypewriterEffect words={words} />
        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
-         <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm cursor-pointer">
+         <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm cursor-pointer"
+         onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/services`}>
            {text.button1}
          </button>
-         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer">
+         <button className="w-40 h-10 rounded-xl bg-white text-black border border-black text-sm cursor-pointer"
+         onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contact`}>
            {text.button2}
          </button>
        </div>

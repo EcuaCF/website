@@ -145,7 +145,7 @@ function SparklesPreview(language:string) {
             as="button"
             className="bg-black text-white flex items-center space-x-2"
           >
-            <span className="px-4 p-2 cursor-pointer" onClick={() => window.location.href = '/contact'}>{translations.button}</span>
+            <span className="px-4 p-2 cursor-pointer" onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contact`}>{translations.button}</span>
           </HoverBorderGradient>
       </div>
     </div>
@@ -215,11 +215,11 @@ function TypewriterEffectDemo(language:string) {
       </div>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 w-full sm:w-auto justify-center">
         <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-black border border-transparent text-white text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-800 active:scale-95"
-        onClick={() => window.location.href = '/services'}>
+        onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/services`}>
           {translated.button1}
         </button>
         <button className="w-full sm:w-32 md:w-36 lg:w-40 h-9 sm:h-10 md:h-11 rounded-lg sm:rounded-xl bg-white text-black border border-gray-300 text-xs sm:text-sm md:text-base font-medium cursor-pointer transition-all duration-200 hover:bg-gray-50 hover:border-gray-400 active:scale-95"
-        onClick={() => window.location.href = '/contact'}>
+        onClick={() => window.location.href = `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contact`}>
           {translated.button2}
         </button>
       </div>

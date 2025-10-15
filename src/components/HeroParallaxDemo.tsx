@@ -13,68 +13,68 @@ const HeroParallaxDemo = () => {
   const products = [
     {
       title: "HDI.",
-      thumbnail: "/images/services/HDI3.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI3.png`,
     },
     {
       title: "HDI",
-      thumbnail: "/images/services/HDI2.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI2.png`,
     },
     {
       title: "HDI",
-      thumbnail: "/images/services/HDI.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI.png`,
     },
 
     {
       title: "NPIA",
-      thumbnail: "/images/services/NPIA2.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/NPIA2.png`,
     },
     {
       title: "PCC",
-      thumbnail: "/images/services/PCC.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
     {
       title: "NPIA",
-      thumbnail: "/images/services/NPIA.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/NPIA.png`,
     },
 
     {
       title: "SSI",
-      thumbnail: "/images/services/SSI.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/SSI.png`,
     },
     {
       title: "STM",
-      thumbnail: "/images/services/STM2.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/STM2.png`,
     },
     {
       title: "STM",
-      thumbnail: "/images/services/STM.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/STM.png`,
     },
     {
       title: "AI",
-      thumbnail: "/images/services/AI.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/AI.png`,
     },
     {
       title: "PCC",
-      thumbnail: "/images/services/PCC.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
 
     {
       title: text.hdi,
-      thumbnail: "/images/services/CP-HDI.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/CP-HDI.png`,
     },
     {
       title: "PCC",
-      thumbnail: "/images/services/PCC.png",
+      thumbnail: `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
     {
       title: text.stm,
       thumbnail:
-        "/images/services/CP-STM.png",
+        `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/CP-STM.png`,
     },
     {
       title: text.ssi,
       thumbnail:
-        "/images/services/CP-SSI.png",
+        `${{process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/CP-SSI.png`,
     },
   ];
 

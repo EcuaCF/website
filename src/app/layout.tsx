@@ -8,7 +8,8 @@ import { LanguageProvider } from "@/components/LanguageContext";
 
 const bitcoin = Roboto_Flex({
   variable: "--font-bitcoin",
-  weight: "400"
+  weight: "400",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {

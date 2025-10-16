@@ -9,6 +9,7 @@ import SlideUp from "@/components/SlideUp";
 import OurValues from "@/components/Values";
 import { useLanguage } from "@/components/LanguageContext";
 import TimelineDemo from "@/components/TimeLineDemo";
+import Leaders from "@/components/Leaders";
 
 export default function About() {
   const {language} = useLanguage();
@@ -42,13 +43,14 @@ export default function About() {
           {OurValues()}
         </section>
         <section className="w-full bg-white">
-          {Members()}
-        </section>
-        
-        <section className="w-full bg-white">
           {Mission()}
         </section>
-        
+        <section className="w-full bg-white">
+          {Leaders()}
+        </section>
+        <section className="w-full bg-white">
+          {Members()}
+        </section>
         <section className="w-full bg-white">
           {Globe()}
         </section>

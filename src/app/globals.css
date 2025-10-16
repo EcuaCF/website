@@ -54,6 +54,7 @@ body {
 /* Team Carousel Styles */
 .team-carousel-section {
   padding: 0;
+  padding-bottom: 85px;
   background: transparent;
   border-radius: 12px;
   overflow: hidden;

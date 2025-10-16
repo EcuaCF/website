@@ -6,6 +6,7 @@ import React from "react";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { useLanguage } from "@/components/LanguageContext";
 import HeroParallaxDemo from "@/components/HeroParallaxDemo";
+import Gallery from "@/components/Gallery";
 
 export default function Services(){
   const {language} = useLanguage();
@@ -39,6 +40,9 @@ export default function Services(){
         <div>
             <section className="bg-black">
                 <HeroParallaxDemo />
+            </section>
+            <section>
+                <Gallery />
             </section>
             <section className="bg-black pt-20">
                 <SlideUp>

@@ -15,7 +15,7 @@ export default function MissionVision() {
   }
 
   return (
-    <section className="py-20 px-6 lg:px-20">
+    <section className="py-10 px-6 lg:px-10">
       <div className="max-w-5xl mx-auto text-center">
         {/* Title */}
         <SlideUp>

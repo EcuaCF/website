@@ -106,14 +106,14 @@ const Gallery: React.FC = () => {
             ))}
 
             {/* Blue Overlay */}
-            <div className="absolute bottom-0 left-0 w-full h-48 md:h-[300px] bg-gradient-to-t from-[#2e59b8] via-[#1b5ff2]/20 to-transparent pointer-events-none z-10" />
+            <div className="absolute bottom-0 left-0 w-full h-48 md:h-[400px] bg-gradient-to-t from-[#2e59b8] via-[#1b5ff2]/20 to-transparent pointer-events-none z-10" />
 
             {/* Text Content */}
             <div className="absolute bottom-4 md:bottom-10 left-4 md:left-10 z-20 w-[calc(100%-2rem)] md:w-[calc(100%-5rem)] text-white">
               <h1 className="italiana-regular text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-4 tracking-wide text-left leading-tight text-shadow-lg">
                 {slides[currentSlide].title}
               </h1>
-              <p className="text-sm md:text-base lg:text-lg leading-relaxed max-w-2xl text-shadow-md opacity-95 font-normal">
+              <p className="text-xs md:text-sm lg:text-lg leading-relaxed max-w-2xl text-shadow-md opacity-95 font-normal">
                 {slides[currentSlide].description}
               </p>
             </div>

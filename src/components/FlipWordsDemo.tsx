@@ -2,7 +2,7 @@
 
 import { useLanguage } from "./LanguageContext";
 import SlideUp from "./SlideUp";
-import { FlipWords } from "./ui/flip-words";
+import { FlipWords } from "./ui/FlipWords";
 
 const FlipWordsDemo = () => {
     const {language} = useLanguage();

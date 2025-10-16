@@ -43,6 +43,7 @@ const Navbar = () => {
     ]
 
     const toggleLanguage = () => {
+        localStorage.setItem('language', language === 'EN' ? 'ES' : 'EN');
         setLanguage(prev => prev === 'EN' ? 'ES' : 'EN');
     };
 

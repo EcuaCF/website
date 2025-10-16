@@ -3,7 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, useMemo } from "react";
 
 type Service = {
   description: string;
@@ -40,9 +40,9 @@ export const AnimatedServices = ({
     }
   }, [autoplay, handleNext]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
-  };
+    const rotations = useMemo(() => {
+    return services.map(() => Math.floor(Math.random() * 21) - 10);
+  }, [services]);
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-12 antialiased sm:px-6 md:py-16 lg:px-8 lg:py-20">
@@ -56,13 +56,13 @@ export const AnimatedServices = ({
                 initial={{
                   opacity: 0,
                   scale: 0.9,
-                  rotate: randomRotateY(),
+                  rotate: isActive(index) ? 0 : rotations[index],
                   zIndex: 0,
                 }}
                 animate={{
                   opacity: isActive(index) ? 1 : 0.7,
                   scale: isActive(index) ? 1 : 0.95,
-                  rotate: isActive(index) ? 0 : randomRotateY(),
+                  rotate: isActive(index) ? 0 : isActive(index) ? 0 : rotations[index],
                   zIndex: isActive(index)
                     ? 40
                     : services.length + 2 - index,
@@ -71,7 +71,7 @@ export const AnimatedServices = ({
                 exit={{
                   opacity: 0,
                   scale: 0.9,
-                  rotate: randomRotateY(),
+                  rotate: isActive(index) ? 0 : rotations[index],
                   zIndex: 0,
                 }}
                 transition={{
@@ -190,13 +190,13 @@ export const AnimatedServices = ({
                 initial={{
                   opacity: 0,
                   scale: 0.9,
-                  rotate: randomRotateY(),
+                  rotate: isActive(index) ? 0 : rotations[index],
                   zIndex: 0,
                 }}
                 animate={{
                   opacity: isActive(index) ? 1 : 0.7,
                   scale: isActive(index) ? 1 : 0.95,
-                  rotate: isActive(index) ? 0 : randomRotateY(),
+                  rotate: isActive(index) ? 0 : isActive(index) ? 0 : rotations[index],
                   zIndex: isActive(index)
                     ? 40
                     : services.length + 2 - index,
@@ -205,7 +205,7 @@ export const AnimatedServices = ({
                 exit={{
                   opacity: 0,
                   scale: 0.9,
-                  rotate: randomRotateY(),
+                  rotate: isActive(index) ? 0 : rotations[index],
                   zIndex: 0,
                 }}
                 transition={{

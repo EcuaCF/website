@@ -26,10 +26,6 @@ function FloatingActionButton() {
     window.open('https://www.linkedin.com/company/ecua-code-forge-s-a-s/', '_blank');
   };
 
-  const handleEmail = () => {
-    window.location.href = 'mailto:lgarzon@ecuacf.com';
-  };
-
 return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Speed Dial Buttons */}
@@ -69,13 +65,12 @@ return (
           <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             {text.button2}
           </span>
-          <button
-            onClick={handleEmail}
+          <Link href="mailto:lgarzon@ecuacf.com" target="_blank"
             className="bg-red-500 hover:bg-red-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="Email"
           >
             <Mail size={16} className="sm:w-5 sm:h-5" />
-          </button>
+          </Link>
         </div>
       </div>
 

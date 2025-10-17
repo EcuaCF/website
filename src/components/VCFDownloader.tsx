@@ -8,7 +8,7 @@ export default function VCFDownloader(name: string) {
   useEffect(() => {
     const downloadVCF = async () => {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contacts/${name}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contactFiles/${name}`);
         const blob = await response.blob();
         const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
@@ -31,7 +31,7 @@ export default function VCFDownloader(name: string) {
     <div style={{ padding: '20px', textAlign: 'center' }}>
       <p>Downloading your contacts file...</p>
       <p>If download does not start automatically, 
-        <a href="/api/contacts/vcf" download="contacts.vcf"> click here</a>.
+        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contactFiles/${name}`} download={name}> click here</a>.
       </p>
     </div>
   );

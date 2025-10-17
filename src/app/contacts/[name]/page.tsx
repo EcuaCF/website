@@ -1,9 +1,10 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { use } from "react";
 
-export default async function ContactPage({ params }: { params: Promise<{ name: string }> }) {
-  const resolvedParams = await params;
+export default function ContactPage({ params }: { params: Promise<{ name: string }> }) {
+  const resolvedParams = use(params);
   const router = useRouter();
   
   useEffect(() => {

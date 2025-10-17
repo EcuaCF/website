@@ -14,7 +14,7 @@ export function Leaders() {
   
   const teamLeaders = [
     { id: 1, name: "Sean Pitcher", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/sean_pitcher.png` },
-    { id: 2, name: "Luz Garzón", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/sean_pitcher.png` },
+    { id: 2, name: "Luz Garzón", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/luz.png` },
   ];
 
   return (

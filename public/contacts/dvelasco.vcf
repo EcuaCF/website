@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:David Velasco
+N:Velasco;David;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:dvelasco@ecuacf.com
+TEL;TYPE=CELL:+593 (98) 937 7750
+item1.ADR:;;Av. Eloy Alfaro N-33-50 y Suiza;Quito;;;EC;Av. Eloy Alfaro N-33
+ -50 y Suiza\nQuito\nEC
+item1.X-ABLabel:Edificio SOHO Galaxy - Oficina 202
+ORG:Ecua Code Forge S.A.S
+TITLE:Software Engineer
+CATEGORIES:myContacts
+END:VCARD

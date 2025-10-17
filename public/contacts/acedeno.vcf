@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Adhisson Cedeño
+N:Cedeño;Adhisson;;;
+EMAIL;TYPE=INTERNET;TYPE=WORK:acedeno@ecuacf.com
+TEL;TYPE=CELL:+593 (97) 889 0183
+item1.ADR:;;Av. Eloy Alfaro N-33-50 y Suiza;Quito;;;EC;Av. Eloy Alfaro N-33
+ -50 y Suiza\nQuito\nEC
+item1.X-ABLabel:Edificio Soho Galaxy - Oficina 202
+ORG:Ecua Code Forge S.A.S
+TITLE:Software Engineer
+CATEGORIES:myContacts
+END:VCARD

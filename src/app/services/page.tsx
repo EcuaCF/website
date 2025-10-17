@@ -1,7 +1,7 @@
 "use client";
 
 import SlideUp from "@/components/SlideUp";
-import { AnimatedServices } from "@/components/ui/animated-services"
+import { AnimatedServices } from "@/components/ui/AnimatedServices"
 import React from "react";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import { useLanguage } from "@/components/LanguageContext";

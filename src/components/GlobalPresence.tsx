@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import SlideUp from "./SlideUp";
 import { useLanguage } from "@/components/LanguageContext";
  
-const World = dynamic(() => import("./ui/Globe").then((m) => m.World), {
+const World = dynamic(() => import("./ui/globe").then((m) => m.World), {
   ssr: false,
 });
  

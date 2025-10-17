@@ -18,14 +18,6 @@ function FloatingActionButton() {
     setIsOpen(!isOpen);
   };
 
-  const handleWhatsApp = () => {
-    window.open('https://wa.me/+593998852466', '_blank');
-  };
-
-  const handleLinkedIn = () => {
-    window.open('https://www.linkedin.com/company/ecua-code-forge-s-a-s/', '_blank');
-  };
-
 return (
     <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       {/* Speed Dial Buttons */}
@@ -37,13 +29,14 @@ return (
           <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             WhatsApp
           </span>
-          <button
-            onClick={handleWhatsApp}
+          <Link
+            href={'https://wa.me/+593998852466'}
+            target="_blank"
             className="bg-green-500 hover:bg-green-600 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="WhatsApp"
           >
             <MessageCircle size={16} className="sm:w-5 sm:h-5" />
-          </button>
+          </Link>
         </div>
 
         {/* LinkedIn Button */}
@@ -51,13 +44,14 @@ return (
           <span className="mr-2 bg-gray-800 text-white px-2 py-1 rounded text-xs sm:text-sm font-medium">
             LinkedIn
           </span>
-          <button
-            onClick={handleLinkedIn}
+          <Link
+            href={'https://www.linkedin.com/company/ecua-code-forge-s-a-s/'}
+            target="_blank"
             className="bg-blue-600 hover:bg-blue-700 text-white p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white"
             aria-label="LinkedIn"
           >
             <Linkedin size={16} className="sm:w-5 sm:h-5" />
-          </button>
+          </Link>
         </div>
 
         {/* Email Button */}

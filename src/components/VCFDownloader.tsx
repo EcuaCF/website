@@ -1,5 +1,7 @@
-  import { useEffect } from 'react';
-import { useRouter } from 'next/router';
+'use client';
+
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function VCFDownloader(name: string) {
   const router = useRouter();

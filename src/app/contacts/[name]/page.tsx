@@ -1,7 +1,9 @@
 import VCFDownloader from "@/components/VCFDownloader";
+import { use } from "react";
 
-export default function ContactPage({ params }: { params: { name: string } }) {
+export default function ContactPage({ params }: { params: Promise<{ name: string }> }) {
+  const resolvedParams = use(params);
   return (
-    VCFDownloader(params.name)
+    VCFDownloader(resolvedParams.name)
   );
 }

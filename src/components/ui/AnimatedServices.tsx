@@ -41,8 +41,14 @@ export const AnimatedServices = ({
   }, [autoplay, handleNext]);
 
     const rotations = useMemo(() => {
-    return services.map(() => Math.floor(Math.random() * 21) - 10);
-  }, [services]);
+  return services.map((service) => {
+    let hash = 0;
+    for (let i = 0; i < service.name.length; i++) {
+      hash = service.name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return (hash % 21) - 10;
+  });
+}, [services]);
 
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-12 antialiased sm:px-6 md:py-16 lg:px-8 lg:py-20">

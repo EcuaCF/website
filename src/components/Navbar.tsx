@@ -53,7 +53,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-20">
                     <div className="flex items-center">
                         <Link href="/">
-                            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/Ecuacf_logo.png`} alt="Logo" width={120} height={120} />
+                            <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/Ecuacf_logo.png`} alt="Logo" width={10} height={10} style={{width: 120, height: "auto"}}/>
                         </Link>
                     </div>
                     

@@ -190,7 +190,6 @@ export default function Clients() {
                     key={idx}
                     className="flex-shrink-0 bg-white/90 backdrop-blur-md rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-lg relative transition-all duration-300"
                     style={{ 
-                      width: `${cardWidth}px`,
                       opacity,
                       transform: `scale(${scale})`,
                     }}

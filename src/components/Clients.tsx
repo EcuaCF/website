@@ -16,19 +16,26 @@ type Testimonial = {
 };
 
 export default function Clients() {
-    const {language} = useLanguage();
-    const text = {
-      title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de Nuestros Clientes',
-      paragraph: language === 'EN' ? 'Discover how our solutions have transformed businesses and enhanced operational efficiency.' : 'Descubre cómo nuestras soluciones han transformado negocios y mejorado la eficiencia operativa.',
-      testimonial1: language === 'EN' ? "Ecua Code Forge has helped revolutionize our policy processing platform. Their custom AI solution has reduced processing time by 60% and significantly improved accuracy. Their team's expertise and dedication to our success has made them an invaluable partner." : 'Ecua Code Forge ha ayudado a revolucionar nuestra plataforma de procesamiento de pólizas. Su solución de IA personalizada ha reducido el tiempo de procesamiento en un 60 % y ha mejorado significativamente la precisión. La experiencia y la dedicación de su equipo a nuestro éxito los han convertido en un socio invaluable.',
-      testimonial2: language === 'EN' ? 'Working with Ecua Code Forge has been a game-changer for our business. Their understanding of international standards has helped us implement solutions that truly address our unique challenges.' : 'Trabajar con Ecua Code Forge ha sido un punto de inflexión para nuestra empresa. Su conocimiento de los estándares internacionales nos ha ayudado a implementar soluciones que realmente abordan nuestros desafíos únicos.',
-      testimonial3: language === 'EN' ? 'Amazing service and support. Our team loves it!' : '¡Increíble servicio y soporte! ¡A nuestro equipo le encanta!',
-      testimonial4: language === 'EN' ? 'Exceeded our expectations in every way.' : 'Superó nuestras expectativas en todos los sentidos.',
-      testimonial5: language === 'EN' ? 'Seamless integration and excellent communication.' : 'Integración impecable y excelente comunicación.',
-      testimonial6: language === 'EN' ? 'Truly transformative solutions for our business.' : 'Soluciones verdaderamente transformadoras para nuestro negocio.',
-    }
+  const {language} = useLanguage();
+  const [cardWidth, setCardWidth] = useState(280);
+  const [gap, setGap] = useState(10);
+  const [index, setIndex] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(1);
+  const [changed, setChanged] = useState(Date.now());
+  const autoPlayDelay = 4000;
+
+  const text = {
+    title: language === 'EN' ? 'What Our Customers Say' : 'Opiniones de Nuestros Clientes',
+    paragraph: language === 'EN' ? 'Discover how our solutions have transformed businesses and enhanced operational efficiency.' : 'Descubre cómo nuestras soluciones han transformado negocios y mejorado la eficiencia operativa.',
+    testimonial1: language === 'EN' ? "Ecua Code Forge has helped revolutionize our policy processing platform. Their custom AI solution has reduced processing time by 60% and significantly improved accuracy. Their team's expertise and dedication to our success has made them an invaluable partner." : 'Ecua Code Forge ha ayudado a revolucionar nuestra plataforma de procesamiento de pólizas. Su solución de IA personalizada ha reducido el tiempo de procesamiento en un 60 % y ha mejorado significativamente la precisión. La experiencia y la dedicación de su equipo a nuestro éxito los han convertido en un socio invaluable.',
+    testimonial2: language === 'EN' ? 'Working with Ecua Code Forge has been a game-changer for our business. Their understanding of international standards has helped us implement solutions that truly address our unique challenges.' : 'Trabajar con Ecua Code Forge ha sido un punto de inflexión para nuestra empresa. Su conocimiento de los estándares internacionales nos ha ayudado a implementar soluciones que realmente abordan nuestros desafíos únicos.',
+    testimonial3: language === 'EN' ? 'Amazing service and support. Our team loves it!' : '¡Increíble servicio y soporte! ¡A nuestro equipo le encanta!',
+    testimonial4: language === 'EN' ? 'Exceeded our expectations in every way.' : 'Superó nuestras expectativas en todos los sentidos.',
+    testimonial5: language === 'EN' ? 'Seamless integration and excellent communication.' : 'Integración impecable y excelente comunicación.',
+    testimonial6: language === 'EN' ? 'Truly transformative solutions for our business.' : 'Soluciones verdaderamente transformadoras para nuestro negocio.',
+  }
     
-    const testimonials: Testimonial[] = [
+  const testimonials: Testimonial[] = [
     {
       name: "Sarah Munro",
       company: "Quick Silver Systems, Inc.",
@@ -67,22 +74,24 @@ export default function Clients() {
     },
   ];
 
-  const [index, setIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(1);
-  const [changed, setChanged] = useState(Date.now());
-  const autoPlayDelay = 4000;
-
   // Handle responsive card visibility
   useEffect(() => {
     const updateVisibleCards = () => {
       if (window.innerWidth >= 1280) { // xl screens
         setVisibleCards(3);
+        setCardWidth(380);
+        setGap(24);
       } else if (window.innerWidth >= 1024) { // lg screens
         setVisibleCards(3);
+        setCardWidth(360);
+        setGap(20);
       } else if (window.innerWidth >= 768) { // md screens
         setVisibleCards(2);
-      } else { // sm screens
-        setVisibleCards(1);
+        setCardWidth(320);
+        setGap(16);
+      } else if (window.innerWidth >= 650) { // sm screens
+        setCardWidth(300);
+        setGap(12);
       }
     };
 
@@ -90,19 +99,6 @@ export default function Clients() {
     window.addEventListener('resize', updateVisibleCards);
     return () => window.removeEventListener('resize', updateVisibleCards);
   }, []);
-
-  // Calculate responsive card dimensions
-  const getCardDimensions = () => {
-    if (typeof window === 'undefined') return { width: 300, gap: 20 };
-    
-    const screenWidth = window.innerWidth;
-    if (screenWidth >= 1280) return { width: 380, gap: 24 };
-    if (screenWidth >= 1024) return { width: 350, gap: 20 };
-    if (screenWidth >= 768) return { width: 320, gap: 16 };
-    return { width: 300, gap: 16 };
-  };
-
-  const { width: cardWidth, gap } = getCardDimensions();
 
   const handleNext = useCallback((autoPlay: boolean = false) => {
     const dif = Date.now() - changed;
@@ -129,7 +125,8 @@ export default function Clients() {
   const calculateTranslateX = () => {
     const containerWidth = cardWidth * visibleCards + gap * (visibleCards - 1);
     const centerPosition = (containerWidth - cardWidth) / 2;
-    return -index * (cardWidth + gap) + centerPosition;
+    const resize = centerPosition - index * (cardWidth + gap);
+    return resize;
   };
 
   return (
@@ -190,7 +187,8 @@ export default function Clients() {
                     key={idx}
                     className="flex-shrink-0 bg-white/90 backdrop-blur-md rounded-xl md:rounded-2xl p-4 sm:p-6 md:p-8 flex flex-col justify-between shadow-lg relative transition-all duration-300"
                     style={{ 
-                      opacity,
+                      width: `${cardWidth}px`,
+                      opacity: opacity,
                       transform: `scale(${scale})`,
                     }}
                   >

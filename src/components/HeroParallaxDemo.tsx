@@ -12,28 +12,28 @@ const HeroParallaxDemo = () => {
 
   const products = [
     {
-      title: "HDI.",
+      title: "HDI 1",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI3.png`,
     },
     {
-      title: "HDI",
+      title: "HDI 2",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI2.png`,
     },
     {
-      title: "HDI",
+      title: "HDI 3",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/HDI.png`,
     },
 
     {
-      title: "NPIA",
+      title: "NPIA 1",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/NPIA2.png`,
     },
     {
-      title: "PCC",
+      title: "PCC 1",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
     {
-      title: "NPIA",
+      title: "NPIA2 ",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/NPIA.png`,
     },
 
@@ -42,11 +42,11 @@ const HeroParallaxDemo = () => {
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/SSI.png`,
     },
     {
-      title: "STM",
+      title: "STM 1",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/STM2.png`,
     },
     {
-      title: "STM",
+      title: "STM 2",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/STM.png`,
     },
     {
@@ -54,7 +54,7 @@ const HeroParallaxDemo = () => {
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/AI.png`,
     },
     {
-      title: "PCC",
+      title: "PCC 2",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
 
@@ -63,7 +63,7 @@ const HeroParallaxDemo = () => {
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/CP-HDI.png`,
     },
     {
-      title: "PCC",
+      title: "PCC 3",
       thumbnail: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/services/PCC.png`,
     },
     {

@@ -39,8 +39,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 md:px-10"
       ref={containerRef}
+      className="w-full bg-white dark:bg-neutral-950 md:px-10"
+      style={{ position: "relative"}}
     >
       <div className="max-w-7xl mx-auto py-10 px-4 md:px-8 lg:px-10">
         <SlideUp>

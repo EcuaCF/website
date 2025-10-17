@@ -6,7 +6,7 @@ import { useLanguage } from "@/components/LanguageContext";
 export function Members() {
   const {language} = useLanguage();
   const text = {
-    title: language === 'EN' ? 'Our Technical Team' : 'Nuestro Equipo de Liderazgo',
+    title: language === 'EN' ? 'Our Technical Team' : 'Nuestro Equipo de Técnicos',
     subtitle: language === 'EN' ? 'Meet the experts driving innovation and excellence at Ecua Code Forge' : 'Conoce a los expertos que impulsan la innovación y la excelencia en Ecua Code Forge.',
     role1: language === 'EN' ? 'Developer' : 'Desarrollador',
     role2: language === 'EN' ? 'Lead Developer' : 'Desarrollador Líder',

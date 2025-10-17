@@ -62,8 +62,11 @@ const TimelineDemo = () => {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip bg-white">
-      <Timeline data={data} />
+    <div className="relative w-full overflow-clip bg-white"
+    >
+      <div style={{ position: "relative"}}>
+        <Timeline data={data} />
+      </div>
     </div>
   );
 };

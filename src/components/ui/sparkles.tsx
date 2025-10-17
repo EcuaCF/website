@@ -3,7 +3,7 @@ import React, { useId } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, SingleOrMultiple } from "@tsparticles/engine";
-import { loadAll } from "@tsparticles/all";
+import { loadFull } from "tsparticles";
 import { cn } from '@/lib/utils';
 import { motion, useAnimation } from "motion/react";
 
@@ -33,7 +33,7 @@ export const SparklesCore = (props: ParticlesProps) => {
   const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadAll(engine); 
+      await loadFull(engine);
     }).then(() => {
       setInit(true);
     });

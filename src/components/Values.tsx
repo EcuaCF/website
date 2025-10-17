@@ -172,6 +172,10 @@ function ValueCard({
           src={value.image}
           alt={value.title}
           fill
+          sizes={isMobile ? 
+            "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" : 
+            "(max-width: 1024px) 100vw, 33vw"
+          }
           className={`object-cover transition-all duration-500 ${
             activeCard === value.id ? 'blur-sm' : 'group-hover:scale-105'
           }`}

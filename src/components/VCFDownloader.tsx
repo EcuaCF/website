@@ -1,8 +1,6 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function VCFDownloader(name: string) {
-  const router = useRouter();
   useEffect(() => {
     const downloadVCF = async () => {
       try {
@@ -23,7 +21,7 @@ export default function VCFDownloader(name: string) {
     };
 
     downloadVCF();
-  }, [router, name]);
+  }, [name]);
 
   return (
     <div style={{ padding: '20px', textAlign: 'center' }}>

@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-export default function VCFDownloader(name: string) {
+export default function VCFDownloader({name}: {name: string}) {
   useEffect(() => {
     const downloadVCF = async () => {
       try {

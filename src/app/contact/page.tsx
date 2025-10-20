@@ -11,8 +11,8 @@ import FlipWordsDemo from "@/components/FlipWordsDemo";
 export default function Contact (){
     const {language} = useLanguage();
     const text = {
-    title: language === 'EN' ? 'Do you want to know more?' : '¿Quieres conocer más?',
-    subtitle: language === 'EN' ? 'Contact Us' : 'Contáctanos',
+        title: language === 'EN' ? 'Do you want to know more?' : '¿Quieres conocer más?',
+        subtitle: language === 'EN' ? 'Contact Us' : 'Contáctanos',
     }
 
     return (

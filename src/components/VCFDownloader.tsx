@@ -1,8 +1,10 @@
 "use client";
 
+import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function VCFDownloader({name}: {name: string}) {
+  const router = useRouter();
   useEffect(() => {
     const downloadVCF = async () => {
       try {
@@ -20,17 +22,14 @@ export default function VCFDownloader({name}: {name: string}) {
       } catch (error) {
         console.error('Download failed:', error);
       }
+      router.push('/');
     };
 
     downloadVCF();
   }, [name]);
 
   return (
-    <div style={{ padding: '20px', textAlign: 'center' }}>
-      <p>Downloading your contacts file...</p>
-      <p>If download does not start automatically, 
-        <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contactFiles/${name}`} download={name}> click here</a>.
-      </p>
-    </div>
+    <>
+    </>
   );
 }

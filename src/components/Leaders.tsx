@@ -8,13 +8,15 @@ export function Leaders() {
   const text = {
     title: language === 'EN' ? 'Company Leadership' : 'Liderazgo de la Compañía',
     subtitle: language === 'EN' ? 'Meet the people who make our vision possible.' : 'Conoce a las personas que hacen posible nuestra visión.',
-    role1: language === 'EN' ? 'CEO' : 'CEO',
+    role1: language === 'EN' ? 'Founder & CEO' : 'Fundador y CEO',
     role2: language === 'EN' ? 'Office Manager' : 'Gerente de Oficina',
+    subrole1: language === 'EN' ? 'USA' : 'EE.UU.',
+    subrole2: language === 'EN' ? 'Quito - Ecuador' : 'Quito - Ecuador',
   }
   
   const teamLeaders = [
-    { id: 1, name: "Sean Pitcher", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/sean_pitcher.png` },
-    { id: 2, name: "Luz Garzón", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/luz.png` },
+    { id: 1, name: "Sean Pitcher", role: text.role1, subrole: text.subrole1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/sean_pitcher.png` },
+    { id: 2, name: "Luz Garzón", role: text.role2, subrole: text.subrole2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/leaders/luz.png` },
   ];
 
   return (
@@ -28,16 +30,13 @@ export function Leaders() {
         </p>
       </SlideUp>
       
-      {/* Horizontal Carousel for all devices */}
-      
-        <div className="gap-4 sm:gap-6 md:gap-8 justify-center flex flex-wrap">
-          {/* First set */}
-          {teamLeaders.map((member) => (
-            <div key={`${member.id}-1`} className="inline-flex">
-              <CardPerson member={member} />
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col items-center gap-4 sm:gap-6 md:gap-8">
+        {teamLeaders.map((member) => (
+          <div key={member.id} className="flex justify-center">
+            <CardPerson member={member} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

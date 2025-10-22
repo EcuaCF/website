@@ -1,10 +1,7 @@
 "use client";
-
-import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function VCFDownloader({name}: {name: string}) {
-  const router = useRouter();
   useEffect(() => {
     const downloadVCF = async () => {
       try {
@@ -22,11 +19,10 @@ export default function VCFDownloader({name}: {name: string}) {
       } catch (error) {
         console.error('Download failed:', error);
       }
-      router.push('/');
     };
 
     downloadVCF();
-  }, [name, router]);
+  }, [name]);
 
   return (
     <>

@@ -2,7 +2,6 @@ import React from "react";
 import CardPerson from "./CardPerson";
 import SlideUp from "./SlideUp";
 import { useLanguage } from "@/components/LanguageContext";
-import Link from "next/link";
 
 export function Members() {
   const {language} = useLanguage();
@@ -15,14 +14,14 @@ export function Members() {
   }
   
   const teamMembers = [
-    { id: 1, name: "Doménica Criollo", role: text.role3, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/dome.jpeg`, link: `/contacts/dcriollo.vcf`},
-    { id: 2, name: "Jairo Cabrera", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jairo.jpeg`, link: `/contacts/jcabrera.vcf`},
-    { id: 3, name: "Jinson Medina", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jinson.jpeg`, link: `/contacts/jmedina.vcf`},
-    { id: 4, name: "Erick Armijos", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/erick.jpeg`, link: `/contacts/earmijos.vcf`},
-    { id: 5, name: "Diego Pazmiño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/diego.jpeg`, link: `/contacts/dpazmino.vcf`},
-    { id: 6, name: "David Velasco", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/david.jpeg`, link: `/contacts/dvelasco.vcf`},
-    { id: 7, name: "Omar Gualotuña", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/omar.jpeg`, link: `/contacts/ogualotuna.vcf`},
-    { id: 8, name: "Adhisson Cedeño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/adhisson.jpeg`, link: `/contacts/acedeno.vcf`},
+    { id: 1, name: "Doménica Criollo", role: text.role3, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/dome.jpeg`},
+    { id: 2, name: "Jairo Cabrera", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jairo.jpeg`},
+    { id: 3, name: "Jinson Medina", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jinson.jpeg`},
+    { id: 4, name: "Erick Armijos", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/erick.jpeg`},
+    { id: 5, name: "Diego Pazmiño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/diego.jpeg`},
+    { id: 6, name: "David Velasco", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/david.jpeg`},
+    { id: 7, name: "Omar Gualotuña", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/omar.jpeg`},
+    { id: 8, name: "Adhisson Cedeño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/adhisson.jpeg`},
   ];
 
   return (
@@ -42,9 +41,7 @@ export function Members() {
           {/* First set */}
           {teamMembers.map((member) => (
             <div key={`${member.id}-1`} className="inline-flex">
-              <Link href={member.link}>
                 <CardPerson member={member} />
-              </Link>
             </div>
           ))}
           {/* Duplicate set for seamless loop */}

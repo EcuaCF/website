@@ -6,6 +6,7 @@ interface CardPersonProps {
         id: number;
         name: string;
         role: string;
+        subrole?: string;
         image: string;
     }
 }
@@ -19,6 +20,7 @@ const CardPerson = ({member}: CardPersonProps) => {
             <div className="member-info">
                 <h4>{member.name}</h4>
                 <p>{member.role}</p>
+                {member.subrole && <p>{member.subrole}</p>}
             </div>
         </div>
     );

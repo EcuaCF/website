@@ -116,8 +116,8 @@ export default function Home() {
 function SparklesPreview(language:string) {
   const router = useRouter();
   const translations = {
-    title1: language === 'EN' ? 'Custom AI Solutions for Global' : 'Soluciones de IA Personalizadas para',
-    title2: language === 'EN' ? 'Innovation' : 'Innovación Global',
+    title1: language === 'EN' ? 'Digital Transformation' : 'Transformación Digital',
+    title2: language === 'EN' ? 'For Your Business' : 'Para Tu Negocio',
     paragraph: language === 'EN' ? 'Bridging Ecuador and the US with cutting-edge machine learning and artificial intelligence solutions tailored to transform your business operations.' : 'Conectando a Ecuador y Estados Unidos con soluciones de vanguardia en aprendizaje automático (Machine Learning) e inteligencia artificial, diseñadas a medida para transformar sus operaciones comerciales.',
     button: language === 'EN' ? 'Request a Consultation' : 'Solicitar una Consulta',
   }

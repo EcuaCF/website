@@ -51,7 +51,7 @@ export default function Services(){
                         <p className="mx-auto text-sm md:text-base lg:text-lg text-neutral-400 text-center mb-6 md:mb-8 max-w-2xl lg:max-w-4xl">{text.custom}</p>
                     </div>
                 </SlideUp>
-                <div className="flex items-center justify-center">
+                <div className="flex items-center justify-center pb-25">
                     {AnimatedServices({ services: [
                     { 
                       name: text.name1, 

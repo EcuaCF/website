@@ -147,7 +147,7 @@ function SparklesPreview(language:string) {
             as="button"
             className="bg-black text-white flex items-center space-x-2"
           >
-            <span className="px-4 p-2 cursor-pointer" onClick={() => {router.push(`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contact`)}}>{translations.button}</span>
+            <span className="px-4 p-2 cursor-pointer" onClick={() => {router.push(`/contact`)}}>{translations.button}</span>
           </HoverBorderGradient>
       </div>
     </div>

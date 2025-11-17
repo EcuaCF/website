@@ -18,7 +18,7 @@ export function Members() {
     { id: 2, name: "Jairo Cabrera", role: text.role2, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jairo.jpeg`},
     { id: 3, name: "Jinson Medina", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/jinson.jpeg`},
     { id: 4, name: "Erick Armijos", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/erick.jpeg`},
-    { id: 5, name: "Diego Pazmiño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/diego.jpeg`},
+    /*{ id: 5, name: "Diego Pazmiño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/diego.jpeg`},*/
     { id: 6, name: "David Velasco", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/david.jpeg`},
     { id: 7, name: "Omar Gualotuña", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/omar.jpeg`},
     { id: 8, name: "Adhisson Cedeño", role: text.role1, image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/members/adhisson.jpeg`},

@@ -9,7 +9,7 @@ export function Leaders() {
     title: language === 'EN' ? 'Company Leadership' : 'Liderazgo de la Compañía',
     subtitle: language === 'EN' ? 'Meet the people who make our vision possible.' : 'Conoce a las personas que hacen posible nuestra visión.',
     role1: language === 'EN' ? 'Founder & CEO' : 'Fundador y CEO',
-    role2: language === 'EN' ? 'Office Manager' : 'Gerente de Oficina',
+    role2: language === 'EN' ? 'General Manager' : 'Gerente General',
     subrole1: language === 'EN' ? 'Bradenton - USA' : 'Bradenton - EE.UU.',
     subrole2: language === 'EN' ? 'Quito - Ecuador' : 'Quito - Ecuador',
   }
